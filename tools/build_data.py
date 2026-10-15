@@ -1,5 +1,5 @@
 """Normalize scraped brocap.com content (ref/*.json) into site/assets/js/data.js."""
-import json, re, shutil, os, unicodedata
+import json, re, shutil, os, subprocess, unicodedata
 
 MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october',
           'november', 'december']
@@ -21,6 +21,7 @@ NAME_FIX = {
   'THE COMMITTEE OF CAP CANA BONDHOLDERS': 'Cap Cana Bondholders Committee',
   'TRINIDAD PETROLEUM HOLDINGS LIMITED– PETROTRIN': 'Trinidad Petroleum Holdings (Petrotrin)',
   'UNICURITIBA': 'UniCuritiba',
+  'Ansa McAl': 'ANSA McAL',
   'Province of Buenos Aires Committee': 'Province of Buenos Aires',
   'Province of Cordoba Creditors Committee': 'Province of Córdoba',
   'Ecuador Creditors Committee': 'Republic of Ecuador',
@@ -130,12 +131,99 @@ def sector_group(s):
   return None
 
 
+FLAGS = {
+  'Brazil': 'br', 'Trinidad & Tobago': 'tt', 'Dominican Republic': 'do', 'United States': 'us', 'Mexico': 'mx',
+  'Colombia': 'co', 'Belize': 'bz', 'Puerto Rico': 'pr', 'Barbados': 'bb', 'Costa Rica': 'cr', 'Spain': 'es',
+  'Argentina': 'ar', 'El Salvador': 'sv', 'Curaçao': 'cw', 'Panama': 'pa', 'Jamaica': 'jm', 'Grenada': 'gd',
+  'Guatemala': 'gt', 'Antigua': 'ag', 'St. Lucia': 'lc', 'Haiti': 'ht', 'Bahamas': 'bs', 'Honduras': 'hn', 'Peru': 'pe',
+  'Ecuador': 'ec', 'Switzerland': 'ch', 'St. Kitts & Nevis': 'kn', 'Bolivia': 'bo',
+  'Trinidad, Barbados & Jamaica': 'tt bb jm', 'Trinidad & Tobago, Barbados': 'tt bb',
+}
+
+# Sharper Wikimedia Commons artwork for deals whose brocap.com logo is too small; coats of arms are rasterized.
+LOGO_OVERRIDE = {
+  'Bancolombia': 'bancolombia', 'Republic of Ecuador': 'ecuador', 'Province of Buenos Aires': 'buenos-aires',
+  'Province of Córdoba': 'cordoba', 'Puerto Rico Employees Retirement System': 'puerto-rico',
+  'Puerto Rico Sales Tax Financing Corp. (COFINA)': 'puerto-rico', 'Zurich Insurance Group': 'zurich',
+  'EOG Resources': 'eog', 'Kohler Co.': 'kohler', 'Sandals Resort': 'sandals', 'Belize Creditors Committee': 'belize',
+  'Banco Sabadell': 'sabadell', 'Nortel Networks': 'nortel', 'SNC Lavalin': 'snc-lavalin',
+  "The Grenada Creditor's Committee": 'grenada', 'Grenada Creditors Committee': 'grenada',
+}
+RASTERIZE = {'ecuador', 'buenos-aires', 'cordoba', 'puerto-rico', 'belize', 'grenada'}
+
+# brocap.com "logos" that are only typed names; rendered as text instead.
+TEXT_LOGOS = {'Pica de Hule Natural, S.A.', 'Caribbean Project Acquisition, LLC', 'Ático Florestal FIP',
+              'Benoit, Wallerius, FASA', 'HNB Acquisition Corp.'}
+
+FEATURED = [
+  ('Republic of Ecuador', 'Advising the Ecuador Steering Committee', 'on the restructuring of Ecuador’s sovereign debt',
+   'Co-Financial Advisor'),
+  ('Bancolombia', 'Advising Bancolombia', 'on the settlement of the obligations of ATN3, a subsidiary of Abengoa Perú',
+   'Exclusive Financial Advisor'),
+  ('Province of Buenos Aires', 'Advising the Bondholder Steering Committee',
+   'on the restructuring of the Province of Buenos Aires’ external debt', 'Financial Advisor'),
+  ('EOG Resources', 'Advising EOG Resources', 'on the sale of its equity interests in two Caribbean ammonia plants',
+   'Financial Advisor'),
+  ('Puerto Rico Employees Retirement System', 'Advising the UBS Puerto Rico Family of Funds',
+   'on the restructuring of the Employees Retirement System’s debt', 'Exclusive Financial Advisor'),
+  ('Banco Sabadell', 'Advising Banco Sabadell', 'on its acquisition of Mellon United National Bank from BNY Mellon',
+   'Exclusive Financial Advisor'),
+  ('Sandals Resort', 'Advising Sandals Resorts', 'on the sale of Grand Pineapple Beach Antigua to Elite Island Resorts',
+   'Exclusive Financial Advisor'),
+]
+
+
+def trim_logo(src, dst):
+  """Crops near-white margins so logos of different source sizes render at a consistent visual weight."""
+  from PIL import Image, ImageChops
+  im = Image.open(src).convert('RGBA')
+  flat = Image.new('RGBA', im.size, (255, 255, 255, 255))
+  flat.alpha_composite(im)
+  diff = ImageChops.difference(flat.convert('RGB'), Image.new('RGB', im.size, (255, 255, 255)))
+  bbox = diff.point(lambda p: 255 if p > 24 else 0).getbbox()
+  if bbox:
+    flat = flat.crop(bbox)
+  flat.convert('RGB').save(dst, quality=92)
+
+
+def logo_for(d, used):
+  name = NAME_FIX.get(d['name'], d['name'].strip())
+  if name in TEXT_LOGOS or d['name'] in TEXT_LOGOS:
+    return None
+  if name in LOGO_OVERRIDE:
+    key = LOGO_OVERRIDE[name]
+    src = f'ref/svg-logos/{key}.svg'
+    if key in RASTERIZE:
+      dst = f'assets/img/logos/{key}.png'
+      if dst not in used:
+        subprocess.run(['rsvg-convert', '-h', '240', '-o', 'site/' + dst, src], check=True)
+    else:
+      dst = f'assets/img/logos/{key}.svg'
+      shutil.copy(src, 'site/' + dst)
+    used.add(dst)
+    return dst
+  src = 'ref/logos/' + d['logo'].lstrip('/').replace('/', '__')
+  if not os.path.exists(src):
+    return None
+  try:
+    dst = 'assets/img/logos/' + re.sub(r'[^a-z0-9]+', '-', os.path.splitext(os.path.basename(src))[0].lower()) + '.jpg'
+    if dst not in used:
+      trim_logo(src, 'site/' + dst)
+    used.add(dst)
+    return dst
+  except OSError:
+    return None
+
+
 def deals():
   out = []
+  used = set()
+  os.makedirs('site/assets/img/logos', exist_ok=True)
   for d in json.load(open('ref/deals.json')):
     country = COUNTRY_FIX.get(d.get('country'), d.get('country'))
     if country is None and 'Transmissora' in d['name']:
       country = 'Brazil'
+    country = {'Ansa McAl': 'Trinidad & Tobago', 'Caribbean Communications Network Ltd.': 'Trinidad & Tobago'}.get(d['name'].strip(), country)
     if country == 'Regional':
       country = 'Latin America'
     year, month = parse_date(d.get('completion'))
@@ -153,6 +241,8 @@ def deals():
       'year': year, 'month': month,
       'value': value, 'usd': usd,
       'desc': desc,
+      'logo': logo_for(d, used),
+      'flags': FLAGS.get(country, '').split(),
     })
   out.sort(key=lambda d: (-(d['year'] or 0), -(d['month'] or 0)))
   return out
@@ -191,7 +281,7 @@ def team():
       'name': name, 'title': p['title'], 'img': img, 'languages': p['languages'],
       'bio': [b.replace('Broadspan', 'BroadSpan') for b in p['bio']], 'group': group, 'exec': p['name'] in EXEC_COMMITTEE,
     })
-  out.sort(key=lambda p: (RANK.index(p['title']), p['name'].split()[-1]))
+  out.sort(key=lambda p: (['board', 'team', 'advisors'].index(p['group']), RANK.index(p['title']), p['name'].split()[-1]))
   return out
 
 
@@ -217,14 +307,21 @@ def research():
 
 
 def main():
+  shutil.rmtree('site/assets/img/logos', ignore_errors=True)
   d, n, t = deals(), news(), team()
+  os.makedirs('site/assets/img/flags', exist_ok=True)
+  for code in {c for x in d for c in x['flags']}:
+    shutil.copy(f'ref/flags/{code}.svg', f'site/assets/img/flags/{code}.svg')
+  featured = []
+  for name, line1, line2, role in FEATURED:
+    deal = next(x for x in d if x['name'] == name)
+    featured.append({'name': name, 'line1': line1, 'line2': line2, 'role': role, 'logo': deal['logo'],
+                     'value': deal['value'], 'year': deal['year'], 'country': deal['country'], 'flags': deal['flags']})
   r = [{'sector': s, 'items': [{'title': a, 'date': b, 'pdf': 'https://brocap.com/pdf/' + c} for a, b, c in items]}
        for s, items in research()]
-  restructured = sum(x['usd'] or 0 for x in d if x['practice'] == 'restructuring')
-  stats = {'deals': len(d), 'restructuredUsdBn': round(restructured / 1000, 1),
-           'countries': len({x['country'] for x in d if x['country']})}
+  stats = {'deals': len(d)}
   js = ('window.BSC = ' + json.dumps({'practices': PRACTICES, 'regions': list(REGIONS) + ['Latin America'],
-                                      'sectors': [s for s, _ in SECTORS] + ['Other'], 'deals': d, 'news': n,
+                                      'sectors': [s for s, _ in SECTORS] + ['Other'], 'deals': d, 'featured': featured, 'news': n,
                                       'team': t, 'research': r, 'stats': stats}, ensure_ascii=False) + ';\n')
   open('site/assets/js/data.js', 'w').write(js)
   print(stats, {k: sum(1 for x in d if x['practice'] == k) for k in PRACTICES})
