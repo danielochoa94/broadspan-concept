@@ -284,6 +284,7 @@ dialog.modal[open] { animation: rise .3s ease-out; }
 .deal-modal-logo img { max-height: 96px; max-width: 70%; object-fit: contain; mix-blend-mode: multiply; }
 .deal-modal-logo .wordlogo { font-size: 26px; font-weight: 500; color: var(--slate); }
 .deal-modal h2 { font-size: clamp(26px, 2.8vw, 34px); font-weight: 300; color: var(--blue); line-height: 1.2; }
+.deal-modal > .more { margin-top: 28px; }
 .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 28px 0; padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .facts dt { font-size: 12px; text-transform: uppercase; color: var(--muted); }
 .facts dd { margin: 4px 0 0; font-size: 16px; }
@@ -457,6 +458,10 @@ dialog.modal[open] { animation: rise .3s ease-out; }
 .deal-contact { padding: 18px 0; border-top: 1px solid var(--line); font-size: 14px; }
 .deal-contact a { color: var(--blue); }
 .deal-team > .more { margin-top: 24px; }
+.related .label { margin-bottom: 28px; }
+@media (min-width: 1200px) {
+  .related .tombstones { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
 @media (max-width: 900px) {
   .deal-head, .deal-body { grid-template-columns: 1fr; gap: 32px; }
   .deal-logo { height: 96px; max-width: 220px; }

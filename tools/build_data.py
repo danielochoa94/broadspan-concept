@@ -142,13 +142,15 @@ FLAGS = {
 
 # Sharper Wikimedia Commons artwork for deals whose brocap.com logo is too small; coats of arms are rasterized.
 LOGO_OVERRIDE = {
-  'Bancolombia': 'bancolombia', 'Republic of Ecuador': 'ecuador', 'Province of Buenos Aires': 'buenos-aires',
+  'Republic of Ecuador': 'ecuador', 'Province of Buenos Aires': 'buenos-aires',
   'Province of Córdoba': 'cordoba', 'Puerto Rico Employees Retirement System': 'puerto-rico',
   'Puerto Rico Sales Tax Financing Corp. (COFINA)': 'puerto-rico', 'Zurich Insurance Group': 'zurich',
   'EOG Resources': 'eog', 'Kohler Co.': 'kohler', 'Sandals Resort': 'sandals', 'Belize Creditors Committee': 'belize',
   'Banco Sabadell': 'sabadell', 'Nortel Networks': 'nortel', 'SNC Lavalin': 'snc-lavalin',
   "The Grenada Creditor's Committee": 'grenada', 'Grenada Creditors Committee': 'grenada',
 }
+# Hand-edited artwork kept in the repo, outside the logos folder this script rebuilds.
+TRACKED_LOGOS = {'Bancolombia': 'assets/img/deals/logos/bancolombia.svg'}
 RASTERIZE = {'ecuador', 'buenos-aires', 'cordoba', 'puerto-rico', 'belize', 'grenada'}
 
 # brocap.com "logos" that are only typed names; rendered as text instead.
@@ -210,6 +212,11 @@ NEWS_PAGES = {
 }
 
 
+def slug(s):
+  ascii_s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode()
+  return re.sub(r'[^a-z0-9]+', '-', ascii_s.lower()).strip('-')
+
+
 def deal_page(name, year, desc):
   slug = next((s for n, y, k, s in DEAL_PAGES if n == name and y == year and k in desc), None)
   return slug and f'deal-{slug}.html'
@@ -240,6 +247,8 @@ def logo_for(d, used):
   name = NAME_FIX.get(d['name'], d['name'].strip())
   if name in TEXT_LOGOS or d['name'] in TEXT_LOGOS:
     return None
+  if name in TRACKED_LOGOS:
+    return TRACKED_LOGOS[name]
   if name in LOGO_OVERRIDE:
     key = LOGO_OVERRIDE[name]
     src = f'ref/svg-logos/{key}.svg'
@@ -296,6 +305,11 @@ def deals():
       'page': deal_page(name, year, desc),
     })
   out.sort(key=lambda d: (-(d['year'] or 0), -(d['month'] or 0)))
+  seen = {}
+  for d in out:
+    base = d['page'][5:-5] if d['page'] else slug(f"{d['name']} {d['year'] or ''}")
+    seen[base] = seen.get(base, 0) + 1
+    d['id'] = base if seen[base] == 1 else f'{base}-{seen[base]}'
   return out
 
 

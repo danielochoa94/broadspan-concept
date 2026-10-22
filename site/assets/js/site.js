@@ -83,6 +83,49 @@
     return d.logo ? `<img src="${d.logo}" alt="${esc(d.name)}" loading="lazy">` : `<span class="wordlogo">${esc(d.name)}</span>`;
   }
 
+  function dealCard(d)
+  {
+    return `
+      <button class="ts" type="button" data-deal="${d.id}">
+        <div class="ts-logo">${logoBlock(d)}</div>
+        <div class="ts-body">
+          <div class="ts-top">${flags(d.flags, d.country)}<time>${monthYear(d, true)}</time></div>
+          <h3 class="ts-name">${esc(d.name)}</h3>
+          <div class="ts-practice">${SHORT[d.practice]}</div>
+          <div class="ts-value${d.value ? '' : ' undisclosed'}">${d.value ? esc(d.value) : 'Undisclosed'}</div>
+        </div>
+      </button>`;
+  }
+
+  document.addEventListener('click', (e) =>
+  {
+    const b = e.target.closest('[data-deal]');
+    if (!b)
+    {
+      return;
+    }
+    const d = B.deals.find((x) => x.id === b.dataset.deal);
+    openModal(`
+      <div class="deal-modal">
+        <div class="deal-modal-logo">${logoBlock(d)}</div>
+        <h2>${esc(d.name)}</h2>
+        <dl class="facts">
+          <div><dt>Practice</dt><dd>${esc(B.practices[d.practice])}</dd></div>
+          <div><dt>Country</dt><dd>${d.flags.length ? flags(d.flags, d.country) : esc(d.country || '—')}</dd></div>
+          <div><dt>Completed</dt><dd>${monthYear(d) || '—'}</dd></div>
+          <div><dt>Value</dt><dd>${esc(d.value || 'Undisclosed')}</dd></div>
+        </dl>
+        <div class="copy"><p>${esc(dealDesc(d))}</p></div>
+        ${d.client && d.client !== d.name ? `<p class="modal-meta">Client: ${esc(d.client)}</p>` : ''}
+        ${d.page ? `<a class="more" href="${d.page}">View full transaction <span class="chev"></span></a>` : ''}
+      </div>`);
+  });
+
+  document.querySelectorAll('[data-deals]').forEach((el) =>
+  {
+    el.innerHTML = el.dataset.deals.split(' ').map((id) => dealCard(B.deals.find((d) => d.id === id))).join('');
+  });
+
   // Stats and counts
   document.querySelectorAll('[data-stat]').forEach((el) =>
   {
@@ -293,20 +336,6 @@
       (!state.q || `${d.name} ${d.client} ${d.country} ${d.desc}`.toLowerCase().includes(state.q));
 
     let list = [];
-    const card = (d, i) =>
-    {
-      const [tag, attrs] = d.page ? ['a', `href="${d.page}"`] : ['button', `type="button" data-deal="${i}"`];
-      return `
-      <${tag} class="ts" ${attrs}>
-        <div class="ts-logo">${logoBlock(d)}</div>
-        <div class="ts-body">
-          <div class="ts-top">${flags(d.flags, d.country)}<time>${monthYear(d, true)}</time></div>
-          <h3 class="ts-name">${esc(d.name)}</h3>
-          <div class="ts-practice">${SHORT[d.practice]}</div>
-          <div class="ts-value${d.value ? '' : ' undisclosed'}">${d.value ? esc(d.value) : 'Undisclosed'}</div>
-        </div>
-      </${tag}>`;
-    };
 
     function render()
     {
@@ -314,7 +343,7 @@
       const active = tabs.querySelector('[aria-pressed="true"]');
       tabs.scrollTo({ left: Math.max(0, active.offsetLeft - 24), behavior: 'smooth' });
       list = B.deals.filter(matches);
-      $('#deals').innerHTML = list.slice(0, state.shown).map(card).join('');
+      $('#deals').innerHTML = list.slice(0, state.shown).map(dealCard).join('');
       $('#empty').hidden = list.length > 0;
       $('#result-count').textContent = `${list.length} transaction${list.length === 1 ? '' : 's'}`;
       $('#reset').hidden = state.practice === 'all' && !state.region && !state.sector && !state.q;
@@ -352,28 +381,6 @@
     {
       state.shown += PAGE;
       render();
-    });
-    $('#deals').addEventListener('click', (e) =>
-    {
-      const b = e.target.closest('[data-deal]');
-      if (!b)
-      {
-        return;
-      }
-      const d = list[+b.dataset.deal];
-      openModal(`
-        <div class="deal-modal">
-          <div class="deal-modal-logo">${logoBlock(d)}</div>
-          <h2>${esc(d.name)}</h2>
-          <dl class="facts">
-            <div><dt>Practice</dt><dd>${esc(B.practices[d.practice])}</dd></div>
-            <div><dt>Country</dt><dd>${d.flags.length ? flags(d.flags, d.country) : esc(d.country || '—')}</dd></div>
-            <div><dt>Completed</dt><dd>${monthYear(d) || '—'}</dd></div>
-            <div><dt>Value</dt><dd>${esc(d.value || 'Undisclosed')}</dd></div>
-          </dl>
-          <div class="copy"><p>${esc(dealDesc(d))}</p></div>
-          ${d.client && d.client !== d.name ? `<p class="modal-meta">Client: ${esc(d.client)}</p>` : ''}
-        </div>`);
     });
     render();
   }
