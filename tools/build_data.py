@@ -172,6 +172,56 @@ FEATURED = [
    'Exclusive Financial Advisor'),
 ]
 
+# (normalized deal name, completion year, description keyword, deal page); the keyword separates same-month AGS deals.
+DEAL_PAGES = [
+  ('ouronova', 2026, '', 'ouronova'), ('Bancolombia', 2025, '', 'bancolombia'), ('Boa Praça', 2024, '', 'boa-praca'),
+  ('Grupo Imsa', 2024, '', 'grupo-imsa'), ('Agencias Universales S.A. (“AGS”)', 2024, 'Omni', 'ags-omni'),
+  ('Agencias Universales S.A. (“AGS”)', 2024, 'Savage', 'ags-ar-savage'), ('Grupo Vargas', 2023, '', 'arsal'),
+  ('Crédito Real USA Finance', 2023, '', 'bepensa'), ('Colonial Fire & General Insurance (COLFIRE)', 2023, '', 'colfire'),
+  ('Agencias Universales', 2023, '', 'agunsa-carver'), ('Banco di Caribe', 2022, '', 'banco-di-caribe'),
+  ('Servicarga', 2022, '', 'servicarga'), ('Puerto Rico Employees Retirement System', 2022, '', 'puerto-rico-ers'),
+  ('Province of Buenos Aires', 2021, '', 'buenos-aires'), ('Milfra', 2021, '', 'milfra'),
+  ('Seal Telecom', 2021, '', 'seal-telecom'), ('ANSA McAL', 2021, '', 'ansa-mcal'), ('Province of Córdoba', 2021, '', 'cordoba'),
+  ('Republic of Ecuador', 2020, '', 'ecuador'), ('Belize Creditors Committee', 2020, '', 'belize-2020'),
+  ('FMO & DEG', 2020, '', 'fmo-deg'), ('Trinidad Petroleum Holdings (Petrotrin)', 2019, '', 'petrotrin'),
+  ('Puerto Rico Sales Tax Financing Corp. (COFINA)', 2019, '', 'cofina'), ('Cap Cana Bondholders Committee', 2017, '', 'cap-cana'),
+  ('Belize Creditors Committee', 2017, '', 'belize-2017'), ("The Grenada Creditor's Committee", 2015, '', 'grenada'),
+]
+
+NEWS_PAGES = {
+  'ouronova-March-2026.pdf': 'ouronova', 'Bancolombia2025.pdf': 'bancolombia', 'GrupoBoa.pdf': 'boa-praca',
+  'IMSA-Press-Release.pdf': 'grupo-imsa', 'Omni-02-24.pdf': 'ags-omni', 'Arsal11-23.pdf': 'arsal',
+  'Savage-02-24.pdf': 'ags-ar-savage',
+  'BroadSpan-Advises-Bepensa-on-Acquisition-of-Credito-Real-USA-Finance.pdf': 'bepensa',
+  'BroadSpan-Advises-Court-Appointed-Liquidators-on-Sale-of-COLFIRE.pdf': 'colfire', 'Carver-02-23.pdf': 'agunsa-carver',
+  'BroadSpan-Advises-the-Central-Bank-of-Curacao-and-Sint-Maartenon-in-the-Sale-of-Banco-di-Caribe.pdf': 'banco-di-caribe',
+  'Servicarga-Deal-Announcement.pdf': 'servicarga', 'Milfra.pdf': 'milfra', 'Seal-Telecom.pdf': 'seal-telecom',
+  'Caribbean-Baroda.pdf': 'ansa-mcal', 'Cordoba.pdf': 'cordoba',
+  '20210112-Bondholder-Group-of-the-Province-of-Cordoba-in-Support-of-Amended-Consent-Solicitation.pdf': 'cordoba',
+  '20200723-Committee-Members-Intend-to-Support-Belize-Consent-Solicitation.pdf': 'belize-2020', 'Ushuaia.pdf': 'fmo-deg',
+  '20200604-Ecuador-Bondholders-Announce-Organization.pdf': 'ecuador',
+  '20200422-Bondholders-Reject-the-Province-of-Buenos%20Aires-Restructuring-Proposal.pdf': 'buenos-aires',
+  '20190606-Bondholder-Committee-Supports-TPHL-Amended-Exchange-Offer.pdf': 'petrotrin',
+  '20190416-BroadSpan-Advises-Bondholders-in-PuertoRico-COFINA-Restructuring.pdf': 'cofina',
+  '20190203-Bondholder-Committee-Supports-Buenos-Aires-Amended-2021-Consent-Solicitation.pdf': 'buenos-aires',
+  '20170828-BroadSpan-Advises-Bondholders-inCap-Cana-Debt-Restructuring.pdf': 'cap-cana',
+  '20161116-Belize-Coordinating-Committee-Announces-Formation.pdf': 'belize-2017',
+  '20150410-Grenada-Steering-Committee-Confirms-Key-Restructuring-Terms-Agreed-in-Principle.pdf': 'grenada',
+}
+
+
+def deal_page(name, year, desc):
+  slug = next((s for n, y, k, s in DEAL_PAGES if n == name and y == year and k in desc), None)
+  return slug and f'deal-{slug}.html'
+
+
+def news_page(n):
+  # brocap.com links the ERS announcement to the Córdoba PDF, so match it by title first.
+  if 'ERS' in n['title']:
+    return 'deal-puerto-rico-ers.html'
+  slug = NEWS_PAGES.get(n['pdf'].rsplit('/', 1)[1])
+  return slug and f'deal-{slug}.html'
+
 
 def trim_logo(src, dst):
   """Crops near-white margins so logos of different source sizes render at a consistent visual weight."""
@@ -243,6 +293,7 @@ def deals():
       'desc': desc,
       'logo': logo_for(d, used),
       'flags': FLAGS.get(country, '').split(),
+      'page': deal_page(name, year, desc),
     })
   out.sort(key=lambda d: (-(d['year'] or 0), -(d['month'] or 0)))
   return out
@@ -253,7 +304,7 @@ def news():
   for n in json.load(open('ref/news.json')):
     year, month = parse_date(n['date'])
     out.append({'title': title_case(n['title']), 'summary': n['summary'], 'pdf': n['pdf'], 'year': year,
-                'month': month, 'kind': n['kind']})
+                'month': month, 'kind': n['kind'], 'page': news_page(n)})
   out.sort(key=lambda n: (-n['year'], -n['month']))
   return out
 
@@ -316,7 +367,8 @@ def main():
   for name, line1, line2, role in FEATURED:
     deal = next(x for x in d if x['name'] == name)
     featured.append({'name': name, 'line1': line1, 'line2': line2, 'role': role, 'logo': deal['logo'],
-                     'value': deal['value'], 'year': deal['year'], 'country': deal['country'], 'flags': deal['flags']})
+                     'value': deal['value'], 'year': deal['year'], 'country': deal['country'], 'flags': deal['flags'],
+                     'page': deal['page']})
   r = [{'sector': s, 'items': [{'title': a, 'date': b, 'pdf': 'https://brocap.com/pdf/' + c} for a, b, c in items]}
        for s, items in research()]
   stats = {'deals': len(d)}

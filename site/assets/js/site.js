@@ -9,6 +9,7 @@
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
   const initials = (name) => name.split(' ').filter((w) => /^[A-ZÁÉÍÓÚ]/.test(w)).map((w) => w[0]).slice(0, 2).join('');
   const monthYear = (o, short) => o.year ? `${o.month ? MONTHS[o.month - 1].slice(0, short ? 3 : 99) + ' ' : ''}${o.year}` : '';
+  const newsHref = (n) => n.page ? `href="${n.page}"` : `href="${n.pdf}" target="_blank" rel="noopener"`;
   const flags = (codes, country) => `<span class="flagged">${codes.map((c) => `<img class="flag" src="assets/img/flags/${c}.svg" alt="" width="22" height="17">`).join('')}<span>${esc(country || '')}</span></span>`;
 
   // Nav
@@ -129,7 +130,7 @@
     requestAnimationFrame(tick);
 
     $('#latest-news').innerHTML = B.news.slice(0, 3).map((n) => `
-      <a class="news-item" href="${n.pdf}" target="_blank" rel="noopener"><h3>${esc(n.title)}</h3><time>${monthYear(n)}</time></a>`).join('');
+      <a class="news-item" ${newsHref(n)}><h3>${esc(n.title)}</h3><time>${monthYear(n)}</time></a>`).join('');
 
     // Featured carousel
     const slides = $('#slides');
@@ -137,7 +138,7 @@
     slides.innerHTML = B.featured.map((f, i) => `
       <div class="slide${i ? '' : ' active'}" role="tabpanel" aria-hidden="${i ? 'true' : 'false'}">
         <div class="logo"><img src="${f.logo}" alt="${esc(f.name)}"></div>
-        <p class="line1">${esc(f.line1)}</p>
+        <p class="line1">${f.page ? `<a href="${f.page}">${esc(f.line1)} <span class="chev"></span></a>` : esc(f.line1)}</p>
         <p class="line2">${esc(f.line2)}</p>
         <p class="role"><span>${esc(f.role)}</span><span class="sep"></span><span>${esc(f.value || f.year)}</span></p>
         <p class="where">${flags(f.flags, f.country)}</p>
@@ -221,7 +222,7 @@
   {
     const years = [...new Set(B.news.map((n) => n.year))];
     $('#news').innerHTML = years.map((y) => `<h2 class="year">${y}</h2>` + B.news.filter((n) => n.year === y).map((n) => `
-      <a class="news-row" href="${n.pdf}" target="_blank" rel="noopener">
+      <a class="news-row" ${newsHref(n)}>
         <time>${monthYear(n, true)}</time><h3>${esc(n.title)}</h3><span class="chev"></span><p>${esc(n.summary)}</p>
       </a>`).join('')).join('');
     $('#research').innerHTML = B.research.map((r) => `
@@ -292,8 +293,11 @@
       (!state.q || `${d.name} ${d.client} ${d.country} ${d.desc}`.toLowerCase().includes(state.q));
 
     let list = [];
-    const card = (d, i) => `
-      <button class="ts" type="button" data-deal="${i}">
+    const card = (d, i) =>
+    {
+      const [tag, attrs] = d.page ? ['a', `href="${d.page}"`] : ['button', `type="button" data-deal="${i}"`];
+      return `
+      <${tag} class="ts" ${attrs}>
         <div class="ts-logo">${logoBlock(d)}</div>
         <div class="ts-body">
           <div class="ts-top">${flags(d.flags, d.country)}<time>${monthYear(d, true)}</time></div>
@@ -301,7 +305,8 @@
           <div class="ts-practice">${SHORT[d.practice]}</div>
           <div class="ts-value${d.value ? '' : ' undisclosed'}">${d.value ? esc(d.value) : 'Undisclosed'}</div>
         </div>
-      </button>`;
+      </${tag}>`;
+    };
 
     function render()
     {
