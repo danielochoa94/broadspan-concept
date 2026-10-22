@@ -13,7 +13,7 @@ STEP = 7
 FIRMS = [
   ('broadspan', 'BroadSpan Capital', 'https://brocap.com/', 'Broadspan-col.png', 2001, [
     ('Miami', 'us', 25.762, -80.192), ('Mexico City', 'mx', 19.433, -99.133), ('Medellín', 'co', 6.244, -75.581),
-    ('Rio de Janeiro', 'br', -22.907, -43.173), ('São Paulo', 'br', -23.551, -46.633)]),
+    ('Caracas', 've', 10.481, -66.904), ('Rio de Janeiro', 'br', -22.907, -43.173), ('São Paulo', 'br', -23.551, -46.633)]),
   ('aurignac', 'Aurignac Finance', 'https://aurfi.com/', 'Aurignac-col.png', 2004, [('Paris', 'fr', 48.857, 2.352)]),
   ('bacp', 'Buenos Aires Capital Partners', 'https://www.bacp.com.ar/', 'BACP-monotrim-dresner25.png', 1991, [
     ('Buenos Aires', 'ar', -34.604, -58.382)]),
