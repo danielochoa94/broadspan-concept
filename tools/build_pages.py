@@ -3,8 +3,8 @@ import os, re
 
 BASE_URL = 'https://danielochoa94.github.io/broadspan-concept/'
 
-NAV = [('firm.html', 'Who We Are'), ('transactions.html', 'Transactions'), ('alliance.html', 'Mergers Alliance'),
-       ('news.html', 'News')]
+NAV = [('firm.html', 'Who We Are'), ('what-we-do.html', 'What We Do'), ('transactions.html', 'Experience'),
+       ('alliance.html', 'Mergers Alliance'), ('news.html', 'News'), ('contact.html', 'Contact')]
 
 LAYOUT = """<!DOCTYPE html>
 <html lang="en">
@@ -38,7 +38,6 @@ LAYOUT = """<!DOCTYPE html>
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
     <nav class="nav" id="nav">
 {nav}
-      <a href="index.html#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -54,7 +53,7 @@ LAYOUT = """<!DOCTYPE html>
     </div>
     <div class="footer-col">
       <h4>Offices</h4>
-      <p>Miami</p><p>Mexico City</p><p>Medellín</p><p>Rio de Janeiro</p><p>São Paulo</p>
+      <p>Miami</p><p>Mexico City</p><p>Medellín</p><p>Caracas</p><p>Rio de Janeiro</p><p>São Paulo</p>
     </div>
     <div class="footer-col">
       <h4>Contact</h4>

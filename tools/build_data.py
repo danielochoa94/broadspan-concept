@@ -149,8 +149,8 @@ LOGO_OVERRIDE = {
   'Banco Sabadell': 'sabadell', 'Nortel Networks': 'nortel', 'SNC Lavalin': 'snc-lavalin',
   "The Grenada Creditor's Committee": 'grenada', 'Grenada Creditors Committee': 'grenada',
 }
-# Hand-edited artwork kept in the repo, outside the logos folder this script rebuilds.
-TRACKED_LOGOS = {'Bancolombia': 'assets/img/deals/logos/bancolombia.svg'}
+# Sharper artwork kept in the repo, outside the logos folder this script rebuilds: deal name -> path under site/.
+TRACKED_LOGOS = dict(line.rstrip('\n').split('\t') for line in open('tools/logos.tsv', encoding='utf-8') if line.strip())
 RASTERIZE = {'ecuador', 'buenos-aires', 'cordoba', 'puerto-rico', 'belize', 'grenada'}
 
 # brocap.com "logos" that are only typed names; rendered as text instead.
@@ -323,8 +323,10 @@ def news():
   return out
 
 
-RANK = ['Chairman', 'Senior Managing Director', 'Managing Director', 'Board Member', 'Director', 'Vice President',
-        'Associate', 'Analyst', 'Senior Advisor']
+RANK = ['Chairman', 'Senior Managing Director', 'Managing Director', 'Board Member', 'Senior Advisor', 'Director',
+        'Vice President', 'Associate', 'Analyst']
+# Headshots sourced outside brocap.com, kept in the repo; they win over the scraped staff photos.
+TRACKED_PHOTOS = 'assets/img/team-photos'
 EXEC_COMMITTEE = {'Michael L. Gerrard', 'Leonardo Antunes', 'Noah Kessler'}
 BOARD = EXEC_COMMITTEE | {'Gonzalo Valdes-Fauli', 'Timothy Davis'}
 
@@ -334,10 +336,12 @@ def team():
   os.makedirs('site/assets/img/team', exist_ok=True)
   for p in json.load(open('ref/team.json')):
     img = None
-    if p['img']:
+    ascii_name = unicodedata.normalize('NFKD', p['name']).encode('ascii', 'ignore').decode()
+    slug = re.sub(r'[^a-z]+', '-', ascii_name.lower()).strip('-')
+    if os.path.exists(f'site/{TRACKED_PHOTOS}/{slug}.jpg'):
+      img = f'{TRACKED_PHOTOS}/{slug}.jpg'
+    elif p['img']:
       src = 'ref/img/staff/' + os.path.basename(p['img'])
-      ascii_name = unicodedata.normalize('NFKD', p['name']).encode('ascii', 'ignore').decode()
-      slug = re.sub(r'[^a-z]+', '-', ascii_name.lower()).strip('-')
       img = f'assets/img/team/{slug}{os.path.splitext(src)[1]}'
       shutil.copy(src, 'site/' + img)
     name = p['name'].replace('Vinicius Días', 'Vinicius Dias')
@@ -346,7 +350,8 @@ def team():
       'name': name, 'title': p['title'], 'img': img, 'languages': p['languages'],
       'bio': [b.replace('Broadspan', 'BroadSpan') for b in p['bio']], 'group': group, 'exec': p['name'] in EXEC_COMMITTEE,
     })
-  out.sort(key=lambda p: (['board', 'team', 'advisors'].index(p['group']), RANK.index(p['title']), p['name'].split()[-1]))
+  # The board leads; everyone else is ordered by seniority so senior advisors sit above directors and analysts.
+  out.sort(key=lambda p: (p['group'] != 'board', RANK.index(p['title']), p['name'].split()[-1]))
   return out
 
 

@@ -139,6 +139,10 @@
   {
     el.textContent = `${B.deals.filter((d) => d.practice === el.dataset.count).length} transactions`;
   });
+  document.querySelectorAll('[data-tally]').forEach((el) =>
+  {
+    el.textContent = B.deals.filter((d) => d.practice === el.dataset.tally).length;
+  });
 
   const page = document.body.dataset.page;
 
@@ -313,6 +317,26 @@
       const el = e.target.closest('[data-firm]');
       highlight(el && el.dataset.firm);
     }));
+  }
+
+  if (page === 'contact')
+  {
+    const form = $('#contact-form');
+    const interest = $('#interest');
+    const requested = new URLSearchParams(location.search).get('interest');
+    if ([...interest.options].some((o) => o.value === requested))
+    {
+      interest.value = requested;
+    }
+    // Preview only: no form backend is wired up yet, so submissions just show the confirmation.
+    form.addEventListener('submit', (e) =>
+    {
+      e.preventDefault();
+      form.hidden = true;
+      const message = $('#form-message');
+      message.textContent = 'Thank you. A member of our team will be in touch shortly.';
+      message.hidden = false;
+    });
   }
 
   if (page === 'transactions')
