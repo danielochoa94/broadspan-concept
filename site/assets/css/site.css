@@ -17,6 +17,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header) + 16px); }
 body { margin: 0; font-family: var(--sans); font-size: 17px; line-height: 1.6; color: var(--ink); background: var(--white); -webkit-font-smoothing: antialiased; }
 img, video { display: block; max-width: 100%; }

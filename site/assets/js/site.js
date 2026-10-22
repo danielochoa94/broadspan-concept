@@ -1,16 +1,6 @@
 (function ()
 {
-  const B = window.BSC;
-  const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
-    'November', 'December'];
-  const SHORT = { ma: 'M&A', restructuring: 'Restructuring', placements: 'Capital Raising', valuations: 'Valuation' };
-
   const $ = (sel, root = document) => root.querySelector(sel);
-  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
-  const initials = (name) => name.split(' ').filter((w) => /^[A-ZÁÉÍÓÚ]/.test(w)).map((w) => w[0]).slice(0, 2).join('');
-  const monthYear = (o, short) => o.year ? `${o.month ? MONTHS[o.month - 1].slice(0, short ? 3 : 99) + ' ' : ''}${o.year}` : '';
-  const newsHref = (n) => n.page ? `href="${n.page}"` : `href="${n.pdf}" target="_blank" rel="noopener"`;
-  const flags = (codes, country) => `<span class="flagged">${codes.map((c) => `<img class="flag" src="assets/img/flags/${c}.svg" alt="" width="22" height="17">`).join('')}<span>${esc(country || '')}</span></span>`;
 
   // Nav
   const header = $('.site-header');
@@ -50,98 +40,13 @@
     }
   });
 
-  function avatar(p)
-  {
-    return `<span class="avatar">${p.img ? `<img src="${p.img}" alt="" width="190" height="190">` : `<span class="initials">${initials(p.name)}</span>`}</span>`;
-  }
-
   document.addEventListener('click', (e) =>
   {
-    const btn = e.target.closest('[data-person]');
-    if (!btn)
+    const b = e.target.closest('[data-deal], [data-person]');
+    if (b)
     {
-      return;
+      openModal($(b.dataset.deal ? `#deal-${b.dataset.deal}` : `#bio-${b.dataset.person}`).innerHTML);
     }
-    const p = B.team.find((x) => x.name === btn.dataset.person);
-    openModal(`
-      <div class="bio-head">${avatar(p)}<div><h2>${esc(p.name)}</h2><p>${esc(p.title)}${p.exec ? ' · Executive Committee' : ''}</p></div></div>
-      <div class="copy">${p.bio.map((b) => `<p>${esc(b)}</p>`).join('')}</div>
-      ${p.languages ? `<p class="modal-meta">Languages: ${esc(p.languages)}</p>` : ''}`);
-  });
-
-  function dealDesc(d)
-  {
-    if (d.desc)
-    {
-      return d.desc;
-    }
-    return d.practice === 'valuations' ? `Valuation and fairness opinion advisory${d.client && d.client !== d.name ? ' for ' + d.client : ''}.` : '';
-  }
-
-  function logoBlock(d)
-  {
-    return d.logo ? `<img src="${d.logo}" alt="${esc(d.name)}" loading="lazy">` : `<span class="wordlogo">${esc(d.name)}</span>`;
-  }
-
-  function dealCard(d)
-  {
-    return `
-      <button class="ts" type="button" data-deal="${d.id}">
-        <div class="ts-logo">${logoBlock(d)}</div>
-        <div class="ts-body">
-          <div class="ts-top">${flags(d.flags, d.country)}<time>${monthYear(d, true)}</time></div>
-          <h3 class="ts-name">${esc(d.name)}</h3>
-          <div class="ts-practice">${SHORT[d.practice]}</div>
-          <div class="ts-value${d.value ? '' : ' undisclosed'}">${d.value ? esc(d.value) : 'Undisclosed'}</div>
-        </div>
-      </button>`;
-  }
-
-  document.addEventListener('click', (e) =>
-  {
-    const b = e.target.closest('[data-deal]');
-    if (!b)
-    {
-      return;
-    }
-    const d = B.deals.find((x) => x.id === b.dataset.deal);
-    openModal(`
-      <div class="deal-modal">
-        <div class="deal-modal-logo">${logoBlock(d)}</div>
-        <h2>${esc(d.name)}</h2>
-        <dl class="facts">
-          <div><dt>Practice</dt><dd>${esc(B.practices[d.practice])}</dd></div>
-          <div><dt>Country</dt><dd>${d.flags.length ? flags(d.flags, d.country) : esc(d.country || '—')}</dd></div>
-          <div><dt>Completed</dt><dd>${monthYear(d) || '—'}</dd></div>
-          <div><dt>Value</dt><dd>${esc(d.value || 'Undisclosed')}</dd></div>
-        </dl>
-        <div class="copy"><p>${esc(dealDesc(d))}</p></div>
-        ${d.client && d.client !== d.name ? `<p class="modal-meta">Client: ${esc(d.client)}</p>` : ''}
-        ${d.page ? `<a class="more" href="${d.page}">View full transaction <span class="chev"></span></a>` : ''}
-      </div>`);
-  });
-
-  document.querySelectorAll('[data-deals]').forEach((el) =>
-  {
-    el.innerHTML = el.dataset.deals.split(' ').map((id) => dealCard(B.deals.find((d) => d.id === id))).join('');
-  });
-
-  // Stats and counts
-  document.querySelectorAll('[data-stat]').forEach((el) =>
-  {
-    el.textContent = B.stats[el.dataset.stat];
-  });
-  document.querySelectorAll('[data-count-sovereign]').forEach((el) =>
-  {
-    el.textContent = B.deals.filter((d) => d.practice === 'restructuring' && d.sector === 'Sovereign & Public').length;
-  });
-  document.querySelectorAll('[data-count]').forEach((el) =>
-  {
-    el.textContent = `${B.deals.filter((d) => d.practice === el.dataset.count).length} transactions`;
-  });
-  document.querySelectorAll('[data-tally]').forEach((el) =>
-  {
-    el.textContent = B.deals.filter((d) => d.practice === el.dataset.tally).length;
   });
 
   const page = document.body.dataset.page;
@@ -176,26 +81,14 @@
     };
     requestAnimationFrame(tick);
 
-    $('#latest-news').innerHTML = B.news.slice(0, 3).map((n) => `
-      <a class="news-item" ${newsHref(n)}><h3>${esc(n.title)}</h3><time>${monthYear(n)}</time></a>`).join('');
-
-    // Featured carousel
     const slides = $('#slides');
     const dots = $('#dots');
-    slides.innerHTML = B.featured.map((f, i) => `
-      <div class="slide${i ? '' : ' active'}" role="tabpanel" aria-hidden="${i ? 'true' : 'false'}">
-        <div class="logo"><img src="${f.logo}" alt="${esc(f.name)}"></div>
-        <p class="line1">${f.page ? `<a href="${f.page}">${esc(f.line1)} <span class="chev"></span></a>` : esc(f.line1)}</p>
-        <p class="line2">${esc(f.line2)}</p>
-        <p class="role"><span>${esc(f.role)}</span><span class="sep"></span><span>${esc(f.value || f.year)}</span></p>
-        <p class="where">${flags(f.flags, f.country)}</p>
-      </div>`).join('');
-    dots.innerHTML = B.featured.map((f, i) => `<button type="button" role="tab" aria-label="${esc(f.name)}" aria-current="${!i}"></button>`).join('');
+    const count = slides.children.length;
     let current = 0;
     let timer;
     const show = (i) =>
     {
-      current = (i + B.featured.length) % B.featured.length;
+      current = (i + count) % count;
       [...slides.children].forEach((s, k) =>
       {
         s.classList.toggle('active', k === current);
@@ -231,81 +124,28 @@
     slides.parentElement.addEventListener('mouseenter', () => clearInterval(timer));
     slides.parentElement.addEventListener('mouseleave', start);
     start();
-
-    const people = [...B.team.filter((p) => p.group === 'board'), B.team.find((p) => p.name === 'Luis Camarena')];
-    $('#leadership').innerHTML = people.map((p) => `
-      <button class="mini" type="button" data-person="${esc(p.name)}">${avatar(p)}<span class="n">${esc(p.name)}</span><span class="t">${esc(p.title)}</span></button>`).join('');
   }
 
   if (page === 'firm')
   {
-    const GROUPS = [['all', 'All'], ['board', 'Board of Managers'], ['team', 'Investment Banking & Restructuring'], ['advisors', 'Senior Advisors']];
     const tabs = $('#team-tabs');
-    let group = 'all';
-    tabs.innerHTML = GROUPS.map(([k, label]) => `<button type="button" data-group="${k}">${label}<span>${k === 'all' ? B.team.length : B.team.filter((p) => p.group === k).length}</span></button>`).join('');
-    const render = () =>
-    {
-      tabs.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', b.dataset.group === group));
-      $('#team-grid').innerHTML = B.team.filter((p) => group === 'all' || p.group === group).map((p) => `
-        <button class="person" type="button" data-person="${esc(p.name)}">
-          ${avatar(p)}<span class="n">${esc(p.name)}</span><span class="t">${esc(p.title)}</span>
-          ${p.exec ? '<span class="ec">Executive Committee</span>' : ''}
-          <span class="more">View Bio <span class="chev"></span></span>
-        </button>`).join('');
-    };
     tabs.addEventListener('click', (e) =>
     {
       const b = e.target.closest('button');
-      if (b)
+      if (!b)
       {
-        group = b.dataset.group;
-        render();
+        return;
       }
+      tabs.querySelectorAll('button').forEach((t) => t.setAttribute('aria-pressed', t === b));
+      document.querySelectorAll('#team-grid .person').forEach((p) =>
+      {
+        p.hidden = b.dataset.group !== 'all' && p.dataset.group !== b.dataset.group;
+      });
     });
-    render();
-  }
-
-  if (page === 'news')
-  {
-    const years = [...new Set(B.news.map((n) => n.year))];
-    $('#news').innerHTML = years.map((y) => `<h2 class="year">${y}</h2>` + B.news.filter((n) => n.year === y).map((n) => `
-      <a class="news-row" ${newsHref(n)}>
-        <time>${monthYear(n, true)}</time><h3>${esc(n.title)}</h3><span class="chev"></span><p>${esc(n.summary)}</p>
-      </a>`).join('')).join('');
-    $('#research').innerHTML = B.research.map((r) => `
-      <div class="research-card"><h3>${esc(r.sector)}</h3>
-        ${r.items.map((i) => `<a href="${i.pdf}" target="_blank" rel="noopener">${esc(i.title)}<span>${i.date || 'PDF'}</span></a>`).join('')}
-      </div>`).join('');
   }
 
   if (page === 'alliance')
   {
-    const A = window.ALLIANCE;
-    document.querySelectorAll('[data-alliance]').forEach((el) =>
-    {
-      el.textContent = A.stats[el.dataset.alliance];
-    });
-
-    // Partner pins first so BroadSpan's sit on top where offices overlap (Miami and Fort Lauderdale)
-    const ordered = [...A.firms.slice(1), A.firms[0]];
-    $('#pins').innerHTML = ordered.map((f) => f.offices.map((o) => `
-      <button class="pin${f.slug === 'broadspan' ? ' own' : ''}" type="button" data-firm="${f.slug}" style="left:${o.x}%;top:${o.y}%" aria-label="${esc(f.name)}, ${esc(o.city)}">
-        <span class="tip"><b>${esc(o.city)}</b>${esc(f.name)}</span>
-      </button>`).join('')).join('');
-
-    $('#members').innerHTML = A.firms.map((f) =>
-    {
-      const codes = [...new Set(f.offices.map((o) => o.flag))];
-      const body = `
-        <span class="member-logo"><img src="${f.logo}" alt="${esc(f.name)}" loading="lazy"></span>
-        <span class="member-name">${esc(f.name)}</span>
-        <span class="member-flags">${codes.map((c) => `<img class="flag" src="assets/img/flags/${c}.svg" alt="" width="22" height="17">`).join('')}</span>
-        <span class="member-cities">${f.offices.map((o) => esc(o.city)).join(' · ')}</span>
-        <span class="member-est">Est. ${f.est}</span>`;
-      const cls = `member${f.slug === 'broadspan' ? ' own' : ''}`;
-      return f.url ? `<a class="${cls}" data-firm="${f.slug}" href="${f.url}" target="_blank" rel="noopener">${body}</a>` : `<div class="${cls}" data-firm="${f.slug}">${body}</div>`;
-    }).join('');
-
     const world = $('.world');
     const highlight = (slug) =>
     {
@@ -345,33 +185,34 @@
     const params = new URLSearchParams(location.search);
     const state = { practice: params.get('practice') || 'all', region: '', sector: '', q: '', shown: PAGE };
     const tabs = $('#practice-filter');
-    tabs.innerHTML = ['all', ...Object.keys(B.practices)].map((k) =>
+    const cards = [...$('#deals').children].map((el) =>
     {
-      const n = k === 'all' ? B.deals.length : B.deals.filter((d) => d.practice === k).length;
-      return `<button type="button" data-practice="${k}">${k === 'all' ? 'All' : B.practices[k]}<span>${n}</span></button>`;
-    }).join('');
-    $('#region-filter').insertAdjacentHTML('beforeend', B.regions.filter((r) => B.deals.some((d) => d.region === r)).map((r) => `<option>${r}</option>`).join(''));
-    $('#sector-filter').insertAdjacentHTML('beforeend', B.sectors.filter((s) => B.deals.some((d) => d.sector === s)).map((s) => `<option>${s}</option>`).join(''));
+      const detail = $(`#deal-${el.dataset.deal}`);
+      const text = [$('.ts-name', el), $('.flagged', el), $('.copy', detail), $('.modal-meta', detail)]
+        .map((n) => n ? n.textContent : '').join(' ').toLowerCase();
+      return { el, text };
+    });
 
-    const matches = (d) =>
-      (state.practice === 'all' || d.practice === state.practice) &&
-      (!state.region || d.region === state.region) &&
-      (!state.sector || d.sector === state.sector) &&
-      (!state.q || `${d.name} ${d.client} ${d.country} ${d.desc}`.toLowerCase().includes(state.q));
-
-    let list = [];
+    const matches = ({ el, text }) =>
+      (state.practice === 'all' || el.dataset.practice === state.practice) &&
+      (!state.region || el.dataset.region === state.region) &&
+      (!state.sector || el.dataset.sector === state.sector) &&
+      (!state.q || text.includes(state.q));
 
     function render()
     {
       tabs.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', b.dataset.practice === state.practice));
       const active = tabs.querySelector('[aria-pressed="true"]');
       tabs.scrollTo({ left: Math.max(0, active.offsetLeft - 24), behavior: 'smooth' });
-      list = B.deals.filter(matches);
-      $('#deals').innerHTML = list.slice(0, state.shown).map(dealCard).join('');
-      $('#empty').hidden = list.length > 0;
-      $('#result-count').textContent = `${list.length} transaction${list.length === 1 ? '' : 's'}`;
+      let total = 0;
+      cards.forEach((c) =>
+      {
+        c.el.hidden = !matches(c) || ++total > state.shown;
+      });
+      $('#empty').hidden = total > 0;
+      $('#result-count').textContent = `${total} transaction${total === 1 ? '' : 's'}`;
       $('#reset').hidden = state.practice === 'all' && !state.region && !state.sector && !state.q;
-      $('#more').hidden = list.length <= state.shown;
+      $('#more').hidden = total <= state.shown;
     }
 
     const update = (patch) =>

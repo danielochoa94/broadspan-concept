@@ -1,0 +1,565 @@
+# BroadSpan Capital
+
+> BroadSpan Capital is an independent investment bank specializing in Latin America and the Caribbean. Founded in 2001 and headquartered in Miami, it advises corporations, partnerships and governments on cross-border mergers and acquisitions, financial restructurings, capital raising, and valuations and fairness opinions.
+
+## Offices
+
+- Miami, United States: 1441 Brickell Ave, Suite 1550, FL 33131
+- Mexico City, Mexico: Pedregal 24, Piso 3, Col. Lomas Virreyes, 11040
+- Medellín, Colombia: Carrera 43a #1-50, Torre Protección, 6th Floor, Office 652
+- Caracas, Venezuela
+- Rio de Janeiro, Brazil: Avenida das Américas 3434, Bloco 4, Sala 406
+- São Paulo, Brazil
+
+Contact: info@brocap.com
+
+## Transactions
+
+### Mergers & Acquisitions
+
+- **Latin American Agribusiness Development Corp.** (Mergers & Acquisitions, United States, April 2026, Undisclosed value). BroadSpan Capital acted as exclusive financial advisor to DEG on the sale of its equity stake in Latin American Agribusiness Development Corp. (“LAAD”). Client: Deutsche Investitions- und Entwicklungsgesellschaft (“DEG”).
+- **Boa Praça** (Mergers & Acquisitions, Brazil, December 2024, Undisclosed value). BroadSpan Capital acted as exclusive financial advisor to Grupo Boa Praça and its shareholders in the sale of its ship supply operations to Wrist Ship Supply. Client: Grupo Boa Praça. Details: https://danielochoa94.github.io/broadspan-concept/deal-boa-praca.html
+- **Grupo Imsa** (Mergers & Acquisitions, Brazil, June 2024, Undisclosed value). BroadSpan Capital, in a joint effort with its Peruvian partner, EFIC Partners, acted as financial advisor to Grupo IMSA and its shareholders on the sale of 50% of the outstanding shares of Nova Scott Especialidades Quimicas Limitada to Scott Bader Brazil Ltd. Client: Grupo IMSA. Details: https://danielochoa94.github.io/broadspan-concept/deal-grupo-imsa.html
+- **Agencias Universales S.A. (“AGS”)** (Mergers & Acquisitions, United States, February 2024, Undisclosed value). BroadSpan Capital acted as exclusive financial advisor to Agencias Universales S.A. (“AGS”) and its shareholders on the acquisition of 55% of the outstanding shares of Omni Transloading & Logistics and Omni Bulk Services, Inc. (“Omni”). Details: https://danielochoa94.github.io/broadspan-concept/deal-ags-omni.html
+- **Agencias Universales S.A. (“AGS”)** (Mergers & Acquisitions, United States, February 2024, Undisclosed value). BroadSpan Capital acted as exclusive financial advisor to Agencias Universales S.A. (“AGS”) and its shareholders on the acquisition of 70% of the outstanding shares of A.R. Savage & Son (“A.R. Savage”). Details: https://danielochoa94.github.io/broadspan-concept/deal-ags-ar-savage.html
+- **Grupo Vargas** (Mergers & Acquisitions, El Salvador, December 2023, Undisclosed value). BroadSpan Capital acted as exclusive financial advisor to Grupo Vargas and its shareholders on the sale of 100% of the outstanding shares of Laboratorios Arsal, S.A. (“Arsal”) to Calox de Costa Rica, S.A. (“Calox”). Details: https://danielochoa94.github.io/broadspan-concept/deal-arsal.html
+- **Crédito Real USA Finance** (Mergers & Acquisitions, United States, April 2023, Undisclosed value). BroadSpan Capital acted as exclusive financial advisor to Bepensa, S.A. de C.V. (“Bepensa”) in the acquisition of 97.6% of the outstanding shares of Credito Real USA Finance (“Crusafin”), which were sold by Credito Real SAB de CV SOFOM ENR (“Credito Real”). Client: Bepensa. Details: https://danielochoa94.github.io/broadspan-concept/deal-bepensa.html
+- **Plimsoll** (Mergers & Acquisitions, Brazil, April 2023, Undisclosed value). Plimsoll has sold 100% of its shares to Ambipar. BroadSpan acted as exclusive financial advisor to Plimsoll.
+- **EOG Resources** (Mergers & Acquisitions, Trinidad & Tobago, February 2023, Undisclosed value). BroadSpan Capital acted as financial advisor to EOG in the sale of their equity interests in two ammonia plants located in the Caribbean. BroadSpan executed the transaction in a joint effort with its United Kingdom based partner, Opus Corporate Finance. Client: EOG Resources (“EOG”).
+- **Agencias Universales** (Mergers & Acquisitions, United States, February 2023, Undisclosed value). AGUNSA acquired 75% of the outstanding shares of Carver Maritime Manatee. BroadSpan acted as exclusive financial advisor to AGUNSA. Client: Agencias Universales S.A. ("AGUNSA"). Details: https://danielochoa94.github.io/broadspan-concept/deal-agunsa-carver.html
+- **Colonial Fire & General Insurance (COLFIRE)** (Mergers & Acquisitions, Trinidad & Tobago, February 2023, Undisclosed value). BroadSpan Capital acted as exclusive financial advisor to the court-appointed liquidators of CL Financial Limited in the sale of 94.24% of the outstanding shares of Colonial Fire & General Insurance Company Limited (“COLFIRE”). Client: Court-Appointed Liquidators. Details: https://danielochoa94.github.io/broadspan-concept/deal-colfire.html
+- **Banco di Caribe** (Mergers & Acquisitions, Curaçao, June 2022, Undisclosed value). BroadSpan Capital acted as exclusive financial advisor to the Central Bank of Curacao and Sint Maarten in the sale of 100% of the outstanding shares of Banco di Caribe, which were sold by Ennia Caribe Holding NV. Client: Central Bank of Curacao and Sint Maarten. Details: https://danielochoa94.github.io/broadspan-concept/deal-banco-di-caribe.html
+- **Servicarga** (Mergers & Acquisitions, Brazil, March 2022, Undisclosed value). Servicarga Brazil sold 100% of its shares to VIX Logistica. BroadSpan acted as exclusive financial advisor to Servicarga Brazil. Details: https://danielochoa94.github.io/broadspan-concept/deal-servicarga.html
+- **Milfra** (Mergers & Acquisitions, Brazil, July 2021, Undisclosed value). Milfra has sold 100% of its shares to Nemera. BroadSpan acted as exclusive financial advisor to Milfra. Details: https://danielochoa94.github.io/broadspan-concept/deal-milfra.html
+- **Oceanpact** (Mergers & Acquisitions, Brazil, June 2021, Undisclosed value). Oceanpact has acquired 100% of the outstanding shares of UP Offshore. BroadSpan acted as exclusive financial advisor to Oceanpact.
+- **Seal Telecom** (Mergers & Acquisitions, Brazil, April 2021, Undisclosed value). Seal Telecom has sold 100% of its shares to Convergint Technologies. BroadSpan acted as exclusive financial advisor to Seal Telecom (Brazil). Details: https://danielochoa94.github.io/broadspan-concept/deal-seal-telecom.html
+- **ANSA McAL** (Mergers & Acquisitions, Trinidad & Tobago, March 2021, Undisclosed value). Ansa McAl has acquired 100% of the outstanding shares of Bank of Baroda (Trinidad & Tobago). BroadSpan acted as exclusive financial advisor to ANSA McAL. Client: Ansa McAl. Details: https://danielochoa94.github.io/broadspan-concept/deal-ansa-mcal.html
+- **Compufour** (Mergers & Acquisitions, Brazil, September 2020, Undisclosed value). Compufour has sold 100% of its shares to Zucchetti Group. BroadSpan acted as exclusive financial advisor to Compufour.
+- **Bancaribe** (Mergers & Acquisitions, Puerto Rico, July 2020, Undisclosed value). ARCA International Bank has sold 100% of its shares to Bancaribe. BroadSpan acted as exclusive financial advisor to Bancaribe.
+- **PSB Bank N.V** (Mergers & Acquisitions, Curaçao, June 2020, Undisclosed value). PSB Bank has sold 100% of its shares to APC (Algemeen Pensioonfonds Van Curaçao). BroadSpan acted as exclusive financial advisor to PSB Bank.
+- **Kohler Co.** (Mergers & Acquisitions, Brazil, December 2019, Undisclosed value). Kohler Co. has sold 100% of its equity of Maquigeral. BroadSpan acted as exclusive financial advisor to Kohler Co.
+- **UniCuritiba** (Mergers & Acquisitions, Brazil, December 2019, Undisclosed value). Unicuritiba has sold 100% of its shares to Ânima Educação. BroadSpan acted as exclusive financial advisor to Unicuritiba. Client: Unicuritiba.
+- **FIP Dolomitas and NI* Ventures** (Mergers & Acquisitions, Brazil, December 2019, Undisclosed value). FIP Dolomitas and NI* Ventures have sold 20% equity of AGE S.A. (indigo Brasil) to the Indigo Group. BroadSpan acted as exclusive financial advisor to FIP Dolomitas and NI* Ventures.
+- **United Telecommunication Services (UTS)** (Mergers & Acquisitions, Curaçao, March 2019, US$189.3 million). Liberty Latin America has acquired United Telecommunication Services. BroadSpan acted as exclusive financial advisor to UTS.
+- **Grupo Cortel** (Mergers & Acquisitions, Brazil, September 2018, Undisclosed value). Grupo Cortel has sold a 40% stake to Zion Capital S.A. BroadSpan acted as exclusive financial advisor to Grupo Cortel.
+- **Delivery Center** (Mergers & Acquisitions, Brazil, May 2018, Undisclosed value). BroadSpan Capital acted as exclusive financial advisor to Delivery Center.
+- **Banco BCT S.A.** (Mergers & Acquisitions, Costa Rica, October 2017, Undisclosed value). Banco BCT has acquired 100% of the shares of Balboa Bank and Trust. BroadSpan Capital acted as exclusive financial advisor to Banco BCT.
+- **Guardian Group** (Mergers & Acquisitions, Trinidad & Tobago, September 2016, Undisclosed value). Guardian Group has acquired 100% of the shares of Caribe Hospitality of Trinidad and Tobago Limited from the Caribbean Property Group. BroadSpan Capital acted as exclusive financial advisor to Guardian Group for this transaction.
+- **Global Packaging Group** (Mergers & Acquisitions, El Salvador, August 2016, Undisclosed value). Global Packaging Group has acquired 100% of the shares of Cartonesa, SA. BroadSpan Capital acted as exclusive financial advisor to Global Packaging Group for this transaction.
+- **Koch Metalúrgica** (Mergers & Acquisitions, Brazil, August 2016, Undisclosed value). BroadSpan Capital acted as the exclusive financial advisor to Koch Metalúrgica during the sale of its 100% stake in the Dreggen-Koch Consortium to Palfinger.
+- **Sandals Resort** (Mergers & Acquisitions, Antigua, June 2016, Undisclosed value). Sandals Resorts sold its interest in Grand Pineapple Beach Antigua to Elite Island Resorts. BroadSpan acted as exclusive financial advisor to Sandals Resorts for this transaction. Client: Sandals Resorts.
+- **Indigo** (Mergers & Acquisitions, Panama, April 2016, Undisclosed value). Advised Indigo in the acquisition of 50% of City Parking Panama. BroadSpan acted as exclusive financial advisor to Indigo for this transaction.
+- **Indigo** (Mergers & Acquisitions, Colombia, March 2016, Undisclosed value). Advised Indigo in the acquisition of 50% of City Parking S.A.S. from Tribeca Asset Management. BroadSpan acted as exclusive financial advisor to Indigo for this transaction.
+- **Apsa - Administração Predial e Negócios Imobiliários S.A.** (Mergers & Acquisitions, Brazil, May 2015, Undisclosed value). Advised Apsa in the acquisition of 100% of Mario Dias' client portfolio. BroadSpan acted as exclusive financial advisor to Apsa for this transaction.
+- **SNC Lavalin** (Mergers & Acquisitions, Brazil, December 2014, Undisclosed value). Advised SNC Lavalin on the sale of its Brazilian subsidiary to a group of executives.
+- **National Commercial Bank of Jamaica** (Mergers & Acquisitions, Jamaica, September 2014, US$26.7 million). National Commercial Bank of Jamaica sold its 32.6% stake in Kingston Wharves Limited to Seaboard Corporation and Jamaica Producers. BroadSpan acted as exclusive financial advisor to NCB for this transaction.
+- **Almond Resorts Inc.** (Mergers & Acquisitions, Barbados, February 2014, US$53 million). Almond sold its interest in Almond Beach Village Hotel to Barbados Tourism Investment. BroadSpan acted as exclusive financial advisor to Almond Resorts for this transaction.
+- **RJ Consultores** (Mergers & Acquisitions, Brazil, January 2014, R$16.5 million). RJ Consultores sold a 60% stake to Bematech. BroadSpan acted as exclusive financial advisor to RJ Consultores for this transaction.
+- **Neal & Massy Holdings** (Mergers & Acquisitions, Barbados, December 2013, Undisclosed value). Almond Resorts sold its interest in Almond Casuarina Beach Resort to Sandals Resorts International. BroadSpan acted as exclusive financial advisor to Almond Resorts for this transaction.
+- **Moving Estacionamentos** (Mergers & Acquisitions, Brazil, July 2013, Undisclosed value). Moving sold a 50% equity stake to Vinci Park. BroadSpan acted as exclusive financial advisor to Moving Estacionamentos for this transaction.
+- **Guardian Holdings Limited** (Mergers & Acquisitions, Trinidad & Tobago, April 2013, US$18 million). GHL acquired 100% of RSA (Antilles) N.V. from RSA Group. BroadSpan acted as exclusive financial advisor to GHL for this transaction.
+- **Guardian Holdings Limited** (Mergers & Acquisitions, Trinidad & Tobago, September 2012, Undisclosed value). GHL acquired Globe Insurance Company of Jamaica Ltd from Lascelles de Mercado. BroadSpan acted as exclusive financial advisor to GHL.
+- **Almond Resorts Inc.** (Mergers & Acquisitions, Barbados, July 2012, Undisclosed value). Almond Resorts sold its interest in Almond Beach Club to Elite Island Resorts. BroadSpan acted as exclusive financial advisor to Almond Resorts for this transaction.
+- **Battistella Distribuidora** (Mergers & Acquisitions, Brazil, February 2012, Undisclosed value). Battistella Distribuidora sold a 100% stake to Kohler. BroadSpan Capital acted as exclusive financial advisor to Battistella Distribuidora for this transaction.
+- **CMNet** (Mergers & Acquisitions, Brazil, February 2012, Undisclosed value). CMNet sold a 49% stake to Bematech. BroadSpan Capital acted as financial advisor to CMNet for this transaction.
+- **Almond Resorts Inc.** (Mergers & Acquisitions, St. Lucia, December 2011, Undisclosed value). Almond Resorts sold its interest in Almond Morgan Bay Hotel to Elite Island Resorts. BroadSpan acted as exclusive financial advisor to Almond Resorts for this transaction.
+- **Delcop** (Mergers & Acquisitions, Colombia, June 2011, Undisclosed value). Delcop acquired 100% of Xerox’s operations in Colombia. BroadSpan Capital acted as exclusive advisor to Delcop for this transaction.
+- **Trinidad Cement Limited** (Mergers & Acquisitions, Haiti, April 2011, Undisclosed value). TCL established a joint venture with WIN Group in Haiti. BroadSpan acted as exclusive financial advisor to TCL for this transaction.
+- **Nex Group** (Mergers & Acquisitions, Brazil, March 2011, Undisclosed value). Capa Engenharia, DHZ Engenharia, EGL and Lomando Aita merged to form Nex Group. BroadSpan Capital acted as exclusive advisor to Nex Group for this transaction.
+- **Grupo Nacional de Chocolates** (Mergers & Acquisitions, Colombia, February 2011, Undisclosed value). Grupo Nacional de Chocolates acquired a 73.11% stake in Helados BON in the Dominican Republic. BroadSpan Capital acted as exclusive advisor to Grupo Nacional de Chocolates for this transaction.
+- **Associated Bahamian Distillers and Brewers Limited** (Mergers & Acquisitions, Bahamas, May 2010, Undisclosed value). Associated Bahamian Distillers and Brewers Limited (“ABDAB”) reached an agreement to sell its founding stakes in Commonwealth Brewery Limited, a Bahamian brewery, and Burns House Limited, the largest retail spirits outlet in the Bahamas, to its established operating partner Heineken International. BroadSpan acted as exclusive advisor to ABDAB in this transaction.
+- **RiskControl** (Mergers & Acquisitions, Brazil, February 2010, Undisclosed value). Sale of 100% of RiskControl to Accenture. BroadSpan Capital acted as exclusive advisor to RiskControl for this transaction.
+- **Banco Sabadell** (Mergers & Acquisitions, Spain, January 2010, US$159.5 million). Banco Sabadell acquired 100% of Miami based Mellon United National Bank from BNY Mellon. BroadSpan acted as exclusive financial advisor to Banco Sabadell for this transaction.
+- **Banco Sabadell** (Mergers & Acquisitions, Spain, January 2010, Undisclosed value). Banco Sabadell acquired a 100.0% stake in Mellon United National Bank. BroadSpan Capital acted as exclusive advisor to Banco Sabadell for this transaction.
+- **Gaia Ambiental** (Mergers & Acquisitions, Brazil, October 2009, Undisclosed value). Gaia Ambiental sold a 100% stake to Haztec. BroadSpan Capital acted as exclusive financial advisor to Gaia Ambiental for this transaction.
+- **Grupo Poliobras S.A.** (Mergers & Acquisitions, Colombia, June 2009, Undisclosed value). Poliobras sold a 25% stake in the TermoCol project to Filigrana. BroadSpan Capital acted as exclusive financial advisor Poliobras for this transaction.
+- **CMNet** (Mergers & Acquisitions, Brazil, January 2009, Undisclosed value). CMNet sold a 51% stake to Bematech. BroadSpan Capital acted as exclusive financial advisor CMNet for this transaction.
+- **Medial Saúde S.A.** (Mergers & Acquisitions, Brazil, July 2008, Undisclosed value). Medial Saúde acquired 49% of Grupo Saúde’s capital stock. BroadSpan Capital acted as exclusive advisor to Medial Saúde for this transaction.
+- **Datasul** (Mergers & Acquisitions, Brazil, March 2008, Undisclosed value). Datasul SA acquired a 90% interest in Tools Arquitetura Financeira de Negocios SA, a developer of financial and management software. BroadSpan Capital acted as exclusive advisor to Datasul for this transaction.
+- **Neal & Massy Holdings Limited** (Mergers & Acquisitions, Barbados, February 2008, Undisclosed value). Neal & Massy acquired a 69.2% stake in BS&T. BroadSpan Capital acted as exclusive advisor to Neal & Massy for this transaction.
+- **Caribbean Project Acquisition, LLC** (Mergers & Acquisitions, United States, November 2007, Undisclosed value). Caribbean Project Acquisition, LLC acquired undisclosed media assets. BroadSpan Capital acted as exclusive financial advisor to Caribbean Project Acquisition, LLC for this transaction.
+- **Agripec Quimica e Farmacêutica S.A.** (Mergers & Acquisitions, Brazil, August 2007, Undisclosed value). Nufarm Limited acquired a 50.1% stake in Agripec. BroadSpan Capital acted as exclusive advisor to Agripec for this transaction.
+- **Etell E.S.P.** (Mergers & Acquisitions, Colombia, August 2007, Undisclosed value). ETB acquired a 95.7% stake in Etell. BroadSpan Capital acted as exclusive advisor to Etell for this transaction.
+- **Banco Sabadell** (Mergers & Acquisitions, Spain, May 2007, Undisclosed value). Banco Sabadell acquired 100.0% of TransAtlantic Bank. BroadSpan Capital acted as exclusive financial advisor to Banco Sabadell for this transaction.
+- **Bematech** (Mergers & Acquisitions, Brazil, February 2007, Undisclosed value). Bematech acquired a 49.0% stake in GSR. BroadSpan Capital acted as exclusive advisor to Bematech for this transaction.
+- **Datasul** (Mergers & Acquisitions, Brazil, December 2006, Undisclosed value). Datasul acquired a 100.0% stake in Informerge. BroadSpan Capital acted as exclusive advisor to Datasul for this transaction.
+- **Bematech** (Mergers & Acquisitions, Brazil, November 2006, Undisclosed value). Bematech acquired a 51.0% stake in GSR. BroadSpan Capital acted as exclusive advisor to Bematech for this transaction.
+- **Durametal** (Mergers & Acquisitions, Brazil, September 2006, Undisclosed value). CIE Automotive acquired a 50.0% stake in Durametal. BroadSpan Capital acted as exclusive advisor to Durametal for this transaction.
+- **Agripec Quimica e Farmacêutica S.A** (Mergers & Acquisitions, Brazil, January 2005, Undisclosed value). Nufarm acquired a 49.9% stake in Agripec. BroadSpan Capital acted as exclusive advisor to Agripec for this transaction. Client: Agripec Quimica e Farmacêutica S.A..
+- **Grupo Financiero Nacional** (Mergers & Acquisitions, Dominican Republic, September 2004, Undisclosed value). Grupo Financiero Nacional sold its minority interest in AFP Siembra. BroadSpan Capital acted as exclusive advisor to Grupo Financiero Nacional for this transaction.
+- **Banco Mercantil** (Mergers & Acquisitions, Dominican Republic, November 2003, Undisclosed value). Banco Mercantil acquired selected assets and liabilities from Mercantil D.R. BroadSpan Capital acted as exclusive advisor to Banco Mercantil for this transaction.
+- **eMilios International** (Mergers & Acquisitions, Puerto Rico, April 2002, Undisclosed value). eMilios International established a joint venture with ClearComm LP to support the expansion of eMilios International in Puerto Rico. BroadSpan Capital acted as exclusive advisor to eMilios International for this transaction.
+
+### Financial Restructuring
+
+- **Indura Beach & Golf Resort (Phase I)** (Financial Restructuring, Honduras, November 2025, Undisclosed value). BroadSpan Capital acted as exclusive financial advisor to Indura Beach & Golf Resort in the first phase of its debt restructuring process. Client: Indura.
+- **Bancolombia** (Financial Restructuring, Peru, February 2025, Undisclosed value). BroadSpan Capital acted as exclusive financial advisor to Bancolombia S.A. (“Bancolombia”) in the settlement of the outstanding financial obligations of ATN3 S.A (“ATN3”), a subsidiary of Abengoa Peru. Details: https://danielochoa94.github.io/broadspan-concept/deal-bancolombia.html
+- **Puerto Rico Employees Retirement System** (Financial Restructuring, Puerto Rico, March 2022, US$3 billion). BroadSpan acted as exclusive financial advisor to the UBS Puerto Rico Family of Funds (the “Funds”) with respect to the restructuring of the debt of the Employees Retirement System of the Government of Puerto Rico (“ERS"). Client: Commonwealth of Puerto Rico - ERS. Details: https://danielochoa94.github.io/broadspan-concept/deal-puerto-rico-ers.html
+- **Province of Buenos Aires** (Financial Restructuring, Argentina, September 2021, US$7.2 billion). BroadSpan acted as financial advisor to the bondholders of the Buenos Aires Steering Committee in the restructuring of the Province’s debt. Client: Province of Buenos Aires Bondholder Committee. Details: https://danielochoa94.github.io/broadspan-concept/deal-buenos-aires.html
+- **Province of Córdoba** (Financial Restructuring, Argentina, January 2021, US$1.7 billion). BroadSpan acted as exclusive financial advisor to the Cordoba Steering Committee in the restructuring of the Province’s debt. Client: Province of Cordoba Creditors Committee. Details: https://danielochoa94.github.io/broadspan-concept/deal-cordoba.html
+- **Republic of Ecuador** (Financial Restructuring, Ecuador, August 2020, US$17.4 billion). BroadSpan acted as co-financial advisor to the Ecuador Steering Committee in the restructuring of Ecuador’s sovereign debt. Client: Ecuador Steering Committee. Details: https://danielochoa94.github.io/broadspan-concept/deal-ecuador.html
+- **Belize Creditors Committee** (Financial Restructuring, Belize, August 2020, US$526.5 million). BroadSpan acted as exclusive financial advisor to the Belize Creditors' Committee in modification of terms of Belize’s sovereign debt. Details: https://danielochoa94.github.io/broadspan-concept/deal-belize-2020.html
+- **FMO & DEG** (Financial Restructuring, Costa Rica, June 2020, Undisclosed value). FMO & DEG has restructured its stake in Upala Agricola. BroadSpan acted as exclusive financial advisor to FMO & DEG. Details: https://danielochoa94.github.io/broadspan-concept/deal-fmo-deg.html
+- **Trinidad Petroleum Holdings (Petrotrin)** (Financial Restructuring, Trinidad & Tobago, June 2019, US$570.3 million). BroadSpan acted as exclusive financial advisor to the Creditors’ Committee. Client: Petrotrin Creditors Committee. Details: https://danielochoa94.github.io/broadspan-concept/deal-petrotrin.html
+- **Puerto Rico Sales Tax Financing Corp. (COFINA)** (Financial Restructuring, Puerto Rico, January 2019, Undisclosed value). BroadSpan acted as exclusive financial advisor to the Creditors’ Committee. Client: Commonwealth of Puerto Rico – COFINA. Details: https://danielochoa94.github.io/broadspan-concept/deal-cofina.html
+- **Zurich Insurance Group** (Financial Restructuring, Switzerland, September 2018, Undisclosed value). BroadSpan acted as exclusive financial advisor to the Zurich Insurance Group.
+- **Cap Cana Bondholders Committee** (Financial Restructuring, Dominican Republic, July 2017, US$189.5 million). BroadSpan acted as exclusive financial advisor to the Cap Cana Creditors' Committee in Cap Cana's corporate debt restructuring. Client: Cap Cana Creditors Committee. Details: https://danielochoa94.github.io/broadspan-concept/deal-cap-cana.html
+- **Belize Creditors Committee** (Financial Restructuring, Belize, March 2017, US$526.5 million). BroadSpan acted as exclusive financial advisor to the Belize Creditors' Committee in the restructuring of Belize’s sovereign debt. Details: https://danielochoa94.github.io/broadspan-concept/deal-belize-2017.html
+- **The Grenada Creditor's Committee** (Financial Restructuring, Grenada, November 2015, US$260 million). BroadSpan acted as exclusive financial advisor to the Grenada Creditors' Committee in the restructuring of Grenada's sovereign debt. Details: https://danielochoa94.github.io/broadspan-concept/deal-grenada.html
+- **Corporación Multi Inversiones** (Financial Restructuring, Guatemala, July 2015, Undisclosed value). BroadSpan acted as exclusive financial advisor to Corporación Multi Inversiones.
+- **Steering Group of TOCLUB Bondholders** (Financial Restructuring, Panama, July 2013, US$220 million). BroadSpan acted as exclusive financial advisor to the Steering Group of TOCLUB Bondholders in the restructuring of TOCLUB’s financial debt.
+- **Belize Creditors Committee** (Financial Restructuring, Belize, March 2013, US$584.7 million). BroadSpan acted as exclusive financial advisor to the Belize Creditors' Committee in the restructuring of Belize’s sovereign debt.
+- **Trinidad Cement Limited** (Financial Restructuring, Trinidad, Barbados & Jamaica, May 2012, US$304.3 million). BroadSpan acted as exclusive financial advisor to TCL in the restructuring of its outstanding debt obligations.
+- **St. Kitts & Nevis Creditors Committee** (Financial Restructuring, St. Kitts & Nevis, April 2012, US$136.3 million). BroadSpan acted as exclusive financial advisor to the GSKN Creditors' Committee in the restructuring of St. Kitts’ sovereign debt.
+- **Grupo Financiero Nacional** (Financial Restructuring, Dominican Republic, April 2010, US$740.7 million). BroadSpan acted as exclusive financial advisor to GFN in the restructuring of Tricom’s financial debt. Client: GFN.
+- **Fibria** (Financial Restructuring, Brazil, October 2009, Undisclosed value). BroadSpan acted as exclusive financial advisor to Fibria in the refinancing of restructured debt.
+- **Cap Cana Creditors Committee** (Financial Restructuring, Dominican Republic, May 2009, US$250 million). BroadSpan acted as exclusive financial advisor to the Cap Cana Creditors' Committee in Cap Cana's corporate debt restructuring.
+- **Belize Creditors Committee** (Financial Restructuring, Belize, February 2007, Undisclosed value). 
+- **Grenada Creditors Committee** (Financial Restructuring, Grenada, November 2005, US$276 million). BroadSpan acted as exclusive financial advisor to the Grenada Creditors' Committee in Grenada's sovereign debt restructuring.
+- **Movicom** (Financial Restructuring, Argentina, November 2005, US$488.7 million). BroadSpan acted as exclusive financial advisor to Movicom in its corporate debt restructuring.
+- **Nortel Networks** (Financial Restructuring, Brazil, January 2005, US$220 million). BroadSpan acted as exclusive financial advisor to Nortel in the GVT debt restructuring.
+- **Banco Mercantil** (Financial Restructuring, Dominican Republic, March 2004, US$61 million). BroadSpan acted as exclusive financial advisor to Banco Mercantil in its corporate debt restructuring.
+- **Nortel Networks** (Financial Restructuring, Mexico, June 2003, US$450 million). BroadSpan acted as exclusive financial advisor to Nortel in the Unefon debt restructuring.
+- **TV Cidade** (Financial Restructuring, Brazil, December 2002, Undisclosed value). BroadSpan acted as exclusive financial advisor to TV Cidade on the renegotiation of vendor debt.
+- **Lupatech Creditors' Committee** (Financial Restructuring, Brazil, US$275 million). BroadSpan acted as exclusive financial advisor to the Lupatech Creditors' Committee in the restructuring of Lupatech's perpetual bonds.
+
+### Capital Raising
+
+- **Instacredit** (Capital Raising, Costa Rica, June 2026, Undisclosed value). BroadSpan Capital acted as exclusive financial advisor to Instacredit, one of Central America's leading non-bank lenders, on a successful debt capital raising transaction.
+- **ouronova** (Capital Raising, Brazil, March 2026, Undisclosed value). BroadSpan Capital acted as exclusive financial advisor to ouronova and its shareholders in an equity capital raise with a global investor. Client: OURONOVA. Details: https://danielochoa94.github.io/broadspan-concept/deal-ouronova.html
+- **Delivery Center** (Capital Raising, Brazil, December 2018, Undisclosed value). advised the shareholders of Delivery Center on a Series A capital raise, which involved investors from different industries strategically related to Delivery Center’s operations. Client: Delivery Center – Series A Capital Raise.
+- **Dock Brasil Engenharia e Serviços Ltda.** (Capital Raising, Brazil, December 2018, R$50 million). Senior debt and mezzanine capital raise with The Rohatyn Group. BroadSpan Capital acted as exclusive financial advisor to Dock Brasil.
+- **4all** (Capital Raising, Brazil, September 2017, Undisclosed value). Convertible note (Series A) structuring and placement. BroadSpan Capital acted as exclusive financial advisor to 4all.
+- **White Solder** (Capital Raising, Brazil, February 2016, R$100 million). Equity, convertible debenture and debt raise with undisclosed private equity firm. BroadSpan acted as exclusive financial advisor to White Solder for this transaction.
+- **Provale** (Capital Raising, Brazil, January 2016, R$70 million). Equity and debt raise with undisclosed private equity firm. BroadSpan acted as exclusive financial advisor to Provale for this transaction.
+- **Ocean Pact** (Capital Raising, Brazil, January 2014, Undisclosed value). Equity raise with undisclosed private equity firm. BroadSpan acted as exclusive financial advisor to Ocean Pact for this transaction.
+- **Dock Brasil Engenharia e Servicos Ltda.** (Capital Raising, Brazil, October 2013, Undisclosed value). Equity raise with Mantiq Investimentos Ltda., and Mare Investimentos. BroadSpan acted as exclusive financial advisor to Dock Brasil for this transaction.
+- **Atlantic Energias Renováveis S.A.** (Capital Raising, Brazil, July 2013, Undisclosed value). Bridge Loan to develop the wind farm Eurus II. BroadSpan acted as exclusive financial advisor to Atlantic Energias for this transaction.
+- **Atlantic Energias Renováveis S.A.** (Capital Raising, Brazil, June 2013, Undisclosed value). Bridge Loan to develop the wind farm Renascença V. BroadSpan acted as exclusive financial advisor to Atlantic Energias for this transaction.
+- **Atlantic Energias Renováveis S.A.** (Capital Raising, Brazil, April 2013, Undisclosed value). Bridge Loan for Atlantic Energias Renováveis. BroadSpan acted as exclusive financial advisor to Atlantic Energias for this transaction.
+- **Guardian Holdings Limited** (Capital Raising, Jamaica, December 2012, Undisclosed value). Loan to finance GHL’s acquisition of Globe Insurance in Jamaica. BroadSpan acted as exclusive financial advisor to GHL for this transaction.
+- **Atlantic Energias Renováveis** (Capital Raising, Brazil, August 2011, Undisclosed value). Holding Company Bridge Loan comprised of CCBs and debentures to develop the wind farms Eurus II and Renascença V. BroadSpan Capital acted as advisor to AER for this transaction.
+- **Livraria Cultura** (Capital Raising, Brazil, January 2009, Undisclosed value). 
+- **EGE Haina** (Capital Raising, Dominican Republic, December 2006, Undisclosed value). 
+- **Oceanografía** (Capital Raising, Mexico, August 2006, Undisclosed value). 
+- **Pica de Hule Natural, S.A.** (Capital Raising, Guatemala, December 2005, Undisclosed value). 
+- **Acelera** (Capital Raising, Mexico, May 2002, Undisclosed value). 
+
+### Valuations & Fairness Opinions
+
+- **CM Capital Markets** (Valuations & Fairness Opinions, Brazil, November 2019, Undisclosed value). Valuation and fairness opinion advisory.
+- **Guardian Group** (Valuations & Fairness Opinions, Trinidad & Tobago, January 2019, Undisclosed value). Valuation and fairness opinion advisory.
+- **Edigráfica** (Valuations & Fairness Opinions, Brazil, March 2018, Undisclosed value). Valuation and fairness opinion advisory.
+- **Pattac Empreendimentos e Participacoes S.A.** (Valuations & Fairness Opinions, Brazil, September 2017, Undisclosed value). Valuation and fairness opinion advisory.
+- **SoEnergy International** (Valuations & Fairness Opinions, United States, May 2017, Undisclosed value). Valuation and fairness opinion advisory.
+- **Fundação Atlântico** (Valuations & Fairness Opinions, Brazil, November 2015, Undisclosed value). Valuation and fairness opinion advisory.
+- **Guardian Holdings Limited** (Valuations & Fairness Opinions, Trinidad & Tobago, October 2015, Undisclosed value). Valuation and fairness opinion advisory.
+- **BHL – Citrus Products of Belize FV** (Valuations & Fairness Opinions, Belize, September 2015, Undisclosed value). Valuation and fairness opinion advisory.
+- **Banco Panamá** (Valuations & Fairness Opinions, Panama, July 2015, Undisclosed value). Valuation and fairness opinion advisory.
+- **Ático Florestal FIP** (Valuations & Fairness Opinions, Brazil, July 2015, Undisclosed value). Valuation and fairness opinion advisory.
+- **Massy** (Valuations & Fairness Opinions, Trinidad & Tobago, August 2014, Undisclosed value). Valuation and fairness opinion advisory for MASSY. Client: MASSY.
+- **Atlas Industria de Eletrodomésticos** (Valuations & Fairness Opinions, Brazil, July 2014, Undisclosed value). Valuation and fairness opinion advisory.
+- **Grupo Cementos de Chihuahua** (Valuations & Fairness Opinions, Mexico, July 2014, Undisclosed value). Valuation and fairness opinion advisory.
+- **Trinidad Cement Limited** (Valuations & Fairness Opinions, Trinidad & Tobago, April 2014, Undisclosed value). Valuation and fairness opinion advisory.
+- **Guardian Group** (Valuations & Fairness Opinions, Trinidad & Tobago, March 2014, Undisclosed value). Valuation and fairness opinion advisory.
+- **Guardian Group** (Valuations & Fairness Opinions, Trinidad & Tobago, March 2014, Undisclosed value). Valuation and fairness opinion advisory.
+- **Benoit, Wallerius, FASA** (Valuations & Fairness Opinions, Brazil, February 2014, Undisclosed value). Valuation and fairness opinion advisory.
+- **Ático Florestal FIP** (Valuations & Fairness Opinions, Brazil, February 2014, Undisclosed value). Valuation and fairness opinion advisory.
+- **Steering Committee of Rede Bondholders** (Valuations & Fairness Opinions, Brazil, June 2013, Undisclosed value). Valuation and fairness opinion advisory.
+- **Sociedad Boliviana de Cemento S.A.** (Valuations & Fairness Opinions, Mexico, April 2013, Undisclosed value). Valuation and fairness opinion advisory.
+- **Transmissora Aliança de Energia Elétrica S.A** (Valuations & Fairness Opinions, Brazil, April 2013, Undisclosed value). Valuation and fairness opinion advisory.
+- **Transmissora Aliança de Energia Elétrica S.A** (Valuations & Fairness Opinions, Brazil, March 2012, Undisclosed value). Valuation and fairness opinion advisory.
+- **OceanPact** (Valuations & Fairness Opinions, Brazil, March 2012, Undisclosed value). Valuation and fairness opinion advisory.
+- **EEA Fund Management** (Valuations & Fairness Opinions, Brazil, June 2011, Undisclosed value). Valuation and fairness opinion advisory.
+- **OceanPact** (Valuations & Fairness Opinions, Brazil, May 2011, Undisclosed value). Valuation and fairness opinion advisory.
+- **Atlantic Energias Renováveis S.A.** (Valuations & Fairness Opinions, Brazil, August 2010, Undisclosed value). Valuation and fairness opinion advisory.
+- **CL Financial** (Valuations & Fairness Opinions, Trinidad & Tobago, February 2010, Undisclosed value). Valuation and fairness opinion advisory.
+- **Benoit** (Valuations & Fairness Opinions, Brazil, January 2010, Undisclosed value). Valuation and fairness opinion advisory.
+- **BSPar** (Valuations & Fairness Opinions, Brazil, October 2009, Undisclosed value). Valuation and fairness opinion advisory.
+- **Diagonal** (Valuations & Fairness Opinions, Brazil, May 2009, Undisclosed value). Valuation and fairness opinion advisory.
+- **IESA Óleo & Gás S/A** (Valuations & Fairness Opinions, Brazil, January 2009, Undisclosed value). Valuation and fairness opinion advisory.
+- **Medial Saúde** (Valuations & Fairness Opinions, Brazil, July 2008, Undisclosed value). Valuation and fairness opinion advisory.
+- **Neal & Massy Holdings Ltd. and Barbados Shipping & Trading Co.** (Valuations & Fairness Opinions, Trinidad & Tobago, Barbados, July 2007, Undisclosed value). Valuation and fairness opinion advisory.
+- **Datasul** (Valuations & Fairness Opinions, Brazil, April 2007, Undisclosed value). Valuation and fairness opinion advisory.
+- **Dancor** (Valuations & Fairness Opinions, Brazil, December 2006, Undisclosed value). Valuation and fairness opinion advisory.
+- **Grupo Fator** (Valuations & Fairness Opinions, Brazil, August 2006, Undisclosed value). Valuation and fairness opinion advisory.
+- **RiskControl** (Valuations & Fairness Opinions, Brazil, July 2006, Undisclosed value). Valuation and fairness opinion advisory.
+- **Expert Witness Testimony** (Valuations & Fairness Opinions, Belize, June 2006, Undisclosed value). Valuation and fairness opinion advisory.
+- **Neal & Massy Holdings** (Valuations & Fairness Opinions, Trinidad & Tobago, March 2006, Undisclosed value). Valuation and fairness opinion advisory.
+- **Nortel** (Valuations & Fairness Opinions, Latin America, March 2004, Undisclosed value). Valuation and fairness opinion advisory.
+- **Hispanic Publishing Group** (Valuations & Fairness Opinions, United States, December 2003, Undisclosed value). Valuation and fairness opinion advisory.
+- **Ovaciones Deportes** (Valuations & Fairness Opinions, Mexico, October 2003, Undisclosed value). Valuation and fairness opinion advisory.
+- **Editora Tres** (Valuations & Fairness Opinions, Brazil, September 2003, Undisclosed value). Valuation and fairness opinion advisory.
+- **TV Cidade** (Valuations & Fairness Opinions, Brazil, April 2003, Undisclosed value). Valuation and fairness opinion advisory.
+- **Caribbean Communications Network Ltd.** (Valuations & Fairness Opinions, Trinidad & Tobago, February 2003, Undisclosed value). Valuation and fairness opinion advisory.
+- **HNB Acquisition Corp.** (Valuations & Fairness Opinions, United States, December 2002, Undisclosed value). Valuation and fairness opinion advisory.
+- **IFX Networks Bolivia Ltda.** (Valuations & Fairness Opinions, Bolivia, September 2002, Undisclosed value). Valuation and fairness opinion advisory.
+
+## Team
+
+### Gonzalo Valdes-Fauli
+
+Chairman
+
+Mr. Valdes-Fauli is a shareholder of BroadSpan and has been the Chairman of the firm's Board of Managers since 2003. Mr. Valdes-Fauli has more than 35 years of experience in commercial and investment banking in Latin America and the Caribbean.
+
+Prior to BroadSpan, Mr Valdes-Fauli was the Vice Chairman of Barclays Capital (Latin America), the investment banking arm of Barclays Bank PLC, and a member of its Management Committee. Prior to this position, he was the Barclays Group CEO for Latin America where he was responsible for all investment banking, commercial banking and private banking operations in the region, a position he held for more than 15 years. Under Mr. Valdes-Fauli’s leadership, Barclays became one of the leading providers of financial services in Latin American and the Caribbean operating through wholly owned financial service companies incorporated in the principal markets in Latin America.
+
+Mr. Valdes-Fauli currently serves on the Board of Directors of Blue Cross Blue Shield of Florida (Florida's largest insurance company) where he was Lead Director from 2006-2010, and Gildan Activewear Inc, (the world's leading low cost manufacturer of basic apparel ) where he is the Chair of the Corporate Governance and Social Responsibility Committees. Mr. Valdes-Fauli is also a Trustee Emeritus of the University of Miami and holds a number of other civic board positions.
+
+Mr. Valdes Fauli received his M.B.A. from The American Graduate School of International Management (Thunderbird) and holds a B.A. from Spring Hill College.
+
+Languages: English, Spanish, Portuguese
+### Leonardo Antunes
+
+Senior Managing Director, Executive Committee
+
+Leonardo Antunes is a Partner and Senior Managing Director at BroadSpan Capital, where he leads the firm’s operations in Brazil and oversees coverage of the Southern Cone region of Latin America. He is a member of the Firm’s Board of Managers and Executive Committee.
+
+With more than 30 years of investment banking experience, Mr. Antunes has advised on over 150 mergers and acquisitions, capital raising, restructuring, and strategic advisory assignments across Latin America, representing more than US$15 billion in transaction value and over US$5 billion in capital raises.
+
+Since joining BroadSpan in 2005, he has advised multinational corporations, private equity investors, family-owned businesses, and leading middle-market companies on complex domestic and cross-border transactions. His industry experience includes energy, power and utilities, oil and gas, industrials, technology, business services, and infrastructure.
+
+Prior to BroadSpan, Mr. Antunes led M&A, Capital Markets, and Project Finance activities at Banco Modal. Previously, he served as Vice President of Corporate Finance and Structured Finance for Latin America at ABN AMRO Bank and began his investment banking career at J.P. Morgan (formerly Robert Fleming & Co.).
+
+Mr. Antunes currently serves as Chairman of the Board of MCG – Mourão Campos Group and has served on the boards of several companies and international organizations. He is also active in the entrepreneurial and corporate governance communities, including the Entrepreneurs’ Organization (EO and Endeavor Brazil.
+
+Mr. Antunes holds a B.Sc. in Electrical Engineering from Pontifical Catholic University of Rio de Janeiro (PUC-Rio), an Executive MBA from IBMEC, and an Executive MBA in Energy from COPPEAD Graduate School of Business.
+
+Languages: Portuguese, English, Spanish
+### Michael L. Gerrard
+
+Senior Managing Director, Executive Committee
+
+Mr. Gerrard is one of the Founders of BroadSpan and the firm’s CEO. He has been a Managing Director with BroadSpan since 2001. Mr. Gerrard has more than 21 years of experience as an investment banking advisor in Latin America and the Caribbean and has led transaction teams in 15 countries. While with BroadSpan Mr. Gerrard has successfully advised global and regional corporations, financial institutions and government entities in a variety of complex mergers, acquisitions and restructuring assignments throughout the region and across industry sectors.
+
+In addition to his other responsibilities, Mr. Gerrard heads BroadSpan’s Financial Restructuring Advisory practice and is a member of the firm's Board of Managers and Executive Committee.
+
+Prior to BroadSpan, Mr. Gerrard managed the Latin American Capital Markets division of Barclays Capital, the investment banking arm of Barclays Bank PLC, where he was responsible for capital markets origination, structuring and execution in Latin America and the Caribbean. While with Barclays, Mr. Gerrard structured and executed over $3.5 billion of cross border financings for private and public sector issuers throughout the region via 33 competed transactions.
+
+Mr. Gerrard is a member of the Institute of International Finance’s Special Committee on Financial Crisis Prevention and Resolution and is a Member of the Board of Trustees of the Miami Science Museum.
+
+Mr. Gerrard received his M.B.A. from The American Graduate School of International Management (Thunderbird) and holds a B.A. in Finance from the University of Miami.
+
+Languages: English, Spanish, Portuguese
+### Noah Kessler
+
+Managing Director, Executive Committee
+
+Noah Kessler is a Managing Director in the Financial Restructuring and Investment Banking group at BroadSpan Capital, based in Miami. He also serves on the BroadSpan Capital Management Committee.
+
+Prior to joining BroadSpan Capital, Mr. Kessler worked at Merrill Lynch in New York. For over 15 years, Mr. Kessler has advised global and regional corporations, financial institutions and government entities in a variety of complex transactions and restructuring assignments throughout 14 countries and across multiple industries.
+
+Mr. Kessler is a frequent panelist at conferences and active participant with the Institute of International Finance. In addition, he is an active member of multiple non-for-profit boards in South Florida.
+
+Mr. Kessler received his BA magna cum laude from Florida International University with a major in Finance and minor in Economics and his MBA from the Kellogg School of Management at Northwestern University.
+
+Languages: English, Spanish
+### Timothy Davis
+
+Board Member
+
+Mr. Timothy Davis is a shareholder of BroadSpan Capital and has been a member of the firm’s Board of Managers since 2003. Mr. Davis has more than 35 years of experience in commercial and investment banking in the Americas and Europe.
+
+Prior to BroadSpan, Mr. Davis spent thirty-four years with Chase Manhattan Bank and JP Morgan Chase where he held executive positions in North America, Europe and Latin America.
+
+Mr. Davis currently manages a family office and provides financial advice for the heirs of Robert A. McCormack of St. Augustine, Florida and formerly served on the Board of Directors of BAC Florida Bank based in Coral Gables, Florida.
+
+Mr. Davis holds a Bachelor of Science degree from Cornell University and a Master of Business Administration degree from New York University.
+### Luis Camarena
+
+Managing Director
+
+Mr. Camarena is a Managing Director with BroadSpan and the Head of the firm’s Mexico operations. Prior to joining BroadSpan, Mr. Camarena was Head of Investment Banking at Alantra, a global boutique investment bank based out of Europe. He has 23+ years working in Investment Banking (“IB”) at JPMorgan, Lehman Brothers, Rothschild, and Alantra. Prior to Alantra, Mr. Camarena was a Director at Rothschild leading multiple M&A and Restructuring projects for 8 years, and prior to that he worked as a Vice President at Lehman Brothers on the M&A team in Mexico and New York. Mr. Camarena started in JPMorgan´s IB group in New York and then Monterrey, Mexico.
+
+Mr. Camarena had worked on over 100 transactions in different industries and IB products including: (i) M&A, (ii) Equity Capital Markets, (iii) Debt Capital Markets, (iv) Loan Syndications, (v) Debt Restructurings and (vi) Derivatives.
+
+He obtained his BS in Economics and Business Administration from ITAM in Mexico City.
+
+Languages: English, Spanish
+### Fabrício Negrão
+
+Managing Director
+
+Fabrício Negrão is a Managing Director with BroadSpan, based in São Paulo, Brazil.
+
+Mr. Negrão joined BroadSpan in 2024 and has 18+ years of experience in investment banking where he advised global corporations in numerous domestic and cross-border strategic transactions in m&a and private capital raise as well as debt and equity capital markets and event-driven financing. His experience covers a range of sectors including healthcare, real estate, power/renewables, agriculture, oil & gas, energy, financial institution and consumer/retail.
+
+Prior to joining BroadSpan, Fabrício was an Investment Banking Executive Director and Country Manager for Nomura Securities in Brazil, where he joined in 2012. Prior to Nomura Fabrício was with the Investment Banking division of BNP Paribas in São Paulo and prior worked for the Investment Banking division of Santander Group in the M&A Advisory team in Madrid, Spain and for the Corporate Finance department of Deloitte in São Paulo.
+
+Fabrício holds a bachelor’s degree in Business Administration from the State University of Londrina (UEL) and a Master in Finance from the University Alcalá de Henares at CIFF (International Centre of Financial Formation) in Madrid, Spain.
+
+Languages: Portuguese, English, Spanish
+### Daniel Da Silveira
+
+Managing Director
+
+Mr. Silveira is a Managing Director at BroadSpan Capital, based in the firm's Rio de Janeiro office.
+
+Mr. Silveira joined BroadSpan in 2015 and has more than two decades of investment banking experience advising clients across Brazil and Latin America.
+
+Throughout his career, Mr. Silveira has advised multinational corporations, private companies and family-owned businesses on a wide range of strategic and financial transactions, including mergers and acquisitions, divestitures, capital raising, and corporate restructurings. He has extensive experience leading complex cross-border and domestic transactions and supporting clients through all stages of the deal execution process.
+
+Prior to joining BroadSpan, Mr. Silveira headed the Corporate Finance division of Apsis Consultoria. Previously, he was Managing Partner of Vairo & Associados, a Brazilian investment banking firm focused on M&A, debt restructuring, and private placements. Earlier in his career, he was a Senior Analyst in the M&A group at Bank of America, where he was actively involved in several landmark transactions, including Brazil's privatization program.
+
+Mr. Silveira holds a Bachelor's degree in Economics from Universidade Estadual do Rio de Janeiro (UERJ) and an MBA in Corporate Finance from IBMEC.
+
+Languages: English, Portuguese
+### Christian Vandendriessche
+
+Managing Director
+
+Mr. Christian Vandendriessche is a Managing Director with BroadSpan and the Head of the firm’s Central America operations. Mr. Vandendriessche has a long history of providing direct investment advisory services to family offices and entrepreneurs in the region.
+
+Mr. Christian Vandendriessche is a member of the firm’s management committee.
+
+Previously, Mr. Vandendriessche was a Managing Director and Chief Operating Officer of Washington based Paperboy Ventures, a leading intellectual property merchant bank and a member of the firm’s investment committee. He has been a Senior Vice President at Lehman Brothers’ Capital Advisory Group focusing on private equity and early stage advisory, and President of international operations at TradeOut Inc., a trailblazing B2B online exchange for business surplus. Prior to that, he was Executive Director at Motorola Network Ventures where he pioneered wireless telecommunications in Latin America bridging the communications divide for millions of people in emerging markets, and later served as Senior Director in Motorola's mergers and acquisitions group. He has led or collaborated in over US$ 4 billion of transactions (M&A and financings) in a principal and advisory capacity in Latin America and the United States.
+
+Mr. Vandendriessche founded the Honduras Relief Fund, established to aid victims of Hurricane Mitch and served on the board of the Riecken Foundation, building and operating more than 60 community libraries in rural areas of Guatemala and Honduras. In addition, he was an adjunct professor of entrepreneurship and marketing at Lynn University’s College of Business and Management and serves as a member of the senior executive mentoring program at the Kellogg School of Management (Northwestern.) Mr. Vandendriessche holds a Bachelor of Science degree in Business Analysis from the Kelley School of Business at Indiana University, and an MBA from the Kellogg School of Management at Northwestern University. He also completed the NIS program at Stanford University.
+
+Languages: English, Spanish, French, Portuguese
+### Felipe P. Andrade
+
+Senior Advisor
+
+Mr. Andrade is a Senior Advisor and previously a Managing Director of BroadSpan’s Rio de Janeiro office. Previously, Mr. Andrade was a Director at Flemings, in Brazil. While at Flemings, Mr. Andrade executed over $4 billion in M&A, debt restructuring and corporate restructuring transactions for Brazilian corporations. Mr. Andrade has developed strong relationships through his career, having advised major industrial groups, financial institutions, and the Government in Brazil. Previously, Mr. Andrade worked in the Latin American Capital Markets group of Barclays Capital, the investment banking division of Barclays Bank PLC, where he was responsible for origination and execution in Brazil. Previously with BZW, Mr. Andrade worked in the Latin American M&A Group. Prior to Barclays, Mr. Andrade worked for Banco Pactual and for Bankers Trust, where he focused on the Brazilian investment banking market.
+
+Mr. Andrade received his M.B.A. from The Simon School of Business at the University of Rochester and his B.A. in Industrial Engineering from Federal University of Rio de Janeiro.
+
+Languages: English, Spanish, French, Portuguese
+### Vinicius Dias
+
+Senior Advisor
+
+Vinicius Dias is a Senior Advisor based in the firm’s Rio de Janeiro office. Vinicius has more than 25 years of experience in the financial market. Previously, he was director of Corporate & Investment Banking at Sumitomo Bank. He was also a Director of the Corporate & Investment Banking department of Banco Votorantim, where he was responsible for commercial activities in Rio de Janeiro and Brazilian Northeast States. In addition, he was Senior Vice President at Corporate & Investment Banking department of Banco Santander and commercial Vice-President at ABN-AMRO. Throughout his career, Vinícius has accumulated experience in managing business relationships and structuring operations in various industrial segments, with emphasis on the natural resources, energy and infrastructure sectors.
+
+Vinícius holds a bachelor's degree in Production Engineering from the Federal University of Rio de Janeiro, a postgraduate degree in finance from the Brazilian Institute of Capital Markets, and an academic master's degree in Administration from the Pontifical Catholic University of Rio de Janeiro.
+
+Languages: Portuguese, English
+### Mario Espinosa
+
+Senior Advisor
+
+Mr. Espinosa is a Senior Advisor based in the Miami office. Prior to joining BroadSpan in July 2017, Mr. Espinosa was Managing Director and Co-Head of Citi’s Latin America Debt Markets Group. He has 30+ years of investment banking and debt markets advisory experience in Latin America, based in New York for 14 years and in Miami for the last 6 years. In this capacity, he led the debt restructuring of some of Latin America’s largest corporations, such as Cemex, Grupo Cementos Chihuahua, Pacific E&P, Endesa and others, representing over $24 billion of debt. He co - managed a team of 18 debt markets specialists located in New York, Mexico, São Paulo and Bogota. He is a frequent speaker at corporate banking conferences in the region, and his transactions have won numerous Industry awards.
+
+He was one of about 20 Senior Securities Officers at Citi worldwide, with approval responsibilities for debt underwriting, bridge lending, and leveraged lending in the region. Prior to his assignment in New York, he worked in Mexico for 11 years, and led Citi’s debt markets business in the country. He also was Corporate Bank Head for Citi in Panama.
+
+Mr. Espinosa is on the board of directors of the Calvert Foundation, an impact investment firm based in Washington, D.C. He obtained his BS in International Economics, School of Foreign Service, Georgetown University, and is a MS candidate in Economics, The Fletcher School, Tufts University. He is fluent in English and Spanish and proficient in French.
+
+Languages: English, Spanish
+### Ernesto Heinzelmann
+
+Senior Advisor
+
+Mr. Heinzelmann currently serves as a Senior Advisor and board member for several companies and is a partner at Strategus, a consulting firm. He is President of the Board of Directors of Sociesc, a university in Santa Catarina, and Managing Director of Savene Transporte Rodoviários.
+
+Between 1993 and 2009, Mr. Heinzelmann was President and CEO of Embraco, where he led its transformation into a global leader in the compressor sector, with global market share of 20%. Before becoming CEO, Mr. Heinzelmann was responsible for technology development in this company, acting as R&D Director. He led the internationalization process of the company, founding industrial plants in Italy in 1994, China in 1995 and Slovakia in 1998. He also launched a sales unit in Mexico in 2004. In addition, as President of Embraco, in 1995 he established the first Brazilian industrial JV in China with local partner Snowflake Group, founding Embraco Snowflake Compressor Company (BESCO), to this day a reference for a successful JV. Through these efforts, Mr. Heinzelmann participated in various rounds of negotiations and industrial and government forums, garnering expertise in forging partnerships between Brazilian and Chinese companies.
+
+Mr. Heinzelmann is one of the most recognized executives in Brazil. He received the title of Commander of the Order of Scientific Merit from the President of Brazil, Fernando Henrique Cardoso. He also received the title of Merit of Industry from Industrial Federation of Santa Catarina (FIESC), and the Anita Garibaldi medal, the most prestigious award in Santa Catarina state, from Santa Catarina’s Governor, Luiz Henrique da Silveira. As professional recognition, he received the Medal of Merit jointly from CONFEA, the National Confederation of Engineering, Architecture and Agronomy, and from Santa Catarina’s Regional Confederation of Engineering Architecture and Agronomy (CREA-SC).
+
+Mr. Heinzelmann is an Honorary Citizen of the city of Joinville and Honorary Consul of the Republic of Slovakia for the South of Brazil.
+
+Languages: Portuguese, English
+### Gilberto Heinzelmann
+
+Senior Advisor
+
+Mr. Heinzelmann is a member of BroadSpan’s Board of Advisors, and has extensive experience as an entrepreneur, executive, and advisor to various companies in Brazil. Currently, he holds positions on the Administrative Boards of Intelbras and Librelato, is a member of the strategy committee of the Federation of Industries of the State of Santa Catarina (FIESC), and is a partner and co-founder of TNS Nano and Revella Agritech.
+
+Between 2012 and 2023, he worked as an executive at ZEN Metalúrgica, where he held positions as Director of Sales, Marketing, and Engineering, as well as President and CEO. He was responsible for implementing operational excellence processes and expanding the product portfolio.
+
+Mr. Heinzelmann also served as an executive at Embraco for over 20 years, holding roles in New Business, Sales Management, International Marketing, and Senior Engineering. During this period, he managed contracts exceeding US$900.0 million, involving global accounts listed in the Fortune Global 500, and negotiated 80% of the company's production volume.
+
+Mr. Heinzelmann graduated in Mechanical Engineering from the Federal University of Santa Catarina, completed postgraduate studies in Materials Engineering at FERJ, and holds an MBA in Management from UNICEMP, along with various specializations from INSEAD, Harvard, and IMD. He is fluent in English and Portuguese, with an advanced level of communication in German.
+
+Languages: English, Spanish
+### Gabriella Icaza
+
+Senior Advisor
+
+Ms. Icaza is a Senior Advisor. She is also the CEO of Albatroz Participações, an investment and equity participation holding company focused on the information technology sector. Ms. Icaza hasworked in the financial sector for a total of thirty-five years, including eighteen years at JP Morgan, one year with Bank of America and nine years at Lloyds Bank.
+
+Ms. Icaza was also President of the American Chamber of Commerce in Rio de Janeiro, where she continues to be a member of the Executive Board. In addition, she is also Vice-President of the Board of AACLA (Association of American Chamber of Commerce in Latin America) and Chairman of Banco da Mulher, a non-profit microfinance organization.
+
+Ms. Icaza holds a B.A. degree in Business Administration and a Masters in Finance and Economics from Fundação Getúlio Vargas in São Paulo.
+### Sérgio Luiz Klein
+
+Senior Advisor
+
+Sergio Luiz Klein is a member of BroadSpan'sadvisory board and currently serves as Managing Partner of ASK ParticipaçõesLtda. He has extensive experience in the infrastructure, logistics, transportation, and sanitation sectors, having held leadership positions in the public sector, multilateral organizations, and the private sector.
+
+Previously, he served as Director-General and Deputy Secretary of the State Secretariat of Transportation of Rio Grande do Sul, as well as Director of Expansion at Companhia Riograndensede Saneamento (CORSAN). He was also a program manager at the Inter-American Development Bank (IDB) and the World Bank (IBRD), a consultant at the Development Bank of Latin America (CAF), and Executive Coordinator of the State Plan for Logistics and Transportation of Rio Grande do Sul (PELT-RS).
+
+Sergio holds a degree in Civil Engineering from the Federal University of Rio Grande do Sul (UFRGS) and has specializations in the appraisal of transportation infrastructure investments and hydrography, completed in Spain and Canada.
+### Mark Rosen
+
+Senior Advisor
+
+Mr. Rosen is a Senior Advisor based in Connecticut. Mr. Rosen has more than 30 years of experience in investment banking, having completed over 200 transactions including some of the most noteworthy M&A deals in Latin America. Mr. Rosen served as Head and later Chairman of Bank of America Merrill Lynch’s Latin American Investment Banking division, Head of Latin American Financial Institutions of Credit-Suisse, Head of Latin American M&A at UBS, and Head of Latin American investment banking at Barclays.
+
+More recently, Mr. Rosen served as Chief Executive Officer of Excelsa Acquisition Corp, which was a special purpose acquisition company in registration with the goal of making an acquisition in Latin America. Mr. Rosen was appointed as the Acting Executive Director of the United States of the International BBC Monetary Fund. He was also Deputy Assistant Secretary of the United States Treasury. Mr. Rosen is a Partner of Advection Growth Capital, a merchant banking firm that invests and raises capital for tech-related growth companies.
+
+Mr. Rosen is a member of the Council on Foreign Relations. He was formally a member of the Oriel College Oxford University Development Committee and a board member of NEST, a nonprofit focused on micro-enterprises in emerging markets.
+
+Mr. Rosen earned a master’s degree in Politics, Philosophy, and Economics from the University of Oxford and received his MBA from Harvard Business School.
+
+Languages: English, Spanish, and French
+### Santiago Villa
+
+Senior Advisor
+
+Mr. Villa is a Senior Advisors to BroadSpan, based in Medellin, Colombia, supporting M&A and restructuring transactions.
+
+He is a former bank executive with more than 26 years of experience in commercial banking at Bancolombia with expertise in the areas of foreign trade and supply chain finance, international operations and private banking. He also has a wide experience as General Manager in different countries and managing cross-border projects.
+
+Prior to joining BroadSpan, Mr. Villa was among others, Head of Trade Finance for Bancolombia Group, General Manager of Bancolombia Miami Agency, and General Manager of Bancolombia Panama and Bancolombia Cayman Islands.
+
+Mr. Villa received his MBA from the Kellogg School of Management at Northwestern University and holds a Systems Engineer Degree (Computer Science) from EAFIT University, Medellin, Colombia.
+
+Languages: Spanish, English
+### Juan R. Dib
+
+Director
+
+Mr. Dib is an Investment Banking Director working in the firm’s Miami office. He has over nine years of relevant M&A and capital markets experience.
+
+Prior to joining BroadSpan, Mr. Dib worked for three years as an Associate at Morgan Stanley in their Latin America Investment Banking team based in New York.
+
+Earlier in his career, Mr. Dib also served as an Analyst and as an Associate for VIPCapital, an investment banking boutique based in Caracas, Venezuela.
+
+Mr. Dib received his MBA from the Goizueta Business School at Emory University where he was a Goizueta Scholar and holds a BBA Magna Cum Laude from Universidad Monteavila.
+
+Languages: English, Spanish
+### Andrea Engelsberg
+
+Director
+
+Ms. Andrea Engelsberg is a Director with BroadSpan, based in Recife – PE.
+
+Prior to joining BroadSpan, she worked for 16 years at Santander Brazil as Corporate Banking Executive Superintendent of the Northeast region. In this role, she led sales teams engaging several industries, and was responsible for a portfolio around BRL6 billion in asset value. Ms. Engelsberg has vast experience in executing commercial and financial structured deals, focusing on credit proposition and risk assessment. She also acted as a deciding member of a number of credit committees.
+
+Ms. Engelsberg has over 25 years of experience in the financial markets, working with financial institutions such as Citibank and Lloyds Bank.
+
+Ms. Engelsberg has an Economics degree from UFPE and an Executive Financial MBA from IBMEC.
+
+Languages: Portuguese, English, Spanish
+### Bruno Passos
+
+Director
+
+Mr. Bruno Passos is a Vice President with BroadSpan based in the firm’s Rio Janeiro office. Prior to joining BroadSpan, Mr. Passos worked as an M&A Analyst at Banco ABC Brasil’s Investment Banking team. Before Banco ABC Brasil, Mr. Passos held positions of Buy-Side Analyst and Corporate Finance Analyst at Louis Dreyfus, having joined under a trainee program.
+
+Mr. Passos holds a B.A. in Business Administration from FEARP-USP and a Specialization in Finance from IDRAC Business School (Lyon, France).
+
+Languages: Portuguese, English, French
+### Pedro Mello
+
+Vice President
+
+Pedro Mello is an Investment Banking Vice President working in the firm’s Miami office supporting M&A and Restructuring transactions in Latin America and the Caribbean.
+
+Prior to becoming an Analyst at BroadSpan, Mr. Mello worked at the firm under an internship program.
+
+Mr. Mello received his BA cum laude from Florida International University with a major in Finance.
+
+Languages: Portuguese, English, Spanish
+### Luca Mastrangelo
+
+Associate
+
+Luca Mastrangelo is an Investment Banking Associate with BroadSpan’s Miami office supporting M&A and Restructuring transactions in Latin America and the Caribbean.
+
+Prior to becoming an Associate, Mr. Mastrangelo worked at the firm as a Senior Analyst with the Rio de Janeiro office.
+
+Mr. Mastrangelo holds a B.A. in Business Economics from PUC-Rio.
+
+Languages: Portuguese, English, Spanish
+### Renato Lopes
+
+Analyst
+
+Renato Lopes is an Investment Banking Analyst with BroadSpan’s Rio de Janeiro office supporting M&A, Capital Raise and Restructuring transactions in Latin America and the Caribbean.
+
+Prior to becoming an Analyst, Mr. Lopes joined BroadSpan through its internship program. Previously, he worked in the transaction advisory team at Grant Thornton Brazil.
+
+Mr. Lopes holds a B.A. in Economics from FGV-Rio.
+
+Languages: English, Spanish
+### Marcos van Tienhoven
+
+Analyst
+
+Marcos van Tienhoven is an Investment Banking Analyst with BroadSpan's Miami office supporting restructuring, capital raise, and cross-border M&A transactions in Latin America, the Caribbean and the United States.
+
+Prior to becoming an Analyst at BroadSpan, Mr. van Tienhoven worked at the firm under an internship program.
+
+He graduated from Grove City College in 2025 with a degree in Finance and a minor in Economics, earning Magna Cum Laude honors.
+
+Languages: English, Spanish
+### Hugo Von Zeschau
+
+Analyst
+
+Hugo Von Zeschau is an Investment Banking Analyst with BroadSpan’s Ciudad de México office with over 5 years of experience working in private equity and M&A transactions in Latin America and internationally.
+
+Prior to working at BroadSpan, Hugo worked in the Business Development M&A team in Cemex, where he was involved in acquiring the Canada operations and in the sale of Costa Rica, El Salvador, and the Philippines operations.
+
+Mr. Von Zeschau graduated Summa Cum Laude from the Instituto Tecnológico y de Estudios Superiores de Monterrey with a Bachelor’s in Economics and is on his way to acquire his CFA charter designation.
+
+Languages: English, Spanish
+
+## News
+
+- **BroadSpan Advises Brazil's ouronova on Strategic Equity Raise** (March 2026): We are pleased to announce that BroadSpan Capital acted as exclusive financial advisor to Ouro Negro Tecnologias em Equipamentos Industriais S.A. ("ouronova") and its shareholders on an equity capital raise with an undisclosed international strategic investor. The proceeds will support the scaling of ouronova's commercial operations and the continued development of next-generation technologies for the offshore energy sector. https://danielochoa94.github.io/broadspan-concept/deal-ouronova.html
+- **BroadSpan Advises Bancolombia on Restructuring of Abengoa Peru Debt** (February 2025): We are pleased to announce that BroadSpan Capital acted as exclusive financial advisor to Bancolombia S.A. (“Bancolombia”) in the settlement of the outstanding financial obligations of ATN3 S.A (“ATN3”), a subsidiary of Abengoa Peru. https://danielochoa94.github.io/broadspan-concept/deal-bancolombia.html
+- **BroadSpan Adds to Brazil Team with Former Nomura Banker Fabricio Negrão** (January 2025): We are pleased to announce that Fabricio Negrão has joined the firm as a Managing Director based in the firm’s São Paulo office. https://brocap.com/pdf/News/BroadSpan-Fabricio-Negrao.pdf
+- **BroadSpan Advises Grupo Boa Praça on Sale of Ship Supply Operations to Wrist Ship Supply** (December 2024): We are pleased to announce that BroadSpan Capital acted as exclusive financial advisor to Grupo Boa Praça and its shareholders in the sale of its ship supply operations to Wrist Ship Supply. https://danielochoa94.github.io/broadspan-concept/deal-boa-praca.html
+- **BroadSpan Capital Advises on Sale of Nova Scott Especialidades Químicas Limitada to Scott Bader Brazil Ltd.** (June 2024): We are pleased to announce that BroadSpan Capital, in a joint effort with its Peruvian partner, EFIC Partners, acted as financial advisor to Grupo IMSA and its shareholders on the sale of 50% of the outstanding shares of Nova Scott Especialidades Quimicas Limitada to Scott Bader Brazil Ltd. https://danielochoa94.github.io/broadspan-concept/deal-grupo-imsa.html
+- **BroadSpan Advises AGS on the Acquisition of Omni Transloading** (February 2024): We are pleased to announce that BroadSpan Capital acted as exclusive financial advisor to Agencias Universales S.A. (“AGS”) and its shareholders on the acquisition of 55% of the outstanding shares of Omni Transloading & Logistics and Omni Bulk Services, Inc. (“Omni”). https://danielochoa94.github.io/broadspan-concept/deal-ags-omni.html
+- **BroadSpan Advises on Sale of El Salvador's Laboratorios Arsal to Costa Rica's Calox** (February 2024): We are pleased to announce that BroadSpan Capital acted as exclusive financial advisor to Grupo Vargas and its shareholders on the sale of 100% of the outstanding shares of Laboratorios Arsal, S.A. (“Arsal”) to Calox de Costa Rica, S.A. (“Calox”). https://danielochoa94.github.io/broadspan-concept/deal-arsal.html
+- **BroadSpan Advises AGS on the Acquisition of A.R. Savage & Son** (February 2024): We are pleased to announce that BroadSpan Capital acted as exclusive financial advisor to Agencias Universales S.A. (“AGS”) and its shareholders on the acquisition of 70% of the outstanding shares of A.R. Savage & Son (“A.R. Savage”). The value of the transaction was not disclosed. https://danielochoa94.github.io/broadspan-concept/deal-ags-ar-savage.html
+- **BroadSpan Advises Bepensa on Acquisition of Credito Real USA Finance** (April 2023): We are pleased to announce that BroadSpan Capital acted as exclusive financial advisor to Bepensa, S.A. de C.V. (“Bepensa”) in the acquisition of 97.6% of the outstanding shares of Credito Real USA Finance (“Crusafin”), which were sold by Credito Real SAB de CV SOFOM ENR (“Credito Real”). The value of the transaction was not disclosed. https://danielochoa94.github.io/broadspan-concept/deal-bepensa.html
+- **BroadSpan Advises the Court-Appointed Liquidators in the Sale of COLFIRE** (February 2023): We are pleased to announce that BroadSpan Capital acted as exclusive financial advisor to the court-appointed liquidators of CL Financial Limited in the sale of 94.24% of the outstanding shares of Colonial Fire & General Insurance Company Limited (“COLFIRE”). The value of the transaction was not disclosed. https://danielochoa94.github.io/broadspan-concept/deal-colfire.html
+- **BroadSpan Advises Agunsa on Acquisition of Carver Maritime Manatee** (February 2023): We are pleased to announce that BroadSpan Capital acted as exclusive financial advisor to Agencias Universales S.A. ("AGUNSA") and its shareholders on the acquisition of 75% of the outstanding shares of Carver Maritime Manatee. The value of the transaction was not disclosed. https://danielochoa94.github.io/broadspan-concept/deal-agunsa-carver.html
+- **BroadSpan Advises the Central Bank in the Sale of Banco di Caribe** (June 2022): We are pleased to announce that BroadSpan Capital acted as exclusive financial advisor to the Central Bank of Curacao and Sint Maarten in the sale of 100% of the outstanding shares of Banco di Caribe, which were sold by Ennia Caribe Holding NV. The value of the transaction was not disclosed. https://danielochoa94.github.io/broadspan-concept/deal-banco-di-caribe.html
+- **BroadSpan Advises Servicarga Brazil on Sale to VIX Logistica** (March 2022): We are pleased to announce that BroadSpan Capital acted as exclusive financial advisor to Servicarga Brazil and its shareholders on its sale to VIX Logistica. The value of the transaction was not disclosed. https://danielochoa94.github.io/broadspan-concept/deal-servicarga.html
+- **BroadSpan Advises Bondholders in Puerto Rico ERS Restructuring** (March 2022): We are pleased to announce that BroadSpan Capital LLC acted as exclusive financial advisor to the UBS Puerto Rico Family of Funds (the "Funds") with respect to the restructuring of the debt of the Employees Retirement System of the Government of Puerto Rico ("ERS"). The Funds, together with other coordinating bondholders, held over 71% or US$2.1 billion of the US$3.0 billion in eligible bond claims prior to the restructuring. https://danielochoa94.github.io/broadspan-concept/deal-puerto-rico-ers.html
+- **BroadSpan Reinforces LatAm Footprint with Mexico Expansion** (September 2021): We are pleased to announce that BroadSpan Capital has expanded its operations in Mexico through the establishment of a presence in Mexico City and the hiring of senior banker Luis Camarena as Managing Director and Head of Mexico. https://brocap.com/pdf/News/BSC-Mexico-Announcement.pdf
+- **BroadSpan Advised Brazil’s Milfra on Sale to France's Nemera** (June 2021): We are pleased to announce that BroadSpan Capital acted as exclusive financial advisor to Milfra and its shareholders in its sale to Nemera. Milfra is a leading manufacturer of plastic products for the pharmaceutical industry in Brazil, specialized in the development and production of personal care applicators and oral dosers. A family-owned company founded in 1966, Milfra is known for its advanced manufacturing capabilities and operates a state-of-the-art industrial plant in Jaguariúna, the countryside of São Paulo state, with over 130 employees. https://danielochoa94.github.io/broadspan-concept/deal-milfra.html
+- **BroadSpan Advises Brazil's Seal Telecom on Sale to Convergint Technologies** (April 2021): We are pleased to announce that BroadSpan Capital acted as exclusive financial advisor to Seal Telecom and its shareholders in its sale to Convergint Technologies. Seal Telecom is a Brazilian multinational integrator that provides innovative Audio & Video, Unified Communication, Smart Buildings, Broadcast, and Fire & Security solutions. Seal Telecom serves Latin America with over 500 employees and offices in Brazil, Argentina, Chile, Peru, Colombia, Costa Rica and Mexico. https://danielochoa94.github.io/broadspan-concept/deal-seal-telecom.html
+- **BroadSpan Advises ANSA McAL on Acquisition of Bank of Baroda Trinidad** (March 2021): We are pleased to announce that BroadSpan Capital LLC acted as financial advisor to ANSA McAL, a Caribbean based conglomerate, on its acquisition of 100% of Bank of Baroda (Trinidad and Tobago) Limited. The value of the transaction was not disclosed. https://danielochoa94.github.io/broadspan-concept/deal-ansa-mcal.html
+- **BroadSpan Advises Bondholders in Argentina's Province of Córdoba Restructuring** (February 2021): We are pleased to announce that BroadSpan Capital LLC acted as exclusive financial advisor to the Ad Hoc Bondholder Group (the "Committee”) formed to address the restructuring of the Province of Cordoba’s (the "Province’s") US$1.669 billion of international bonds due 2021, 2024 and 2027 (the "Existing Notes"). https://danielochoa94.github.io/broadspan-concept/deal-cordoba.html
+- **Bondholder Group of the Province of Córdoba in Support of Amended Consent Solicitation** (January 2021): Following the conclusion of sustained and constructive negotiations with representatives of the Province of Cordoba, the Ad Hoc Bondholder Group of the Province of Cordoba confirms its support for the terms of the amended consent solicitation relating to the Province's outstanding international bonds published today. https://danielochoa94.github.io/broadspan-concept/deal-cordoba.html
+- **Committee Members Intend to Support Belize’s Consent Solicitation** (July 2020): The Steering members of the Committee of holders of the Government of Belize's U.S. Dollar Bonds due 2034 have engaged constructively with the Belize authorities following the Government’s June 17, 2020 public announcement referring to its liquidity challenges associated with the COVID-19 pandemic. https://danielochoa94.github.io/broadspan-concept/deal-puerto-rico-ers.html
+- **BroadSpan Advises FMO and DEG in Costa Rica Restructuring** (June 2020): We are pleased to announce that BroadSpan Capital LLC acted as exclusive financial advisor to Nederlandse Financierings-Maatschappij voor Ontwikkelingslanden N.V. (“FMO”) and Deutsche Investitions - Und Entwicklungsgesellschaft mbH (“DEG”) in the financial restructuring and successful resolution of their exposure to Upala Agricola. https://danielochoa94.github.io/broadspan-concept/deal-fmo-deg.html
+- **Ecuador Bondholders Announce Organization** (June 2020): A group of large institutional holders of various international bonds issued by the Republic of Ecuador have organized a committee of bondholders to engage in discussions related to the potential re-profiling of Ecuador’s external debt. https://danielochoa94.github.io/broadspan-concept/deal-ecuador.html
+- **Bondholders Reject the Province of Buenos Aires’ Restructuring Proposal** (April 2020): Late yesterday, the Province of Buenos Aires issued a press release announcing proposed terms for the restructuring of its external debt. The steering committee of the bondholder group formed by institutional holders of external debt issued by the Province has reviewed the proposed terms and has determined that it cannot support the proposal. https://danielochoa94.github.io/broadspan-concept/deal-buenos-aires.html
+- **Bondholder Committee Supports TPHL’s Amended Exchange Offer** (June 2019): Earlier today, Trinidad Petroleum Holdings Limited, issued a press release announcing its agreement to amend the terms of the exchange offer for its bonds due in 2019 and 2022. https://danielochoa94.github.io/broadspan-concept/deal-petrotrin.html
+- **BroadSpan Advises Bondholders in Puerto Rico COFINA Restructuring** (April 2019): BroadSpan Capital LLC acted as financial advisor to an institutional bondholder group with respect to the restructuring of the debt of the Puerto Rico Sales Tax Financing Corporation (“COFINA"). The Bondholder Group controlled approximately $1.9 billion of the outstanding COFINA Senior and Junior bonds prior to the restructuring. https://danielochoa94.github.io/broadspan-concept/deal-cofina.html
+- **Bondholder Committee Supports Buenos Aires’ Amended 2021 Consent Solicitation** (February 2019): Earlier today, the Province of Buenos Aires announced amended terms of the consent solicitation for its 10.875% bonds due in 2021. https://danielochoa94.github.io/broadspan-concept/deal-buenos-aires.html
+- **BroadSpan Advises Bondholders in Cap Cana Debt Restructuring** (August 2017): BroadSpan Capital LLC acted as exclusive financial advisor to the bondholder committee formed to address the recently completed restructuring of the Cap Cana, S.A. ("Cap Cana") 10% Senior Secured Notes due 2016 and 10% Senior Secured Recovery Notes due 2016. https://danielochoa94.github.io/broadspan-concept/deal-cap-cana.html
+- **Belize Coordinating Committee Announces Formation** (November 2016): A representative group of key holders of the U.S. Dollar Bonds Due 2038 issued by Belize have formed a Coordinating Committee in response to the announcement by the Government of Belize that it will seek to commence discussions with bondholders. https://danielochoa94.github.io/broadspan-concept/deal-belize-2017.html
+- **Grenada Steering Committee Confirms Key Restructuring Terms Agreed in Principle** (April 2015): The Steering Committee of Grenada Bondholders formed to address the default by the Government of Grenada on its U.S. Dollar and E.C. Dollar Bonds Due 2025 confirms reaching an agreement in principle with Grenada on key financial terms that will apply to the forthcoming restructuring of the Bonds. https://danielochoa94.github.io/broadspan-concept/deal-grenada.html
+
+## Mergers Alliance members
+
+- BroadSpan Capital: Miami, Mexico City, Medellín, Caracas, Rio de Janeiro, São Paulo
+- Aurignac Finance: Paris
+- Buenos Aires Capital Partners: Buenos Aires
+- Blair Franklin: Toronto
+- Dresner Partners: Chicago, New York, Fort Lauderdale
+- EFIC Partners: Lima
+- Ethica Group: Milan
+- Evolve Corporate Finance: Birmingham, London, Nottingham
+- Greenstone Partners: Sydney
+- InterCapital: Zagreb, Ljubljana
+- IPOPEMA: Warsaw
+- Khronos Advisory: Bangkok
+- Montminy & Co.: Santa Monica, Orange County, Phoenix
+- Norgestion: Madrid, Barcelona, Bilbao, San Sebastián, Pamplona
+- Oxeye Monthis: Amsterdam
+- Proventis Partners: Zurich, Frankfurt, Hamburg
+- Altis: Santiago
+- Singhi Advisors: Mumbai, New Delhi, Bengaluru
+- Stewart & Co: Seoul
+- Tokyo Kyodo FAS: Tokyo

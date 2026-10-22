@@ -1,4 +1,4 @@
-"""Builds the Mergers Alliance dot map (site/assets/img/world-dots.svg), member logos and site/assets/js/alliance.js.
+"""Builds the Mergers Alliance dot map (site/assets/img/world-dots.svg), member logos and src/data/alliance.json.
 
 Members and offices come from mergers-alliance.com/member-firms (October 2026); logos were saved to ref/alliance/.
 """
@@ -148,8 +148,8 @@ def main():
       shutil.copy(f'ref/flags/{f}.svg', f'site/assets/img/flags/{f}.svg')
   stats = {'firms': len(firms), 'offices': sum(len(f['offices']) for f in firms),
            'countries': len({o['flag'] for f in firms for o in f['offices']}), 'deals': ALLIANCE_DEALS, 'value': ALLIANCE_VALUE}
-  open('site/assets/js/alliance.js', 'w').write(f'window.ALLIANCE = {json.dumps({"stats": stats, "firms": firms}, ensure_ascii=False)};\n')
-  print('alliance.js:', stats)
+  open('src/data/alliance.json', 'w').write(json.dumps({'stats': stats, 'firms': firms}, ensure_ascii=False, indent=1) + '\n')
+  print('alliance.json:', stats)
 
 
 main()

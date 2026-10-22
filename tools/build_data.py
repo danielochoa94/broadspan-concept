@@ -1,4 +1,4 @@
-"""Normalize scraped brocap.com content (ref/*.json) into site/assets/js/data.js."""
+"""Normalize scraped brocap.com content (ref/*.json) into src/data/site.json."""
 import json, re, shutil, os, subprocess, unicodedata
 
 MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october',
@@ -391,10 +391,9 @@ def main():
   r = [{'sector': s, 'items': [{'title': a, 'date': b, 'pdf': 'https://brocap.com/pdf/' + c} for a, b, c in items]}
        for s, items in research()]
   stats = {'deals': len(d)}
-  js = ('window.BSC = ' + json.dumps({'practices': PRACTICES, 'regions': list(REGIONS) + ['Latin America'],
-                                      'sectors': [s for s, _ in SECTORS] + ['Other'], 'deals': d, 'featured': featured, 'news': n,
-                                      'team': t, 'research': r, 'stats': stats}, ensure_ascii=False) + ';\n')
-  open('site/assets/js/data.js', 'w').write(js)
+  data = {'practices': PRACTICES, 'regions': list(REGIONS) + ['Latin America'], 'sectors': [s for s, _ in SECTORS] + ['Other'],
+          'deals': d, 'featured': featured, 'news': n, 'team': t, 'research': r, 'stats': stats}
+  open('src/data/site.json', 'w').write(json.dumps(data, ensure_ascii=False, indent=1) + '\n')
   print(stats, {k: sum(1 for x in d if x['practice'] == k) for k in PRACTICES})
 
 
