@@ -44,7 +44,7 @@ LAYOUT = """<!DOCTYPE html>
 <meta property="og:title" content="{og_title}">
 <meta property="og:description" content="{description}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{base}assets/img/og.png">
+<meta property="og:image" content="{base}assets/img/og.png?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -378,7 +378,7 @@ def organization():
 
   return {
     '@type': 'Organization', '@id': BASE_URL + '#organization', 'name': 'BroadSpan Capital', 'alternateName': 'BroadSpan',
-    'url': BASE_URL, 'logo': BASE_URL + 'assets/img/logo.png', 'image': BASE_URL + 'assets/img/og.png',
+    'url': BASE_URL, 'logo': BASE_URL + 'assets/img/logo.png', 'image': BASE_URL + 'assets/img/og.png?v=2',
     'description': SUMMARY, 'email': 'info@brocap.com', 'foundingDate': '2001',
     'address': {'@type': 'PostalAddress', 'streetAddress': '1441 Brickell Ave, Suite 1550', 'addressLocality': 'Miami',
                 'addressRegion': 'FL', 'postalCode': '33131', 'addressCountry': 'US'},
