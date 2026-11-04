@@ -545,11 +545,3 @@ dialog.modal[open] { animation: rise .3s ease-out; }
   .office-list { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 560px) { .field-row, .office-list { grid-template-columns: 1fr; } }
-/* Asset Management */
-#overview .on-dark p.small, #asset-management .on-dark p.small { color: rgba(255, 255, 255, .8); }
-.bsam-strategies { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.bsam-address { margin-top: 24px; font-style: normal; font-weight: 300; }
-.bsam-address a { display: inline-block; margin-top: 12px; text-decoration: underline; text-underline-offset: 4px; }
-.bsam-disclosures p { max-width: 1100px; font-size: 14px; color: var(--muted); margin-top: 18px; }
-#asset-management, #overview, #strategies, #investment-team, #bsam-contact { scroll-margin-top: calc(var(--header) + 70px); }
-@media (max-width: 760px) { .bsam-strategies { grid-template-columns: 1fr; } }
