@@ -3946,6 +3946,77 @@
    "exec": false
   }
  ],
+ "bsam_team": [
+  {
+   "name": "Michael L. Gerrard",
+   "title": "Senior Managing Director",
+   "img": "assets/img/team/michael-l-gerrard.png",
+   "languages": "English, Spanish, Portuguese",
+   "bio": [
+    "Mr. Gerrard is one of the Founders of BroadSpan and the firm’s CEO. He has been a Managing Director with BroadSpan since 2001. Mr. Gerrard has more than 21 years of experience as an investment banking advisor in Latin America and the Caribbean and has led transaction teams in 15 countries. While with BroadSpan Mr. Gerrard has successfully advised global and regional corporations, financial institutions and government entities in a variety of complex mergers, acquisitions and restructuring assignments throughout the region and across industry sectors.",
+    "In addition to his other responsibilities, Mr. Gerrard heads BroadSpan’s Financial Restructuring Advisory practice and is a member of the firm's Board of Managers and Executive Committee.",
+    "Prior to BroadSpan, Mr. Gerrard managed the Latin American Capital Markets division of Barclays Capital, the investment banking arm of Barclays Bank PLC, where he was responsible for capital markets origination, structuring and execution in Latin America and the Caribbean. While with Barclays, Mr. Gerrard structured and executed over $3.5 billion of cross border financings for private and public sector issuers throughout the region via 33 competed transactions.",
+    "Mr. Gerrard is a member of the Institute of International Finance’s Special Committee on Financial Crisis Prevention and Resolution and is a Member of the Board of Trustees of the Miami Science Museum.",
+    "Mr. Gerrard received his M.B.A. from The American Graduate School of International Management (Thunderbird) and holds a B.A. in Finance from the University of Miami."
+   ],
+   "group": "bsam",
+   "exec": false
+  },
+  {
+   "name": "Tony Egui",
+   "title": "Managing Director",
+   "img": "assets/img/team/tony-egui.png",
+   "languages": "English, Spanish, Portuguese",
+   "bio": [
+    "Mr. Egui is a Managing Director of BroadSpan Asset Management (“BSAM”) and Lead Portfolio Manager for BSAM’s liquid fixed income strategies. He has over 20 years investing and trading experience in Latin American fixed income and credit markets.",
+    "He was previously a Managing Partner of Adelante Capital, a Caracas-based advisory services firm focusing on Latin American fixed income, foreign exchange and derivatives markets. Since its founding in 2002, Adelante successfully provided investment management services to institutional clients and high net worth individuals, consistently delivering returns that have outperformed relevant benchmarks in the region. Mr. Egui was specifically responsible for Adelante’s Investment Committee and all investment banking and brokerage/custodian relationships.",
+    "Prior to Adelante Capital, Mr. Egui held senior management positions at the Latin America division of Barclays Capital, the investment banking arm of Barclays Bank PLC. Mr. Egui was Head of Fixed Income Trading from 1993 to 1998, running all of the Bank’s exposure to sovereign and corporate bonds in the region, with industry-leading proprietary and market-making turnover. Between 1998 and 2001, Mr. Egui was Associate Director of Debt Capital Markets, where he led origination and execution efforts for frequent sovereign and corporate borrowers.",
+    "Mr. Egui co-founded and is currently a Board Member of Superatec, a Caracas-based NGO which promotes IT education and labor market inclusion within lesser privileged communities in 16 locations throughout Venezuela. Mr. Egui also sits in the Latin America Leadership Committee of Georgetown University’s Global Competitiveness Leadership Program.",
+    "Mr. Egui holds a Bachelor of Science in Economics and Finance from Universidad Católica Andrés Bello in Caracas."
+   ],
+   "group": "bsam",
+   "exec": false
+  },
+  {
+   "name": "Marcos Rampoldi",
+   "title": "Managing Partner",
+   "img": "assets/img/team/marcos-rampoldi.png",
+   "languages": "English, Spanish",
+   "bio": [
+    "Mr. Rampoldi leads BSAM’s private capital strategy in Latin America and the Caribbean (“LAC”). He brings over 20 years of experience in private equity and private credit in the target region, and an extensive track record of investing in LAC’s private markets across sectors and geographies.",
+    "He was previously a senior member of LAP Latin American Partners, a middle-market private equity firm specialized in Latin America. Mr. Rampoldi led origination, deployment, management and exit of several investments throughout Central American, Mexico, and Colombia. He previously co-managed a private equity portfolio from a $1 billion Latam infrastructure fund at EMP Global, a pioneer private equity firm specialized in emerging markets infrastructure. Prior to his private equity work, Mr. Rampoldi held roles at BNP Paribas’ project finance team in New York City, and the local waste management subsidiary of Befesa/Abengoa in Argentina.",
+    "He holds a degree in Environmental Engineering from Universidad Catolica Argentina and an MBA from Georgetown University."
+   ],
+   "group": "bsam",
+   "exec": false
+  },
+  {
+   "name": "Hülya Sögüt",
+   "title": "Partner",
+   "img": "assets/img/team/hulya-sogut.png",
+   "languages": "English, Spanish, German, French, Turkish",
+   "bio": [
+    "Mrs. Sögüt has been a sustainability expert for over 18 years, with 10 years of deal experience in LAC. She leads ESG and impact management incl. actively managing portfolio companies’ performance, as well as investor relations, for BSAM’s private capital strategy in LAC.",
+    "Prior to joining BSAM, she was a Partner with Portland Private Equity, a middle-market private equity firm focused on the Caribbean, Central America, and Colombia. Mrs. Sögüt pioneered a groundbreaking ESG and impact program and co-led the successful fundraising of the successor fund. Additionally, Mrs. Sögüt has been consulting many years for DEG and the World Bank working on worldwide investments in projects, companies, banks, and funds. Prior to her investment work, she held roles at PwC in sustainability advisory and audit of development cooperation projects.",
+    "Mrs. Sögüt is fluent in five languages, and holds an MA in International Politics as well as a Diploma in International Business Administration."
+   ],
+   "group": "bsam",
+   "exec": false
+  },
+  {
+   "name": "Ignacio Crespo",
+   "title": "Analyst",
+   "img": "assets/img/team/ignacio-crespo.png",
+   "languages": "English, Spanish",
+   "bio": [
+    "Ignacio Crespo is an Analyst with BroadSpan's Miami office.",
+    "Prior to joining BroadSpan as an Analyst, Mr. Crespo worked in asset management at Telefónica in Madrid, where he contributed to the sale and lease-back of its copper network and led process optimization initiatives. He also held prior roles in insurance advisory and marketing.",
+    "Mr. Crespo holds an M.S. in Applied Business Analytics from Boston University and a B.S. in Finance from Montana State University Billings."
+   ],
+   "group": "bsam",
+   "exec": false
+  }
+ ],
  "research": [
   {
    "sector": "Country Reports",

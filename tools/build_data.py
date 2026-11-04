@@ -1,5 +1,5 @@
 """Normalize scraped brocap.com content (ref/*.json) into src/data/site.json."""
-import json, re, shutil, os, subprocess, unicodedata
+import html, json, re, shutil, os, subprocess, unicodedata
 
 MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october',
           'november', 'december']
@@ -355,6 +355,26 @@ def team():
   return out
 
 
+# Investment team listing order on brocap.com/bsam
+BSAM_TEAM = ['55-michael-l-gerrard', 'investment-team', '207-marcos-rampoldi', '206-huelya-soeguet', '208-ignacio-crespo']
+
+
+def bsam_team():
+  out = []
+  for page in BSAM_TEAM:
+    body = open(f'ref/bsam/{page}.html', encoding='utf-8').read().split('itemprop="articleBody">', 1)[1].split('</div>', 1)[0]
+    paras = [html.unescape(re.sub(r'<[^>]+>', '', p)).strip() for p in re.findall(r'<p[^>]*>(.*?)</p>', body, re.S)]
+    name = html.unescape(re.search(r'<h2>(.*?)</h2>', body).group(1)).strip()
+    photo = re.search(r'src="/bsam/images/staff/([^"]+)"', body).group(1)
+    img = f'assets/img/team/{slug(name)}.png'
+    shutil.copy(f'ref/bsam/img/{photo}', 'site/' + img)
+    langs = re.search(r'Spoken languages: (.*?)\.?\s*<', body).group(1)
+    out.append({'name': name, 'title': paras[1], 'img': img, 'languages': langs,
+                'bio': [p for p in paras[2:] if p and not p.startswith('Spoken')],
+                'group': 'bsam', 'exec': False})
+  return out
+
+
 def research():
   return [
     ('Country Reports', [('Brazil Macro & Political Report', 'Dec 2017', 'Country-Reports/BSC_-_Brazil_Macro_and_Political_Report_-_Dec17.pdf'),
@@ -392,7 +412,8 @@ def main():
        for s, items in research()]
   stats = {'deals': len(d)}
   data = {'practices': PRACTICES, 'regions': list(REGIONS) + ['Latin America'], 'sectors': [s for s, _ in SECTORS] + ['Other'],
-          'deals': d, 'featured': featured, 'news': n, 'team': t, 'research': r, 'stats': stats}
+          'deals': d, 'featured': featured, 'news': n, 'team': t, 'bsam_team': bsam_team(), 'research': r,
+          'stats': stats}
   open('src/data/site.json', 'w').write(json.dumps(data, ensure_ascii=False, indent=1) + '\n')
   print(stats, {k: sum(1 for x in d if x['practice'] == k) for k in PRACTICES})
 

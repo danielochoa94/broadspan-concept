@@ -504,7 +504,7 @@ dialog.modal[open] { animation: rise .3s ease-out; }
 .service li { position: relative; padding: 9px 0 9px 22px; border-top: 1px solid var(--line); font-size: 15px; font-weight: 300; line-height: 1.5; color: #2c333c; }
 .service li::before { content: ""; position: absolute; left: 2px; top: 18px; width: 8px; height: 1.5px; background: var(--blue); }
 .service > .more { margin-top: auto; padding-top: 28px; }
-#investment-banking, #restructuring, #who-we-are, #investment-team, #bsam-contact { scroll-margin-top: calc(var(--header) + 60px); }
+#investment-banking, #restructuring, #asset-management, #strategies, #liquid-markets, #private-markets { scroll-margin-top: calc(var(--header) + 60px); }
 @media (max-width: 1100px) { .services { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 760px) { .services { grid-template-columns: 1fr; } .practice-nav { gap: 28px; } }
 
@@ -546,10 +546,35 @@ dialog.modal[open] { animation: rise .3s ease-out; }
 }
 @media (max-width: 560px) { .field-row, .office-list { grid-template-columns: 1fr; } }
 /* Asset management */
+.bsam-nav { align-items: center; }
+.on-dark p.small { color: rgba(255, 255, 255, .8); }
+.bsam-mark { padding-right: 28px; border-right: 1px solid var(--line); font-size: 13px; font-weight: 500; letter-spacing: .12em; color: var(--muted); }
+.practice-nav a[aria-current="page"] { color: var(--brand); box-shadow: inset 0 -2px 0 var(--brand); }
 .focus-item + .focus-item { margin-top: 48px; padding-top: 48px; border-top: 1px solid rgba(255, 255, 255, .18); }
 .focus-item p { margin-top: 16px; font-size: clamp(19px, 1.6vw, 23px); font-weight: 300; line-height: 1.45; color: rgba(255, 255, 255, .88); max-width: 560px; }
-.tile .role { margin-top: 6px; font-size: 15px; font-weight: 500; text-transform: uppercase; color: var(--brand); }
-.bsam-address { margin-top: 24px; font-style: normal; font-size: 17px; font-weight: 300; line-height: 1.7; color: rgba(255, 255, 255, .88); }
-.bsam-address a:hover { color: var(--white); text-decoration: underline; text-underline-offset: 4px; }
-.bsam-disclosures p { max-width: 1100px; font-size: 14px; font-weight: 300; line-height: 1.7; color: var(--muted); }
-@media (max-width: 900px) { .tile-photo { min-height: 280px; } }
+.focus-item .more { margin-top: 20px; font-size: 13px; }
+.strategy-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.strategy { display: flex; flex-direction: column; background: var(--white); transition: box-shadow .25s, transform .25s; }
+.strategy:hover { box-shadow: 0 18px 40px -24px rgba(11, 35, 65, .45); transform: translateY(-3px); }
+.strategy-photo { display: block; aspect-ratio: 16 / 7; }
+.strategy-photo::before { opacity: .55; }
+.strategy-photo > img { transition: transform .8s cubic-bezier(.2, .7, .2, 1); }
+.strategy:hover .strategy-photo > img { transform: scale(1.04); }
+.strategy-copy { display: flex; flex-direction: column; flex: 1; padding: clamp(28px, 3vw, 44px); border-top: 3px solid var(--blue); }
+.strategy h3 { font-size: clamp(23px, 2vw, 28px); font-weight: 300; color: var(--blue); line-height: 1.2; }
+.strategy p { margin-top: 14px; font-size: 16px; font-weight: 300; color: #2c333c; max-width: 560px; }
+.strategy .more { margin-top: auto; padding-top: 28px; font-size: 13px; }
+.services.two { grid-template-columns: 1fr 1fr; padding: 0; }
+.horizon { display: flex; align-items: center; gap: 24px; margin-top: 32px; padding: 28px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.horizon-num { font-family: var(--cond); font-weight: 300; font-size: clamp(56px, 5vw, 72px); line-height: 1; color: var(--blue); white-space: nowrap; }
+.horizon-label { font-size: 16px; font-weight: 300; color: var(--muted); max-width: 260px; }
+.bsam-team { margin-top: 0; }
+.login-layout { min-height: calc(100svh - var(--header) - 90px); }
+.check { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--ink); cursor: pointer; }
+.check input { width: 16px; height: 16px; accent-color: var(--blue); }
+.login-help { margin-top: 28px; display: flex; gap: 28px; flex-wrap: wrap; font-size: 15px; }
+.login-help a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.bsam-disclosures { border-top: 1px solid var(--line); }
+.bsam-disclosures p { margin-top: 18px; max-width: 1100px; font-size: 14px; font-weight: 300; line-height: 1.7; color: var(--muted); }
+@media (max-width: 900px) { .strategy-cards, .services.two { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .bsam-mark { display: none; } }

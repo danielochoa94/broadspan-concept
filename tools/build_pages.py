@@ -12,8 +12,11 @@ BASE_URL = 'https://brocap.com/' if PRODUCTION else 'https://danielochoa94.githu
 NAV = [('firm.html', 'Who We Are'), ('what-we-do.html', 'What We Do'), ('transactions.html', 'Experience'),
        ('alliance.html', 'Mergers Alliance'), ('news.html', 'News'), ('contact.html', 'Contact')]
 
-# Linked from the footer and indexed, but kept out of the header nav
-SECONDARY_NAV = [('asset-management.html', 'Asset Management')]
+# BroadSpan Asset Management: its own section with a sub-nav, linked from the footer rather than the header
+BSAM_NAV = [('asset-management.html', 'Overview'), ('asset-management-who-we-are.html', 'Who We Are'),
+            ('asset-management-team.html', 'Investment Team'), ('asset-management-contact.html', 'Contact'),
+            ('asset-management-client-login.html', 'Client Login')]
+BSAM_HOME = ('asset-management.html', 'Asset Management')
 
 # city, country code, country, street address, postal code
 OFFICES = [
@@ -124,6 +127,10 @@ def slug(s):
   return re.sub(r'[^a-z0-9]+', '-', unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()).strip('-')
 
 
+# Prefixed so BSAM bios (written for asset management) don't collide with the same person's BroadSpan bio
+BSAM_TEAM = [{**p, 'key': 'bsam-' + slug(p['name'])} for p in D['bsam_team']]
+
+
 def month_year(o, short=False):
   if not o.get('year'):
     return ''
@@ -205,7 +212,7 @@ def person_card(p, cls):
              '\n          <span class="more">View Bio <span class="chev"></span></span>')
   group = f' data-group="{p["group"]}"' if cls == 'person' else ''
   return f"""
-        <button class="{cls}" type="button" data-person="{slug(p['name'])}"{group}>{avatar(p)}<span class="n">{esc(p['name'])}</span><span class="t">{esc(p['title'])}</span>{extra}
+        <button class="{cls}" type="button" data-person="{p.get('key') or slug(p['name'])}"{group}>{avatar(p)}<span class="n">{esc(p['name'])}</span><span class="t">{esc(p['title'])}</span>{extra}
         </button>"""
 
 
@@ -304,6 +311,22 @@ def options(label, values, key):
   return f'<option value="">{label}</option>' + ''.join(f'<option>{esc(v)}</option>' for v in values if any(d[key] == v for d in D['deals']))
 
 
+def bsam_nav(f):
+  links = ''.join(f'\n  <a href="{h}"{" aria-current=\"page\"" if h == f else ""}>{t}</a>' for h, t in BSAM_NAV)
+  return f'<nav class="practice-nav bsam-nav" aria-label="BroadSpan Asset Management">\n  <span class="bsam-mark">BSAM</span>{links}\n</nav>'
+
+
+BSAM_DISCLOSURE = ('BroadSpan Asset Management LLC is an investment adviser registered with the Florida Office of Financial Regulation. '
+  'Such registration does not imply that the Firm is recommended or approved by the United States government or any regulatory agency. '
+  'BroadSpan Asset Management L.L.C may only transact business or render personalized investment advice in those states and '
+  'international jurisdictions where it is registered, has notice filed, or is otherwise excluded or exempted from registration '
+  'requirements. The purpose of this website is for information distribution only and should not be construed as an offer to buy or '
+  'sell securities or to offer investment advice. Past results are no guarantee of future results and no representation is made that '
+  'a client will or is likely to achieve results that are similar to those described. An investor should consider his or her '
+  'investment objectives, risks, charges and expenses carefully before investing. Please refer to BroadSpan Asset Management '
+  'L.L.C’s ADV Part 2 for additional information and risks.')
+
+
 RENDER = {
   'latest-news': latest_news, 'slides': slides, 'dots': dots, 'leadership': leadership, 'team-tabs': team_tabs,
   'team-grid': lambda: ''.join(person_card(p, 'person') for p in D['team']), 'news': news_list, 'research': research,
@@ -312,6 +335,9 @@ RENDER = {
   'sector-filter': lambda: options('All sectors', D['sectors'], 'sector'),
   'deals': lambda: ''.join(deal_card(d) for d in D['deals']),
   'result-count': lambda: f'{len(D["deals"])} transactions',
+  'bsam-team': lambda: ''.join(person_card(p, 'person') for p in BSAM_TEAM),
+  'bsam-mosaic': lambda: ''.join(person_card(p, 'mini') for p in BSAM_TEAM),
+  'bsam-disclosure': lambda: f'<h2 class="label">Important Disclosures</h2><p>{esc(BSAM_DISCLOSURE)}</p>',
 }
 
 COUNTS = {
@@ -352,7 +378,7 @@ def render(body):
   # Modal content ships in the page so crawlers and agents can read it without running JavaScript
   details = [f'<article id="deal-{i}">{deal_detail(DEALS[i])}\n    </article>'
              for i in dict.fromkeys(re.findall(r'data-deal="([^"]+)"', body))]
-  team = {slug(p['name']): p for p in D['team']}
+  team = {slug(p['name']): p for p in D['team']} | {p['key']: p for p in BSAM_TEAM}
   details += [f'<article id="bio-{s}">{person_bio(team[s])}\n    </article>'
               for s in dict.fromkeys(re.findall(r'data-person="([^"]+)"', body))]
   if details:
@@ -405,8 +431,10 @@ def jsonld(f, m):
     crumbs = [('Home', BASE_URL)]
     if m['page'] == 'deal':
       crumbs += [('Experience', page_url('transactions.html')), (m.get('og_title', m['title']), url)]
+    elif f.startswith('asset-management'):
+      crumbs += [(BSAM_HOME[1], page_url(BSAM_HOME[0]))] + ([(dict(BSAM_NAV)[f], url)] if f != BSAM_HOME[0] else [])
     else:
-      crumbs += [(dict(NAV + SECONDARY_NAV)[f], url)]
+      crumbs += [(dict(NAV)[f], url)]
     webpage['breadcrumb'] = {'@type': 'BreadcrumbList', 'itemListElement': [
       {'@type': 'ListItem', 'position': i + 1, 'name': n, 'item': u} for i, (n, u) in enumerate(crumbs)]}
   graph.append(webpage)
@@ -438,7 +466,7 @@ def llms(pages):
   meta = {f: m for f, m, _ in pages}
   practices = '\n'.join(f'- {v}: {sum(d["practice"] == k for d in D["deals"])} transactions' for k, v in D['practices'].items())
   offices = ', '.join(o[0] for o in OFFICES)
-  links = '\n'.join(f'- [{label}]({page_url(f)}): {meta[f]["description"]}' for f, label in NAV + SECONDARY_NAV)
+  links = '\n'.join(f'- [{label}]({page_url(f)}): {meta[f]["description"]}' for f, label in NAV + [BSAM_HOME] + BSAM_NAV[1:])
   deals = '\n'.join(f'- [{meta[f].get("og_title", meta[f]["title"])}]({page_url(f)}): {meta[f]["description"]}'
                     for f in meta if meta[f]['page'] == 'deal')
   return f"""# BroadSpan Capital
@@ -508,6 +536,10 @@ Contact: info@brocap.com
 
 {chr(10).join(person(p) for p in D['team'])}
 
+## BroadSpan Asset Management investment team
+
+{chr(10).join(person(p) for p in BSAM_TEAM)}
+
 ## News
 
 {chr(10).join(news(n) for n in D['news'])}
@@ -521,13 +553,13 @@ Contact: info@brocap.com
 def main():
   src = 'src/pages'
   nav_for = lambda f: '\n'.join(f'      <a href="{h}"{" aria-current=\"page\"" if h == f else ""}>{t}</a>' for h, t in NAV)
-  footer_nav = '\n'.join(f'      <a href="{h}">{t}</a>' for h, t in [('index.html', 'Home')] + NAV + SECONDARY_NAV)
+  footer_nav = '\n'.join(f'      <a href="{h}">{t}</a>' for h, t in [('index.html', 'Home')] + NAV + [BSAM_HOME])
   pages = []
   for f in sorted(os.listdir(src)):
     raw = open(os.path.join(src, f)).read()
     meta, body = raw.split('\n---\n', 1)
     m = {k: unescape(v) for k, v in re.findall(r'^(\w+):\s*(.*)$', meta, re.M)}
-    body, used_data = render(body.strip('\n'))
+    body, used_data = render(body.strip('\n').replace('<nav id="bsam-nav"></nav>', bsam_nav(f)))
     html = LAYOUT.format(
       title=esc(m['title']), og_title=esc(m.get('og_title', m['title'])), description=esc(m['description']),
       page=m['page'], url=page_url(f), base=BASE_URL, nav=nav_for(f), footer_nav=footer_nav, body=body,

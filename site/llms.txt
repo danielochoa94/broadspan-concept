@@ -18,12 +18,16 @@ BroadSpan Securities LLC is a member of FINRA and SIPC. Asset management activit
 
 - [Home](https://danielochoa94.github.io/broadspan-concept/): Independent investment bank for Latin America and the Caribbean. M&A, capital raising, valuations and financial restructuring advisory since 2001.
 - [Who We Are](https://danielochoa94.github.io/broadspan-concept/firm.html): Founded in 2001, BroadSpan Capital is an independent investment bank serving Latin America, the Caribbean and the U.S. Meet our team.
-- [What We Do](https://danielochoa94.github.io/broadspan-concept/what-we-do.html): Investment Banking Advisory and Financial Restructuring Advisory for corporations, creditors and governments across Latin America and the Caribbean.
+- [What We Do](https://danielochoa94.github.io/broadspan-concept/what-we-do.html): Investment Banking Advisory, Financial Restructuring Advisory and Asset Management for corporations, creditors and governments across Latin America and the Caribbean.
 - [Experience](https://danielochoa94.github.io/broadspan-concept/transactions.html): M&A, capital raising, valuation and restructuring transactions advised by BroadSpan Capital across Latin America, the Caribbean and the U.S.
 - [Mergers Alliance](https://danielochoa94.github.io/broadspan-concept/alliance.html): BroadSpan Capital is a member of Mergers Alliance, a partnership of independent corporate finance firms with offices across the Americas, Europe and Asia-Pacific.
 - [News](https://danielochoa94.github.io/broadspan-concept/news.html): Press releases, restructuring announcements and sector research from BroadSpan Capital.
 - [Contact](https://danielochoa94.github.io/broadspan-concept/contact.html): Talk to BroadSpan Capital about M&A, capital raising, valuations or financial restructuring in Latin America and the Caribbean.
 - [Asset Management](https://danielochoa94.github.io/broadspan-concept/asset-management.html): BroadSpan Asset Management provides investment management solutions and portfolio advisory services to institutional investors, with a Latin America and Caribbean focus.
+- [Who We Are](https://danielochoa94.github.io/broadspan-concept/asset-management-who-we-are.html): BSAM provides funds management solutions and portfolio advisory services to institutional investors through Liquid Markets and Private Markets strategies.
+- [Investment Team](https://danielochoa94.github.io/broadspan-concept/asset-management-team.html): Meet the BroadSpan Asset Management investment team managing BSAM's liquid fixed income and private capital strategies in Latin America and the Caribbean.
+- [Contact](https://danielochoa94.github.io/broadspan-concept/asset-management-contact.html): Contact BroadSpan Asset Management in Miami about liquid and private markets strategies for institutional investors.
+- [Client Login](https://danielochoa94.github.io/broadspan-concept/asset-management-client-login.html): Client login for BroadSpan Asset Management account holders.
 
 ## Transactions
 

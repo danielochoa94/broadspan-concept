@@ -1,0 +1,32 @@
+title: Client Login · BroadSpan Asset Management
+og_title: BroadSpan Asset Management: Client Login
+description: Client login for BroadSpan Asset Management account holders.
+page: client-login
+---
+<nav id="bsam-nav"></nav>
+
+<section class="contact-layout login-layout">
+  <div class="contact-content">
+    <h1>Client Login</h1>
+    <p class="contact-lede">Please enter login and password.</p>
+    <form class="contact-form login-form" id="login-form" method="POST">
+      <div class="field">
+        <label for="username">Username <span class="req">*</span></label>
+        <input type="text" id="username" name="username" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="password">Password <span class="req">*</span></label>
+        <input type="password" id="password" name="password" autocomplete="current-password" required>
+      </div>
+      <label class="check"><input type="checkbox" name="remember"> Remember me</label>
+      <button type="submit" class="btn solid">Log In <span class="chev"></span></button>
+    </form>
+    <p class="form-message" id="form-message" role="status" aria-live="polite" hidden></p>
+    <p class="login-help"><a href="asset-management-contact.html?interest=client">Forgot your password?</a><a href="asset-management-contact.html?interest=client">Forgot your username?</a></p>
+  </div>
+  <div class="contact-image tint">
+    <img src="assets/img/photos/towers.jpg" alt="">
+  </div>
+</section>
+
+<section class="section bsam-disclosures" id="bsam-disclosure"></section>

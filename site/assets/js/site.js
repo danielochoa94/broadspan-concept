@@ -179,6 +179,19 @@
     });
   }
 
+  if (page === 'client-login')
+  {
+    // Preview only: the client portal isn't connected, so sign-in attempts explain that instead of failing silently.
+    const form = $('#login-form');
+    form.addEventListener('submit', (e) =>
+    {
+      e.preventDefault();
+      const message = $('#form-message');
+      message.textContent = 'Client login is not connected in this preview.';
+      message.hidden = false;
+    });
+  }
+
   if (page === 'transactions')
   {
     const PAGE = 24;
