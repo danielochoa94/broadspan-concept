@@ -12,6 +12,8 @@ BASE_URL = 'https://brocap.com/' if PRODUCTION else 'https://danielochoa94.githu
 NAV = [('firm.html', 'Who We Are'), ('what-we-do.html', 'What We Do'), ('transactions.html', 'Experience'),
        ('alliance.html', 'Mergers Alliance'), ('news.html', 'News'), ('contact.html', 'Contact')]
 
+SECONDARY_NAV = [('asset-management.html', 'Asset Management')]
+
 # city, country code, country, street address, postal code
 OFFICES = [
   ('Miami', 'US', 'United States', '1441 Brickell Ave, Suite 1550', 'FL 33131'),
@@ -73,7 +75,6 @@ LAYOUT = """<!DOCTYPE html>
     <div class="footer-col">
       <h4>Explore</h4>
 {footer_nav}
-      <a href="https://brocap.com/bsam/" target="_blank" rel="noopener">Asset Management</a>
     </div>
     <div class="footer-col">
       <h4>Offices</h4>
@@ -404,7 +405,7 @@ def jsonld(f, m):
     if m['page'] == 'deal':
       crumbs += [('Experience', page_url('transactions.html')), (m.get('og_title', m['title']), url)]
     else:
-      crumbs += [(dict(NAV)[f], url)]
+      crumbs += [(dict(NAV + SECONDARY_NAV)[f], url)]
     webpage['breadcrumb'] = {'@type': 'BreadcrumbList', 'itemListElement': [
       {'@type': 'ListItem', 'position': i + 1, 'name': n, 'item': u} for i, (n, u) in enumerate(crumbs)]}
   graph.append(webpage)
@@ -436,7 +437,7 @@ def llms(pages):
   meta = {f: m for f, m, _ in pages}
   practices = '\n'.join(f'- {v}: {sum(d["practice"] == k for d in D["deals"])} transactions' for k, v in D['practices'].items())
   offices = ', '.join(o[0] for o in OFFICES)
-  links = '\n'.join(f'- [{label}]({page_url(f)}): {meta[f]["description"]}' for f, label in NAV)
+  links = '\n'.join(f'- [{label}]({page_url(f)}): {meta[f]["description"]}' for f, label in NAV + SECONDARY_NAV)
   deals = '\n'.join(f'- [{meta[f].get("og_title", meta[f]["title"])}]({page_url(f)}): {meta[f]["description"]}'
                     for f in meta if meta[f]['page'] == 'deal')
   return f"""# BroadSpan Capital
@@ -519,7 +520,7 @@ Contact: info@brocap.com
 def main():
   src = 'src/pages'
   nav_for = lambda f: '\n'.join(f'      <a href="{h}"{" aria-current=\"page\"" if h == f else ""}>{t}</a>' for h, t in NAV)
-  footer_nav = '\n'.join(f'      <a href="{h}">{t}</a>' for h, t in [('index.html', 'Home')] + NAV)
+  footer_nav = '\n'.join(f'      <a href="{h}">{t}</a>' for h, t in [('index.html', 'Home')] + NAV + SECONDARY_NAV)
   pages = []
   for f in sorted(os.listdir(src)):
     raw = open(os.path.join(src, f)).read()
