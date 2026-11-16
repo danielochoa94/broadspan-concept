@@ -1,0 +1,61 @@
+# Old Joomla URLs (archive/old-urls.txt) to their new pages. Netlify ignores query strings and trailing slashes when
+# matching, so /news?start=10 and /bsam/ are covered. Specific rules must stay above the splats that follow them.
+# The old press-release and research PDFs are served from site/pdf/ at their original paths, so they need no rules.
+
+/index.php                                     /                                                301
+/home                                          /                                                301
+/home/*                                        /                                                301
+
+# Who we are and team bios (bios open in a modal on the team grid, so there is no per-person URL)
+/who-we-are                                    /firm.html                                       301
+/leonardo-antunes                              /firm.html#team                                  301
+/leonardo-antunes/*                            /firm.html#team                                  301
+
+# Practices
+/mergers-acquisitions                          /what-we-do.html#investment-banking              301
+/capital-raising                               /what-we-do.html#investment-banking              301
+/debt-advisory                                 /what-we-do.html#investment-banking              301
+/valuation-and-fairness-opinions               /what-we-do.html#investment-banking              301
+/debt-restructuring-borrower-representation    /what-we-do.html#restructuring                   301
+/debt-restructuring-creditor-representation    /what-we-do.html#restructuring                   301
+
+# Experience
+/mergers-acquisitions-experience               /transactions.html?practice=ma                   301
+/equity-and-debt-private-placements            /transactions.html?practice=placements           301
+/valuations-and-fairness-opinions              /transactions.html?practice=valuations           301
+/all-transactions                              /transactions.html?practice=restructuring        301
+
+# Mergers Alliance
+/mergers-alliance                              /alliance.html                                   301
+/mergers-alliance-global-partnership           /alliance.html                                   301
+
+# News and research
+/news                                          /news.html                                       301
+/news-n                                        /news.html                                       301
+/business-services                             /news.html#research                              301
+/business-services/*                           /news.html#research                              301
+/consumer-products                             /news.html#research                              301
+/consumer-products/*                           /news.html#research                              301
+/country-reports                               /news.html#research                              301
+/country-reports/*                             /news.html#research                              301
+/energy                                        /news.html#research                              301
+/energy/*                                      /news.html#research                              301
+/financial-services                            /news.html#research                              301
+/financial-services/*                          /news.html#research                              301
+/industrial-engineering                        /news.html#research                              301
+/industrial-engineering/*                      /news.html#research                              301
+/techology-media-telecoms                      /news.html#research                              301
+/techology-media-telecoms/*                    /news.html#research                              301
+
+# BroadSpan Asset Management
+/bsam/who-we-are                               /asset-management-who-we-are.html                301
+/bsam/whoweare                                 /asset-management-who-we-are.html                301
+/bsam/broadspan-asset-management-llc           /asset-management-who-we-are.html                301
+/bsam/investment-team                          /asset-management-team.html                      301
+/bsam/investment-team/*                        /asset-management-team.html                      301
+/bsam/the-investment-team                      /asset-management-team.html                      301
+/bsam/the-investment-team/*                    /asset-management-team.html                      301
+/bsam/client-login                             /asset-management-client-login.html              301
+/bsam/clients-login                            /asset-management-client-login.html              301
+/bsam                                          /asset-management.html                           301
+/bsam/*                                        /asset-management.html                           301

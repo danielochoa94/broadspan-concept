@@ -317,7 +317,7 @@ def news():
   out = []
   for n in json.load(open('ref/news.json')):
     year, month = parse_date(n['date'])
-    out.append({'title': title_case(n['title']), 'summary': n['summary'], 'pdf': n['pdf'], 'year': year,
+    out.append({'title': title_case(n['title']), 'summary': n['summary'], 'pdf': n['pdf'].removeprefix('https://brocap.com/'), 'year': year,
                 'month': month, 'kind': n['kind'], 'page': news_page(n)})
   out.sort(key=lambda n: (-n['year'], -n['month']))
   return out
@@ -408,7 +408,7 @@ def main():
     featured.append({'name': name, 'line1': line1, 'line2': line2, 'role': role, 'logo': deal['logo'],
                      'value': deal['value'], 'year': deal['year'], 'country': deal['country'], 'flags': deal['flags'],
                      'page': deal['page']})
-  r = [{'sector': s, 'items': [{'title': a, 'date': b, 'pdf': 'https://brocap.com/pdf/' + c} for a, b, c in items]}
+  r = [{'sector': s, 'items': [{'title': a, 'date': b, 'pdf': 'pdf/' + c} for a, b, c in items]}
        for s, items in research()]
   stats = {'deals': len(d)}
   data = {'practices': PRACTICES, 'regions': list(REGIONS) + ['Latin America'], 'sectors': [s for s, _ in SECTORS] + ['Other'],

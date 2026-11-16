@@ -1,0 +1,15 @@
+# Netlify renders the production build itself (brocap.com URLs, indexable, no preview banner) from the committed
+# src/ data, so site/ in the repo can stay the GitHub Pages preview. Redirects live in site/_redirects.
+[build]
+  command = "PRODUCTION=1 python3 tools/build_pages.py"
+  publish = "site"
+
+[build.environment]
+  PYTHON_VERSION = "3.12"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"

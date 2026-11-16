@@ -1,0 +1,92 @@
+/*------------------------------------------------------------------------
+# 6Slides module by Team of Six, balbooa.com
+# ------------------------------------------------------------------------
+# author    Balbooa http://www.balbooa.com/
+# Copyright@2013 balbooa.com.  All Rights Reserved.
+# @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+# Websites: http://www.balbooa.com/
+-------------------------------------------------------------------------*/
+.six_slider{
+	position: relative;
+	margin: 0 auto;}
+.slides .caption{
+	position:absolute;
+	z-index: 2;
+	left:20px;
+	top: 20px;
+	right: 20px;
+	bottom: 20px;
+	font-size: 24px;}
+.six_slider .arrowleftdn,
+.six_slider .arrowrightdn,
+.six_slider .arrowleft,
+.six_slider .arrowright{
+	position: absolute;
+	-webkit-transition: opacity 0.5s ease;
+	-moz-transition: opacity 0.5s ease;
+	-ms-transition: opacity 0.5s ease;
+	-o-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+	cursor:pointer;}
+.six_slider.horizental {cursor: url(../images/drag.png), pointer;}
+.six_slider.vertical {cursor: url(../images/drag-vertical.png), pointer;}
+.six_slider .thum_ouside.arrowleftdn,
+.six_slider .thum_ouside.arrowrightdn,
+.six_slider .thum_ouside.arrowleft,
+.six_slider .thum_ouside.arrowright{top: 35%!important;}
+.six_slider .arrowleftdn:hover,
+.six_slider .arrowrightdn:hover,
+.six_slider .arrowleft:hover,
+.six_slider .arrowright:hover{opacity: 0.8;}
+.six_slider .arrowleftdn,
+.six_slider .arrowleft{
+	left: 20px;
+	background: transparent url(../images/arrow-left.png) no-repeat;}
+.six_slider .arrowrightdn,
+.six_slider .arrowright{
+	right: 20px;
+	background: transparent url(../images/arrow-right.png) no-repeat center;}
+.six_slider .slide_dots{
+	position: absolute;
+	bottom: 16px;
+	right: 10px;}
+.six_slider .slide_dots>div{
+	background: transparent url(../images/dot.png) no-repeat center;
+	cursor: pointer;}
+.six_slider .slide_dots>div:hover,
+.six_slider .slide_dots>div.av{background: transparent url(../images/dot-activ.png) no-repeat center;}
+.six_slider .thumbnavigator{
+	position: absolute;
+	bottom: 0px;}
+.six_slider .thumbnavigator_slides{cursor: move;}
+.six_slider .thumbnavigator_slides .thumbnavigator_container{
+	position: absolute;
+	top: 0;
+	left: 0;}
+.six_slider .thumbnavigator .w{
+	width: 100%;
+    height: 100%;}
+.six_slider .thumbnavigator .w_hover{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;}
+.six_slider.carousel .slide img,
+.six_slider .thumbnavigator .thumbnavigator_container img{border-radius: 4px;}
+.six_slider .thumbnavigator div[u="slides"]>div,
+.six_slider .thumbnavigator>div{overflow: inherit!important;}
+.six_slider .thumbnavigator .thumbnavigator_container{
+	-webkit-transition: all 0.45s ease 0s;
+	-moz-transition: all 0.45s ease 0s;
+	-khtml-transition: all 0.45s ease 0s;
+	-ms-transition: all 0.45s ease 0s;
+	-o-transition: all 0.45s ease 0s;
+	transition: all 0.45s ease 0s;}
+.six_slider .thumbnavigator .thumbnavigator_container:hover{margin-top: -15px;}
+.carousel{margin-bottom: 0;}
+.six_slider.carousel .slides{
+	left: 0;
+	right: 0;
+	margin: 0 auto;}
+.six_slider.carousel .slide_dots{bottom: 0;}

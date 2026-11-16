@@ -7,7 +7,10 @@ page: contact
   <div class="contact-content">
     <h1>Talk to our team</h1>
     <p class="contact-lede">Tell us about the transaction or situation. A senior banker will respond, and every inquiry is kept confidential.</p>
-    <form class="contact-form" id="contact-form" name="contact" method="POST">
+    <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <input type="hidden" name="subject" value="Website inquiry: BroadSpan Capital">
+      <p hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
       <div class="field-row">
         <div class="field">
           <label for="first-name">First name <span class="req">*</span></label>

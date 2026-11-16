@@ -4,6 +4,7 @@ robots.txt and llms.txt files.
 PRODUCTION=1 builds for brocap.com and lets crawlers index it; the default preview build is hidden from them.
 """
 import datetime, hashlib, json, os, re, subprocess, unicodedata
+from urllib.parse import urlparse
 from html import escape, unescape
 
 PRODUCTION = os.environ.get('PRODUCTION') == '1'
@@ -32,6 +33,9 @@ SUMMARY = ('BroadSpan Capital is an independent investment bank specializing in 
            'in 2001 and headquartered in Miami, it advises corporations, partnerships and governments on cross-border '
            'mergers and acquisitions, financial restructurings, capital raising, and valuations and fairness opinions.')
 
+# Served at whatever URL was missing, so its relative links need a base
+NOT_FOUND = '404.html'
+
 PAGE_TYPES = {'home': 'WebPage', 'firm': 'AboutPage', 'contact': 'ContactPage', 'transactions': 'CollectionPage',
               'news': 'CollectionPage'}
 
@@ -39,7 +43,7 @@ LAYOUT = """<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+{base_tag}<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{title}</title>
 <meta name="description" content="{description}">
 <meta name="robots" content="{robots}">
@@ -61,7 +65,7 @@ LAYOUT = """<!DOCTYPE html>
 <link rel="stylesheet" href="assets/css/site.css?v={css_v}">
 <script type="application/ld+json">{jsonld}</script>
 </head>
-<body data-page="{page}">
+<body data-page="{page}"{preview}>
 {concept}<header class="site-header">
   <div class="inner">
     <a class="logo" href="index.html"><img src="assets/img/logo.png" alt="BroadSpan Capital" width="325" height="86"></a>
@@ -416,7 +420,7 @@ def organization():
     'memberOf': {'@type': 'Organization', 'name': 'Mergers Alliance', 'url': 'https://www.mergers-alliance.com/'},
     'subOrganization': [
       {'@type': 'Organization', 'name': 'BroadSpan Securities LLC', 'description': 'Member of FINRA and SIPC.'},
-      {'@type': 'Organization', 'name': 'BroadSpan Asset Management LLC', 'url': 'https://brocap.com/bsam/'}],
+      {'@type': 'Organization', 'name': 'BroadSpan Asset Management LLC', 'url': page_url(BSAM_HOME[0])}],
   }
 
 
@@ -427,7 +431,7 @@ def jsonld(f, m):
                             'publisher': org}]
   webpage = {'@type': PAGE_TYPES.get(m['page'], 'WebPage'), '@id': url + '#webpage', 'url': url, 'name': m['title'],
              'description': m['description'], 'isPartOf': {'@id': BASE_URL + '#website'}, 'about': org, 'inLanguage': 'en'}
-  if f != 'index.html':
+  if f not in ('index.html', NOT_FOUND):
     crumbs = [('Home', BASE_URL)]
     if m['page'] == 'deal':
       crumbs += [('Experience', page_url('transactions.html')), (m.get('og_title', m['title']), url)]
@@ -509,7 +513,7 @@ def llms_full():
     return f'### {p["name"]}\n\n{p["title"]}{", Executive Committee" if p["exec"] else ""}\n\n' + '\n\n'.join(p['bio']) + langs
 
   def news(n):
-    link = page_url(n['page']) if n.get('page') else n['pdf']
+    link = page_url(n['page'] if n.get('page') else n['pdf'])
     return f'- **{n["title"]}** ({month_year(n)}): {n["summary"]} {link}'
 
   def office(city, _, country, street, postal):
@@ -563,9 +567,12 @@ def main():
     html = LAYOUT.format(
       title=esc(m['title']), og_title=esc(m.get('og_title', m['title'])), description=esc(m['description']),
       page=m['page'], url=page_url(f), base=BASE_URL, nav=nav_for(f), footer_nav=footer_nav, body=body,
-      robots='index, follow, max-image-preview:large' if PRODUCTION else 'noindex, nofollow',
-      concept='' if PRODUCTION else CONCEPT, css_v=version('site/assets/css/site.css'), js_v=version('site/assets/js/site.js'), offices=''.join(f'<p>{o[0]}</p>' for o in OFFICES), jsonld=jsonld(f, m))
+      robots='index, follow, max-image-preview:large' if PRODUCTION and f != NOT_FOUND else 'noindex, nofollow',
+      base_tag=f'<base href="{urlparse(BASE_URL).path}">\n' if f == NOT_FOUND else '',
+      concept='' if PRODUCTION else CONCEPT, preview='' if PRODUCTION else ' data-preview', css_v=version('site/assets/css/site.css'), js_v=version('site/assets/js/site.js'), offices=''.join(f'<p>{o[0]}</p>' for o in OFFICES), jsonld=jsonld(f, m))
     open(os.path.join('site', f), 'w').write(html)
+    if f == NOT_FOUND:
+      continue
     pages.append((f, m, git_date(os.path.join(src, f), *(['src/data'] if used_data else []))))
     print('built', f)
   open('site/sitemap.xml', 'w').write(sitemap(pages))

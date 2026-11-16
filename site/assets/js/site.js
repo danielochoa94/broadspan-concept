@@ -168,14 +168,37 @@
     {
       interest.value = requested;
     }
-    // Preview only: no form backend is wired up yet, so submissions just show the confirmation.
-    form.addEventListener('submit', (e) =>
+    const message = $('#form-message');
+    const show = (text) =>
+    {
+      message.textContent = text;
+      message.hidden = false;
+    };
+    form.addEventListener('submit', async (e) =>
     {
       e.preventDefault();
-      form.hidden = true;
-      const message = $('#form-message');
-      message.textContent = 'Thank you. A member of our team will be in touch shortly.';
-      message.hidden = false;
+      const button = $('button[type="submit"]', form);
+      button.disabled = true;
+      try
+      {
+        // Netlify Forms only exists on the production host; the preview has no backend to post to
+        if (!('preview' in document.body.dataset))
+        {
+          const response = await fetch('/', { method: 'POST', body: new URLSearchParams(new FormData(form)),
+                                               headers: { 'Content-Type': 'application/x-www-form-urlencoded' } });
+          if (!response.ok)
+          {
+            throw new Error(response.status);
+          }
+        }
+        form.hidden = true;
+        show('Thank you. A member of our team will be in touch shortly.');
+      }
+      catch
+      {
+        button.disabled = false;
+        show('Sorry, your message could not be sent. Please email us at info@brocap.com.');
+      }
     });
   }
 
