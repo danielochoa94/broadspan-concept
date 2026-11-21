@@ -112,6 +112,7 @@ FOOTER = """<footer class="site-footer">
       <h4>Contact</h4>
       <a href="mailto:info@brocap.com">info@brocap.com</a>
       <p>1441 Brickell Ave, Suite 1550<br>Miami, FL 33131</p>
+      <a class="social" href="{linkedin_url}" target="_blank" rel="noopener" aria-label="BroadSpan on LinkedIn">{linkedin}</a>
     </div>
     <a class="logo light" href="index.html"><img src="assets/img/logo-white.png" alt="BroadSpan Capital" width="325" height="86"></a>
   </div>
@@ -135,8 +136,8 @@ BSAM_FOOTER = """<footer class="site-footer">
       <h4>Contact</h4>
       <p>1441 Brickell Avenue, Suite 1550<br>Miami, FL 33131</p>
       <a href="tel:+13054243400">+1 (305) 424-3400</a>
-      <a href="#"><mark class="tbd">[email]</mark></a>
-      <a href="#"><mark class="tbd">LinkedIn</mark></a>
+      <a href="mailto:info@brocap.com">info@brocap.com</a>
+      <a class="social" href="{linkedin_url}" target="_blank" rel="noopener" aria-label="BroadSpan on LinkedIn">{linkedin}</a>
     </div>
     <a class="logo light" href="asset-management.html"><img src="assets/img/logo-bsam-white.png" alt="BroadSpan Asset Management" width="325" height="77"></a>
   </div>
@@ -145,6 +146,13 @@ BSAM_FOOTER = """<footer class="site-footer">
     <p>&copy; {year} BroadSpan Asset Management LLC. All rights reserved.</p>
   </div>
 </footer>"""
+
+LINKEDIN_URL = 'https://www.linkedin.com/company/broadspancapital/'
+LINKEDIN = ('<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56'
+            'v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 '
+            '3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v'
+            '11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 '
+            '23.2 0 22.22 0z"/></svg>')
 
 LOGO = '<a class="logo" href="index.html"><img src="assets/img/logo.png" alt="BroadSpan Capital" width="325" height="86"></a>'
 BSAM_LOGO = ('<a class="logo" href="asset-management.html"><img src="assets/img/logo-bsam.png" alt="BroadSpan Asset Management" '
@@ -463,7 +471,7 @@ def organization():
   return {
     '@type': 'Organization', '@id': BASE_URL + '#organization', 'name': 'BroadSpan Capital', 'alternateName': 'BroadSpan',
     'url': BASE_URL, 'logo': BASE_URL + 'assets/img/logo.png', 'image': BASE_URL + 'assets/img/og.png?v=2',
-    'description': SUMMARY, 'email': 'info@brocap.com', 'foundingDate': '2001',
+    'description': SUMMARY, 'email': 'info@brocap.com', 'foundingDate': '2001', 'sameAs': [LINKEDIN_URL],
     'address': {'@type': 'PostalAddress', 'streetAddress': '1441 Brickell Ave, Suite 1550', 'addressLocality': 'Miami',
                 'addressRegion': 'FL', 'postalCode': '33131', 'addressCountry': 'US'},
     'location': [place(*o) for o in OFFICES],
@@ -633,9 +641,11 @@ def main():
   year = datetime.date.today().year
   links = lambda items: '\n'.join(f'      <a href="{h}">{t}</a>' for h, t in items)
   footer = FOOTER.format(nav=links([('index.html', 'Home')] + NAV + [BSAM_HOME]), year=year,
-                         offices=''.join(f'<p>{o[0]}</p>' for o in OFFICES))
+                         offices=''.join(f'<p>{o[0]}</p>' for o in OFFICES), linkedin=LINKEDIN,
+                         linkedin_url=LINKEDIN_URL)
   bsam_footer = BSAM_FOOTER.format(nav=links([(t if isinstance(t, str) else t[0][0], label) for label, t in BSAM_MENU] + [BSAM_LOGIN]),
-                                   legal=links(BSAM_LEGAL + [(FORM_ADV, 'Form ADV')]), year=year)
+                                   legal=links(BSAM_LEGAL + [(FORM_ADV, 'Form ADV')]), year=year,
+                                   linkedin=LINKEDIN, linkedin_url=LINKEDIN_URL)
   pages = []
   for f in sorted(os.listdir(src)):
     raw = open(os.path.join(src, f)).read()

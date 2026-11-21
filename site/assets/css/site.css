@@ -649,3 +649,8 @@ mark.tbd { background: #fff3b0; color: #6b5300; padding: 0 .2em; font-style: nor
 .points.one > div { padding: 20px 0; }
 .hero.still::after { background: linear-gradient(90deg, rgba(6, 23, 44, .8) 0%, rgba(6, 23, 44, .45) 60%, rgba(6, 23, 44, .25) 100%); }
 .hero-skyline { object-position: center 70%; }
+.footer-col a.social { display: inline-flex; margin-top: 10px; line-height: 1; color: rgba(255, 255, 255, .85); transition: color .2s; }
+
+.stat-unit { margin-left: .2em; font-size: .4em; font-weight: 300; letter-spacing: 0; }
+.nowrap { white-space: nowrap; }
+.latest .insight { background: var(--gray); box-shadow: none; }
