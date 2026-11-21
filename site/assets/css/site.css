@@ -654,3 +654,20 @@ mark.tbd { background: #fff3b0; color: #6b5300; padding: 0 .2em; font-style: nor
 .stat-unit { margin-left: .2em; font-size: .4em; font-weight: 300; letter-spacing: 0; }
 .nowrap { white-space: nowrap; }
 .latest .insight { background: var(--gray); box-shadow: none; }
+
+
+/* What Sets Us Apart: tinted city half beside a 2x2 of points */
+.apart-photo { display: flex; align-items: flex-end; min-height: 560px; color: var(--white); }
+.apart-photo .tint-content { padding: clamp(56px, 7vw, 112px) var(--pad); }
+.apart-photo h2 { font-size: clamp(32px, 3.4vw, 48px); font-weight: 300; line-height: 1.15; text-wrap: balance; }
+.apart .points { grid-template-columns: 1fr 1fr; }
+@media (max-width: 900px) { .apart-photo { min-height: 320px; } }
+@media (max-width: 600px) { .apart .points { grid-template-columns: 1fr; } }
+
+/* Featured insight list: lead story spans the rows beside the rest */
+.insights.featured { grid-template-columns: 3fr 2fr; }
+.insights.featured .insight:first-child { grid-row: span 2; justify-content: flex-end; background: var(--navy) url("../img/lines.svg") center / cover no-repeat; border-top-color: var(--sky); }
+.insights.featured .insight:first-child h3 { font-size: clamp(26px, 2.6vw, 36px); line-height: 1.25; color: var(--white); }
+.insights.featured .insight:first-child :is(.tag, time) { color: var(--sky); }
+.insights.featured .insight:first-child p { font-size: 16px; color: rgba(255, 255, 255, .8); }
+@media (max-width: 760px) { .insights.featured { grid-template-columns: 1fr; } .insights.featured .insight:first-child { grid-row: auto; } }
