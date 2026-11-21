@@ -69,7 +69,7 @@ LAYOUT = """<!DOCTYPE html>
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-{favicon}
+<link rel="icon" href="assets/img/favicon.ico" type="image/vnd.microsoft.icon">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300&family=IBM+Plex+Sans:wght@300;400;500&family=Inter:wght@700&display=swap">
@@ -648,8 +648,6 @@ def main():
     html = LAYOUT.format(
       site_name='BroadSpan Asset Management' if bsam else 'BroadSpan Capital', logo=BSAM_LOGO if bsam else LOGO,
       footer=bsam_footer if bsam else footer,
-      favicon='<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">' if bsam else
-              '<link rel="icon" href="assets/img/favicon.ico" type="image/vnd.microsoft.icon">',
       title=esc(m['title']), og_title=esc(m.get('og_title', m['title'])), description=esc(m['description']),
       page=m['page'], url=page_url(f), base=BASE_URL, nav=bsam_nav(f) if bsam else main_nav(f), body=body,
       robots='index, follow, max-image-preview:large' if PRODUCTION and f != NOT_FOUND else 'noindex, nofollow',
