@@ -210,7 +210,7 @@
     {
       e.preventDefault();
       const message = $('#form-message');
-      message.textContent = 'Client login is not connected in this preview.';
+      message.textContent = 'Investor login is not connected in this preview.';
       message.hidden = false;
     });
   }

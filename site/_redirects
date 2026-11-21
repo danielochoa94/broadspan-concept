@@ -48,9 +48,9 @@
 /techology-media-telecoms/*                    /news.html#research                              301
 
 # BroadSpan Asset Management
-/bsam/who-we-are                               /asset-management-who-we-are.html                301
-/bsam/whoweare                                 /asset-management-who-we-are.html                301
-/bsam/broadspan-asset-management-llc           /asset-management-who-we-are.html                301
+/bsam/who-we-are                               /asset-management-about.html                     301
+/bsam/whoweare                                 /asset-management-about.html                     301
+/bsam/broadspan-asset-management-llc           /asset-management-about.html                     301
 /bsam/investment-team                          /asset-management-team.html                      301
 /bsam/investment-team/*                        /asset-management-team.html                      301
 /bsam/the-investment-team                      /asset-management-team.html                      301

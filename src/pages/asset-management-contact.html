@@ -1,68 +1,58 @@
 title: Contact · BroadSpan Asset Management
 og_title: BroadSpan Asset Management: Contact
-description: Contact BroadSpan Asset Management in Miami about liquid and private markets strategies for institutional investors.
+description: Contact BroadSpan Asset Management in Miami about investment opportunities, partnerships or investor inquiries.
 page: contact
 ---
-<nav id="bsam-nav"></nav>
-
 <section class="contact-layout">
   <div class="contact-content">
-    <h1>Contact Us</h1>
-    <p class="contact-lede">Tell us about your investment objectives. A member of the BSAM team will respond, and every inquiry is kept confidential.</p>
+    <h1>Let&rsquo;s Talk</h1>
+    <p class="contact-lede">For investment opportunities, partnership or investor inquiries, please get in touch.</p>
     <form class="contact-form" id="contact-form" name="bsam-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="bsam-contact">
       <input type="hidden" name="subject" value="Website inquiry: BroadSpan Asset Management">
       <p hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
       <div class="field-row">
         <div class="field">
-          <label for="first-name">First name <span class="req">*</span></label>
-          <input type="text" id="first-name" name="firstName" autocomplete="given-name" required>
+          <label for="name">Name <span class="req">*</span></label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
         </div>
         <div class="field">
-          <label for="last-name">Last name <span class="req">*</span></label>
-          <input type="text" id="last-name" name="lastName" autocomplete="family-name" required>
+          <label for="company">Company <span class="opt">(optional)</span></label>
+          <input type="text" id="company" name="company" autocomplete="organization">
         </div>
       </div>
       <div class="field-row">
         <div class="field">
-          <label for="email">Business email <span class="req">*</span></label>
+          <label for="email">Email <span class="req">*</span></label>
           <input type="email" id="email" name="email" autocomplete="email" required>
         </div>
         <div class="field">
-          <label for="company">Institution <span class="opt">(optional)</span></label>
-          <input type="text" id="company" name="company" autocomplete="organization">
+          <label for="interest">Inquiry type <span class="req">*</span></label>
+          <select id="interest" name="interest" required>
+            <option value="" selected disabled>Select one</option>
+            <option value="investor">Investor</option>
+            <option value="opportunity">Investment opportunity</option>
+            <option value="other">Other</option>
+          </select>
         </div>
       </div>
       <div class="field">
-        <label for="interest">How can we help? <span class="req">*</span></label>
-        <select id="interest" name="interest" required>
-          <option value="" selected disabled>Select one</option>
-          <option value="liquid">Liquid Markets</option>
-          <option value="private">Private Markets</option>
-          <option value="client">Existing client</option>
-          <option value="other">Something else</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="message">Tell us more <span class="opt">(optional)</span></label>
+        <label for="message">Message <span class="opt">(optional)</span></label>
         <textarea id="message" name="message" rows="6"></textarea>
       </div>
       <button type="submit" class="btn solid">Send Inquiry <span class="chev"></span></button>
     </form>
     <p class="form-message" id="form-message" role="status" aria-live="polite" hidden></p>
-    <p class="contact-direct">Or email us at <a href="mailto:info@brocap.com">info@brocap.com</a></p>
   </div>
   <div class="contact-image tint">
-    <img src="assets/img/cities/miami.jpg" alt="Miami skyline" style="object-position:62% center">
+    <img src="assets/img/cities/miami-bay.jpg" alt="Miami skyline">
   </div>
 </section>
 
 <section class="section gray contact-offices">
   <div class="office-list">
-    <div><h3>Miami</h3><p class="country">United States</p><address>1441 Brickell Ave, Suite 1550<br>Miami, FL 33131</address><a class="more" href="https://goo.gl/maps/SkUo65RY1YK2" target="_blank" rel="noopener">Directions <span class="chev"></span></a></div>
-    <div><h3>Phone &amp; Email</h3><p class="country">Contact Us</p><address><a href="tel:+13054243400">(305) 424-3400</a><br><a href="mailto:info@brocap.com">info@brocap.com</a></address></div>
-    <div><h3>Client Login</h3><p class="country">Existing clients</p><address>Access your account through the BSAM client portal.</address><a class="more" href="asset-management-client-login.html">Log In <span class="chev"></span></a></div>
+    <div><h3>Miami</h3><p class="country">BroadSpan Asset Management LLC</p><address>1441 Brickell Avenue, Suite 1550<br>Miami, FL 33131<br>United States</address><a class="more" href="https://goo.gl/maps/SkUo65RY1YK2" target="_blank" rel="noopener">Directions <span class="chev"></span></a></div>
+    <div><h3>Phone &amp; Email</h3><p class="country">Contact Us</p><address><a href="tel:+13054243400">+1 (305) 424-3400</a><br><mark class="tbd">[email]</mark></address></div>
+    <div><h3>Investor Login</h3><p class="country">Existing investors</p><address>Access your account through the BSAM investor portal.</address><a class="more" href="asset-management-client-login.html">Log In <span class="chev"></span></a></div>
   </div>
 </section>
-
-<section class="section bsam-disclosures" id="bsam-disclosure"></section>

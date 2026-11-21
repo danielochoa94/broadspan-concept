@@ -1,0 +1,83 @@
+{
+ "team": [
+  {
+   "name": "Michael L. Gerrard",
+   "title": "Senior Managing Director",
+   "strategy": null,
+   "img": "assets/img/team/michael-l-gerrard.png",
+   "languages": "English, Spanish, Portuguese",
+   "bio": [
+    "Michael Gerrard is a co-founder and the CEO of BroadSpan, and has been a Managing Director of the firm since 2001. He has more than 25 years of experience as an investment banking advisor in Latin America and the Caribbean and has led transaction teams in 15 countries, advising global and regional corporations, financial institutions and government entities on complex mergers, acquisitions and restructurings. He heads BroadSpan's Financial Restructuring Advisory practice and is a member of the firm's Board of Managers and Executive Committee.",
+    "Previously, he managed the Latin American Capital Markets division of Barclays Capital, where he structured and executed over US$3.5 billion of cross-border financings for private and public sector issuers through 33 transactions. He is a member of the Institute of International Finance's Special Committee on Financial Crisis Prevention and Resolution.",
+    "MBA, Thunderbird School of Global Management; BA in Finance, University of Miami."
+   ]
+  },
+  {
+   "name": "Marcos Rampoldi",
+   "title": "Managing Partner",
+   "strategy": "Private Capital",
+   "img": "assets/img/team/marcos-rampoldi.png",
+   "languages": "English, Spanish",
+   "bio": [
+    "Marcos Rampoldi leads BSAM's private capital strategy in Latin America and the Caribbean. He brings over 20 years of experience in private equity and private credit in the region, with an extensive track record investing across sectors and geographies.",
+    "He was previously a senior member of LAP Latin American Partners, a middle-market private equity firm specialized in Latin America, where he led the origination, execution, management and exit of investments in Central America, Mexico and Colombia. Before that, he co-managed a private equity portfolio within a US$1 billion Latin American infrastructure fund at EMP Global. Earlier, he held roles in BNP Paribas' project finance team in New York and at Befesa/Abengoa's waste management subsidiary in Argentina.",
+    "Environmental Engineering, Universidad Católica Argentina; MBA, Georgetown University."
+   ]
+  },
+  {
+   "name": "Hülya Sögüt",
+   "title": "Partner",
+   "strategy": "Private Capital",
+   "img": "assets/img/team/hulya-sogut.png",
+   "languages": "English, Spanish, German, French, Turkish",
+   "bio": [
+    "Hülya Sögüt has over 18 years of experience in sustainability, including 10 years of deal experience in Latin America and the Caribbean. She leads ESG and impact management for BSAM's private capital strategy, including active management of portfolio company performance, as well as investor relations.",
+    "She was previously a Partner at Portland Private Equity, a middle-market private equity firm focused on the Caribbean, Central America and Colombia, where she built the firm's ESG and impact program and co-led the fundraising of its successor fund. She has also advised DEG and the World Bank for many years on investments in projects, companies, banks and funds worldwide, and began her career at PwC in sustainability advisory and the audit of development cooperation projects.",
+    "MA in International Politics; Diploma in International Business Administration."
+   ]
+  },
+  {
+   "name": "Tony Egui",
+   "title": "Managing Director",
+   "strategy": "Fixed Income",
+   "img": "assets/img/team/tony-egui.png",
+   "languages": "English, Spanish, Portuguese",
+   "bio": [
+    "Tony Egui is Lead Portfolio Manager for BSAM's fixed income strategies. He has more than 30 years of experience investing and trading in Latin American fixed income and credit markets.",
+    "He was previously Managing Partner of Adelante Capital, a Caracas-based firm providing investment management services in Latin American fixed income, foreign exchange and derivatives to institutional and high-net-worth clients, where he led the investment committee. Earlier, at Barclays Capital's Latin America division, he was Head of Fixed Income Trading, running the bank's regional sovereign and corporate bond exposure, and then Associate Director of Debt Capital Markets, leading origination and execution for sovereign and corporate borrowers. He co-founded and serves on the board of Superatec, a Venezuelan NGO promoting IT education and labor market inclusion.",
+    "BSc in Economics and Finance, Universidad Católica Andrés Bello."
+   ]
+  },
+  {
+   "name": "Ignacio Crespo",
+   "title": "Analyst",
+   "strategy": null,
+   "img": "assets/img/team/ignacio-crespo.png",
+   "languages": "English, Spanish",
+   "bio": [
+    "Ignacio Crespo is an Analyst in BSAM's Miami office. He previously worked in asset management at Telefónica in Madrid, where he contributed to the sale and leaseback of its copper network and led process optimization initiatives, and earlier held roles in insurance advisory and marketing.",
+    "MS in Applied Business Analytics, Boston University; BS in Finance, Montana State University Billings."
+   ]
+  }
+ ],
+ "insights": [
+  {
+   "title": "BroadSpan Asset Management appoints Marcos Rampoldi as Managing Partner",
+   "category": "Firm News",
+   "date": null,
+   "summary": null
+  },
+  {
+   "title": null,
+   "category": "Market Views",
+   "date": null,
+   "summary": null
+  },
+  {
+   "title": null,
+   "category": "Firm News",
+   "date": null,
+   "summary": null
+  }
+ ]
+}

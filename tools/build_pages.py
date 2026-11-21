@@ -13,11 +13,22 @@ BASE_URL = 'https://brocap.com/' if PRODUCTION else 'https://danielochoa94.githu
 NAV = [('firm.html', 'Who We Are'), ('what-we-do.html', 'What We Do'), ('transactions.html', 'Experience'),
        ('alliance.html', 'Mergers Alliance'), ('news.html', 'News'), ('contact.html', 'Contact')]
 
-# BroadSpan Asset Management: its own section with a sub-nav, linked from the footer rather than the header
-BSAM_NAV = [('asset-management.html', 'Overview'), ('asset-management-who-we-are.html', 'Who We Are'),
-            ('asset-management-team.html', 'Investment Team'), ('asset-management-contact.html', 'Contact'),
-            ('asset-management-client-login.html', 'Client Login')]
+# BroadSpan Asset Management has its own header menu and footer. A menu group's link opens its first page.
 BSAM_HOME = ('asset-management.html', 'Asset Management')
+BSAM_MENU = [
+  ('Firm', [('asset-management-about.html', 'About'), ('asset-management-team.html', 'Team')]),
+  ('Strategies', [('asset-management-private-capital.html', 'Private Capital'),
+                  ('asset-management-fixed-income.html', 'Fixed Income')]),
+  ('Responsible Investing', 'asset-management-responsible-investing.html'),
+  ('Insights', 'asset-management-insights.html'),
+  ('Contact', 'asset-management-contact.html'),
+]
+BSAM_LOGIN = ('asset-management-client-login.html', 'Investor Login')
+# TODO: link BSAM's own Form ADV filing once BroadSpan confirms its CRD number
+FORM_ADV = 'https://adviserinfo.sec.gov/'
+BSAM_LEGAL = [('asset-management-disclosures.html', 'Disclosures'), ('asset-management-privacy.html', 'Privacy Policy'),
+              ('asset-management-terms.html', 'Terms of Use')]
+BSAM_PAGES = dict([p for _, t in BSAM_MENU for p in ([(t, _)] if isinstance(t, str) else t)] + [BSAM_LOGIN] + BSAM_LEGAL)
 
 # city, country code, country, street address, postal code
 OFFICES = [
@@ -50,7 +61,7 @@ LAYOUT = """<!DOCTYPE html>
 <link rel="canonical" href="{url}">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="BroadSpan Capital">
+<meta property="og:site_name" content="{site_name}">
 <meta property="og:title" content="{og_title}">
 <meta property="og:description" content="{description}">
 <meta property="og:url" content="{url}">
@@ -68,7 +79,7 @@ LAYOUT = """<!DOCTYPE html>
 <body data-page="{page}"{preview}>
 {concept}<header class="site-header">
   <div class="inner">
-    <a class="logo" href="index.html"><img src="assets/img/logo.png" alt="BroadSpan Capital" width="325" height="86"></a>
+    {logo}
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
     <nav class="nav" id="nav">
 {nav}
@@ -78,11 +89,20 @@ LAYOUT = """<!DOCTYPE html>
 <main>
 {body}
 </main>
-<footer class="site-footer">
+{footer}
+<dialog class="modal" aria-label="Details">
+  <button class="modal-close" type="button" aria-label="Close">&times;</button>
+  <div class="modal-body"></div>
+</dialog>
+<script src="assets/js/site.js?v={js_v}"></script>
+</body>
+</html>"""
+
+FOOTER = """<footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-col">
       <h4>Explore</h4>
-{footer_nav}
+{nav}
     </div>
     <div class="footer-col">
       <h4>Offices</h4>
@@ -97,16 +117,38 @@ LAYOUT = """<!DOCTYPE html>
   </div>
   <div class="footer-legal">
     <p>BroadSpan Securities LLC is a member of FINRA and SIPC. Asset management activities are conducted through BroadSpan Asset Management LLC.</p>
-    <p>&copy; 2026 BroadSpan Capital. All rights reserved.</p>
+    <p>&copy; {year} BroadSpan Capital. All rights reserved.</p>
   </div>
-</footer>
-<dialog class="modal" aria-label="Details">
-  <button class="modal-close" type="button" aria-label="Close">&times;</button>
-  <div class="modal-body"></div>
-</dialog>
-<script src="assets/js/site.js?v={js_v}"></script>
-</body>
-</html>"""
+</footer>"""
+
+BSAM_FOOTER = """<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Explore</h4>
+{nav}
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+{legal}
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>1441 Brickell Avenue, Suite 1550<br>Miami, FL 33131</p>
+      <a href="tel:+13054243400">+1 (305) 424-3400</a>
+      <a href="#"><mark class="tbd">[email]</mark></a>
+      <a href="#"><mark class="tbd">LinkedIn</mark></a>
+    </div>
+    <a class="logo light" href="asset-management.html"><img src="assets/img/logo-bsam-white.png" alt="BroadSpan Asset Management" width="325" height="77"></a>
+  </div>
+  <div class="footer-legal">
+    <p>BroadSpan Asset Management LLC is part of <a href="index.html">BroadSpan</a>.</p>
+    <p>&copy; {year} BroadSpan Asset Management LLC. All rights reserved.</p>
+  </div>
+</footer>"""
+
+LOGO = '<a class="logo" href="index.html"><img src="assets/img/logo.png" alt="BroadSpan Capital" width="325" height="86"></a>'
+BSAM_LOGO = ('<a class="logo" href="asset-management.html"><img src="assets/img/logo-bsam.png" alt="BroadSpan Asset Management" '
+             'width="325" height="77"></a>')
 
 CONCEPT = ('<div class="concept">Design concept<span class="long"> for BroadSpan Capital</span> &middot; Preview only, '
            'not the live site</div>\n')
@@ -120,6 +162,7 @@ DEALS_PER_PAGE = 24
 
 D = json.load(open('src/data/site.json'))
 A = json.load(open('src/data/alliance.json'))
+BSAM = json.load(open('src/data/bsam.json'))
 DEALS = {d['id']: d for d in D['deals']}
 
 
@@ -132,7 +175,7 @@ def slug(s):
 
 
 # Prefixed so BSAM bios (written for asset management) don't collide with the same person's BroadSpan bio
-BSAM_TEAM = [{**p, 'key': 'bsam-' + slug(p['name'])} for p in D['bsam_team']]
+BSAM_TEAM = [{**p, 'key': 'bsam-' + slug(p['name']), 'exec': False} for p in BSAM['team']]
 
 
 def month_year(o, short=False):
@@ -224,7 +267,7 @@ def person_bio(p):
   langs = f'<p class="modal-meta">Languages: {esc(p["languages"])}</p>' if p.get('languages') else ''
   bio = ''.join(f'<p>{esc(b)}</p>' for b in p['bio'])
   return f"""
-      <div class="bio-head">{avatar(p, lazy=True)}<div><h2>{esc(p['name'])}</h2><p>{esc(p['title'])}{' · Executive Committee' if p['exec'] else ''}</p></div></div>
+      <div class="bio-head">{avatar(p, lazy=True)}<div><h2>{esc(p['name'])}</h2><p>{esc(p['title'])}{', ' + esc(p['strategy']) if p.get('strategy') else ''}{' · Executive Committee' if p['exec'] else ''}</p></div></div>
       <div class="copy">{bio}</div>
       {langs}"""
 
@@ -315,20 +358,25 @@ def options(label, values, key):
   return f'<option value="">{label}</option>' + ''.join(f'<option>{esc(v)}</option>' for v in values if any(d[key] == v for d in D['deals']))
 
 
-def bsam_nav(f):
-  links = ''.join(f'\n  <a href="{h}"{" aria-current=\"page\"" if h == f else ""}>{t}</a>' for h, t in BSAM_NAV)
-  return f'<nav class="practice-nav bsam-nav" aria-label="BroadSpan Asset Management">\n  <span class="bsam-mark">BSAM</span>{links}\n</nav>'
+def tbd(s, placeholder):
+  return esc(s) if s else f'<mark class="tbd">[{placeholder}]</mark>'
 
 
-BSAM_DISCLOSURE = ('BroadSpan Asset Management LLC is an investment adviser registered with the Florida Office of Financial Regulation. '
-  'Such registration does not imply that the Firm is recommended or approved by the United States government or any regulatory agency. '
-  'BroadSpan Asset Management L.L.C may only transact business or render personalized investment advice in those states and '
-  'international jurisdictions where it is registered, has notice filed, or is otherwise excluded or exempted from registration '
-  'requirements. The purpose of this website is for information distribution only and should not be construed as an offer to buy or '
-  'sell securities or to offer investment advice. Past results are no guarantee of future results and no representation is made that '
-  'a client will or is likely to achieve results that are similar to those described. An investor should consider his or her '
-  'investment objectives, risks, charges and expenses carefully before investing. Please refer to BroadSpan Asset Management '
-  'L.L.C’s ADV Part 2 for additional information and risks.')
+def bsam_card(p):
+  tag = f'<span class="tag">{esc(p["strategy"])}</span>' if p['strategy'] else ''
+  return f"""
+        <button class="person" type="button" data-person="{p['key']}">{avatar(p)}<span class="n">{esc(p['name'])}</span><span class="t">{esc(p['title'])}</span>{tag}
+          <span class="more">View Bio <span class="chev"></span></span>
+        </button>"""
+
+
+def insight(n):
+  return f"""
+      <article class="insight">
+        <div class="insight-meta"><span class="tag">{esc(n['category'])}</span><time>{tbd(n['date'], 'date')}</time></div>
+        <h3>{tbd(n['title'], 'title')}</h3>
+        <p>{tbd(n['summary'], 'summary')}</p>
+      </article>"""
 
 
 RENDER = {
@@ -339,9 +387,9 @@ RENDER = {
   'sector-filter': lambda: options('All sectors', D['sectors'], 'sector'),
   'deals': lambda: ''.join(deal_card(d) for d in D['deals']),
   'result-count': lambda: f'{len(D["deals"])} transactions',
-  'bsam-team': lambda: ''.join(person_card(p, 'person') for p in BSAM_TEAM),
-  'bsam-mosaic': lambda: ''.join(person_card(p, 'mini') for p in BSAM_TEAM),
-  'bsam-disclosure': lambda: f'<h2 class="label">Important Disclosures</h2><p>{esc(BSAM_DISCLOSURE)}</p>',
+  'bsam-team': lambda: ''.join(bsam_card(p) for p in BSAM_TEAM),
+  'bsam-insights': lambda: ''.join(insight(n) for n in BSAM['insights']),
+  'bsam-latest': lambda: ''.join(insight(n) for n in BSAM['insights'][:3]),
 }
 
 COUNTS = {
@@ -436,7 +484,7 @@ def jsonld(f, m):
     if m['page'] == 'deal':
       crumbs += [('Experience', page_url('transactions.html')), (m.get('og_title', m['title']), url)]
     elif f.startswith('asset-management'):
-      crumbs += [(BSAM_HOME[1], page_url(BSAM_HOME[0]))] + ([(dict(BSAM_NAV)[f], url)] if f != BSAM_HOME[0] else [])
+      crumbs += [(BSAM_HOME[1], page_url(BSAM_HOME[0]))] + ([(BSAM_PAGES[f], url)] if f != BSAM_HOME[0] else [])
     else:
       crumbs += [(dict(NAV)[f], url)]
     webpage['breadcrumb'] = {'@type': 'BreadcrumbList', 'itemListElement': [
@@ -470,7 +518,7 @@ def llms(pages):
   meta = {f: m for f, m, _ in pages}
   practices = '\n'.join(f'- {v}: {sum(d["practice"] == k for d in D["deals"])} transactions' for k, v in D['practices'].items())
   offices = ', '.join(o[0] for o in OFFICES)
-  links = '\n'.join(f'- [{label}]({page_url(f)}): {meta[f]["description"]}' for f, label in NAV + [BSAM_HOME] + BSAM_NAV[1:])
+  links = '\n'.join(f'- [{label}]({page_url(f)}): {meta[f]["description"]}' for f, label in NAV + [BSAM_HOME] + list(BSAM_PAGES.items()))
   deals = '\n'.join(f'- [{meta[f].get("og_title", meta[f]["title"])}]({page_url(f)}): {meta[f]["description"]}'
                     for f in meta if meta[f]['page'] == 'deal')
   return f"""# BroadSpan Capital
@@ -510,7 +558,8 @@ def llms_full():
 
   def person(p):
     langs = f'\n\nLanguages: {p["languages"]}' if p.get('languages') else ''
-    return f'### {p["name"]}\n\n{p["title"]}{", Executive Committee" if p["exec"] else ""}\n\n' + '\n\n'.join(p['bio']) + langs
+    title = p['title'] + (f', {p["strategy"]}' if p.get('strategy') else '') + (', Executive Committee' if p['exec'] else '')
+    return f'### {p["name"]}\n\n{title}\n\n' + '\n\n'.join(p['bio']) + langs
 
   def news(n):
     link = page_url(n['page'] if n.get('page') else n['pdf'])
@@ -554,22 +603,50 @@ Contact: info@brocap.com
 """
 
 
+def nav_link(h, t, f, indent=6):
+  return f'{" " * indent}<a href="{h}"{" aria-current=\"page\"" if h == f else ""}>{t}</a>'
+
+
+def main_nav(f):
+  return '\n'.join(nav_link(h, t, f) for h, t in NAV)
+
+
+def bsam_nav(f):
+  out = []
+  for label, target in BSAM_MENU:
+    if isinstance(target, str):
+      out.append(nav_link(target, label, f))
+      continue
+    current = ' aria-current="true"' if f in dict(target) else ''
+    children = '\n'.join(nav_link(h, t, f, 10) for h, t in target)
+    out.append(f'      <div class="nav-group">\n        <a class="nav-parent" href="{target[0][0]}"{current}>{label}</a>\n'
+               f'        <div class="nav-menu">\n{children}\n        </div>\n      </div>')
+  return '\n'.join(out)
+
+
 def main():
   src = 'src/pages'
-  nav_for = lambda f: '\n'.join(f'      <a href="{h}"{" aria-current=\"page\"" if h == f else ""}>{t}</a>' for h, t in NAV)
-  footer_nav = '\n'.join(f'      <a href="{h}">{t}</a>' for h, t in [('index.html', 'Home')] + NAV + [BSAM_HOME])
+  year = datetime.date.today().year
+  links = lambda items: '\n'.join(f'      <a href="{h}">{t}</a>' for h, t in items)
+  footer = FOOTER.format(nav=links([('index.html', 'Home')] + NAV + [BSAM_HOME]), year=year,
+                         offices=''.join(f'<p>{o[0]}</p>' for o in OFFICES))
+  bsam_footer = BSAM_FOOTER.format(nav=links([(t if isinstance(t, str) else t[0][0], label) for label, t in BSAM_MENU] + [BSAM_LOGIN]),
+                                   legal=links(BSAM_LEGAL + [(FORM_ADV, 'Form ADV')]), year=year)
   pages = []
   for f in sorted(os.listdir(src)):
     raw = open(os.path.join(src, f)).read()
     meta, body = raw.split('\n---\n', 1)
     m = {k: unescape(v) for k, v in re.findall(r'^(\w+):\s*(.*)$', meta, re.M)}
-    body, used_data = render(body.strip('\n').replace('<nav id="bsam-nav"></nav>', bsam_nav(f)))
+    body, used_data = render(body.strip('\n'))
+    bsam = f.startswith('asset-management')
     html = LAYOUT.format(
+      site_name='BroadSpan Asset Management' if bsam else 'BroadSpan Capital', logo=BSAM_LOGO if bsam else LOGO,
+      footer=bsam_footer if bsam else footer,
       title=esc(m['title']), og_title=esc(m.get('og_title', m['title'])), description=esc(m['description']),
-      page=m['page'], url=page_url(f), base=BASE_URL, nav=nav_for(f), footer_nav=footer_nav, body=body,
+      page=m['page'], url=page_url(f), base=BASE_URL, nav=bsam_nav(f) if bsam else main_nav(f), body=body,
       robots='index, follow, max-image-preview:large' if PRODUCTION and f != NOT_FOUND else 'noindex, nofollow',
       base_tag=f'<base href="{urlparse(BASE_URL).path}">\n' if f == NOT_FOUND else '',
-      concept='' if PRODUCTION else CONCEPT, preview='' if PRODUCTION else ' data-preview', css_v=version('site/assets/css/site.css'), js_v=version('site/assets/js/site.js'), offices=''.join(f'<p>{o[0]}</p>' for o in OFFICES), jsonld=jsonld(f, m))
+      concept='' if PRODUCTION else CONCEPT, preview='' if PRODUCTION else ' data-preview', css_v=version('site/assets/css/site.css'), js_v=version('site/assets/js/site.js'), jsonld=jsonld(f, m))
     open(os.path.join('site', f), 'w').write(html)
     if f == NOT_FOUND:
       continue
