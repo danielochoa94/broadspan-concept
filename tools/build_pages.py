@@ -69,7 +69,7 @@ LAYOUT = """<!DOCTYPE html>
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+{favicon}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300&family=IBM+Plex+Sans:wght@300;400;500&family=Inter:wght@700&display=swap">
@@ -149,6 +149,10 @@ BSAM_FOOTER = """<footer class="site-footer">
 LOGO = '<a class="logo" href="index.html"><img src="assets/img/logo.png" alt="BroadSpan Capital" width="325" height="86"></a>'
 BSAM_LOGO = ('<a class="logo" href="asset-management.html"><img src="assets/img/logo-bsam.png" alt="BroadSpan Asset Management" '
              'width="325" height="77"></a>')
+# Each header links to the sister firm by its logo, as the original site did.
+SISTER = '      <a class="sister" href="{0}"><img src="assets/img/{1}" alt="{2}" width="325" height="{3}"></a>'
+SISTER_BSAM = SISTER.format('asset-management.html', 'logo-bsam.png', 'BroadSpan Asset Management', 77)
+SISTER_CAPITAL = SISTER.format('index.html', 'logo.png', 'BroadSpan Capital', 86)
 
 CONCEPT = ('<div class="concept">Design concept<span class="long"> for BroadSpan Capital</span> &middot; Preview only, '
            'not the live site</div>\n')
@@ -608,7 +612,7 @@ def nav_link(h, t, f, indent=6):
 
 
 def main_nav(f):
-  return '\n'.join(nav_link(h, t, f) for h, t in NAV)
+  return '\n'.join([nav_link(h, t, f) for h, t in NAV] + [SISTER_BSAM])
 
 
 def bsam_nav(f):
@@ -621,7 +625,7 @@ def bsam_nav(f):
     children = '\n'.join(nav_link(h, t, f, 10) for h, t in target)
     out.append(f'      <div class="nav-group">\n        <a class="nav-parent" href="{target[0][0]}"{current}>{label}</a>\n'
                f'        <div class="nav-menu">\n{children}\n        </div>\n      </div>')
-  return '\n'.join(out)
+  return '\n'.join(out + [SISTER_CAPITAL])
 
 
 def main():
@@ -638,10 +642,14 @@ def main():
     meta, body = raw.split('\n---\n', 1)
     m = {k: unescape(v) for k, v in re.findall(r'^(\w+):\s*(.*)$', meta, re.M)}
     body, used_data = render(body.strip('\n'))
+    # Videos and city photos are replaced in place, so their URLs carry a content hash to bypass stale browser caches
+    body = re.sub(r'(assets/(?:media|img/cities)/[\w.-]+\.(?:mp4|jpg))"', lambda v: f'{v[1]}?v={version("site/" + v[1])}"', body)
     bsam = f.startswith('asset-management')
     html = LAYOUT.format(
       site_name='BroadSpan Asset Management' if bsam else 'BroadSpan Capital', logo=BSAM_LOGO if bsam else LOGO,
       footer=bsam_footer if bsam else footer,
+      favicon='<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">' if bsam else
+              '<link rel="icon" href="assets/img/favicon.ico" type="image/vnd.microsoft.icon">',
       title=esc(m['title']), og_title=esc(m.get('og_title', m['title'])), description=esc(m['description']),
       page=m['page'], url=page_url(f), base=BASE_URL, nav=bsam_nav(f) if bsam else main_nav(f), body=body,
       robots='index, follow, max-image-preview:large' if PRODUCTION and f != NOT_FOUND else 'noindex, nofollow',
