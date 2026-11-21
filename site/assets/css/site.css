@@ -742,7 +742,7 @@ mark.tbd { background: #fff3b0; color: #6b5300; padding: 0 .2em; font-style: nor
 
 .partner-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .partner-grid > div { display: flex; flex-direction: column; min-height: 320px; padding: clamp(28px, 2.8vw, 44px); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.partner-grid .icon { width: 44px; height: auto; fill: none; stroke: var(--brand); stroke-width: 1.1; stroke-linecap: round; stroke-linejoin: round; }
+.partner-grid .icon { width: 44px; height: auto; color: var(--brand); fill: currentColor; }
 .partner-grid h3 { margin-top: 56px; font-size: clamp(22px, 2vw, 28px); font-weight: 300; color: var(--blue); line-height: 1.2; }
 .partner-grid p { margin-top: 12px; font-size: 16px; font-weight: 300; color: var(--muted); }
 
