@@ -592,7 +592,11 @@ dialog.modal[open] { animation: rise .3s ease-out; }
 .strategy p { margin-top: 14px; font-size: 16px; font-weight: 300; color: #2c333c; max-width: 560px; }
 .strategy .more { margin-top: auto; padding-top: 28px; font-size: 13px; }
 .services.two { grid-template-columns: 1fr 1fr; padding: 0; }
-.bsam-team { margin-top: 0; }
+.bsam-team { margin-top: 0; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.bsam-team .person { padding: 32px 14px 24px; }
+.bsam-team .person .avatar { width: min(150px, 100%); }
+@media (max-width: 1000px) { .bsam-team { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .bsam-team { grid-template-columns: 1fr 1fr; gap: 12px; } }
 .login-layout { min-height: calc(100svh - var(--header) - 90px); }
 .check { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--ink); cursor: pointer; }
 .check input { width: 16px; height: 16px; accent-color: var(--blue); }
