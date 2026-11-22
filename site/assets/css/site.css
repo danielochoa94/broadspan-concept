@@ -582,11 +582,11 @@ dialog.modal[open] { animation: rise .3s ease-out; }
 .focus-item .more { margin-top: 20px; font-size: 13px; }
 .strategy-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .strategy { display: flex; flex-direction: column; background: var(--white); transition: box-shadow .25s, transform .25s; }
-.strategy:hover { box-shadow: 0 18px 40px -24px rgba(11, 35, 65, .45); transform: translateY(-3px); }
+a.strategy:hover { box-shadow: 0 18px 40px -24px rgba(11, 35, 65, .45); transform: translateY(-3px); }
 .strategy-photo { display: block; aspect-ratio: 16 / 7; }
 .strategy-photo::before { opacity: .55; }
 .strategy-photo > img { transition: transform .8s cubic-bezier(.2, .7, .2, 1); }
-.strategy:hover .strategy-photo > img { transform: scale(1.04); }
+a.strategy:hover .strategy-photo > img { transform: scale(1.04); }
 .strategy-copy { display: flex; flex-direction: column; flex: 1; padding: clamp(28px, 3vw, 44px); border-top: 3px solid var(--blue); }
 .strategy h3 { font-size: clamp(23px, 2vw, 28px); font-weight: 300; color: var(--blue); line-height: 1.2; }
 .strategy p { margin-top: 14px; font-size: 16px; font-weight: 300; color: #2c333c; max-width: 560px; }
