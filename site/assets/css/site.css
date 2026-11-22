@@ -691,6 +691,15 @@ mark.tbd { background: #fff3b0; color: #6b5300; padding: 0 .2em; font-style: nor
 .principles .icon { width: 44px; height: auto; fill: none; stroke: var(--sky); stroke-width: 1.1; stroke-linecap: round; stroke-linejoin: round; }
 .principles h3 { font-size: clamp(22px, 2vw, 28px); font-weight: 300; line-height: 1.25; }
 .principles p { margin-top: 8px; font-size: 17px; font-weight: 300; color: rgba(255, 255, 255, .78); }
+.investment-method { color: var(--blue); background: var(--white); }
+.investment-method-body { display: grid; grid-template-columns: 1fr 1fr; gap: var(--pad); }
+@media (max-width: 800px) {
+  .investment-method-body { grid-template-columns: 1fr; gap: 32px; }
+  .investment-method-photo { aspect-ratio: 16 / 9; }
+}
+.investment-method .principles, .investment-method .principles li { border-color: rgba(31, 67, 134, .24); }
+.investment-method .principles .icon { stroke: var(--blue); }
+.investment-method .principles p { color: #2c333c; }
 .family-head { display: grid; grid-template-columns: 1fr auto; gap: 32px var(--pad); align-items: end; }
 .family-head .statement { max-width: 900px; font-size: clamp(22px, 2vw, 28px); }
 .family-head .btn { margin-bottom: 6px; }
