@@ -739,6 +739,7 @@ mark.tbd { background: #fff3b0; color: #6b5300; padding: 0 .2em; font-style: nor
 
 .sectors { position: relative; }
 .sectors h2 { position: absolute; z-index: 3; top: clamp(24px, 3vw, 44px); left: clamp(20px, 3vw, 44px); font-size: clamp(32px, 3.4vw, 48px); font-weight: 300; line-height: 1.15; color: var(--white); pointer-events: none; }
+.impact-kicker { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; }
 .sector-row { display: grid; grid-template-columns: repeat(3, 1fr); }
 .sectors .photo-tile { aspect-ratio: auto; height: clamp(480px, 46vw, 680px); }
 .sectors .photo-tile > img { filter: grayscale(.2) contrast(1.05); }
@@ -748,6 +749,12 @@ mark.tbd { background: #fff3b0; color: #6b5300; padding: 0 .2em; font-style: nor
 .sectors .photo-tile:hover > img { transform: none; }
 .sectors .photo-tile .tint-content { flex-direction: column; align-items: flex-start; justify-content: flex-end; gap: 12px; }
 .sectors .photo-tile p { font-size: 16px; font-weight: 300; line-height: 1.5; color: rgba(255, 255, 255, .85); max-width: 380px; min-height: 4.5em; }
+
+[data-page="bsam-responsible-investing"] .sectors .photo-tile p { min-height: 0; }
+[data-page="bsam-responsible-investing"] .sectors .photo-tile .tint-content { gap: 4px; padding-bottom: 16px; }
+@media (width > 760px) {
+  [data-page="bsam-responsible-investing"] .sectors .photo-tile .tint-content { height: 100px; justify-content: flex-start; }
+}
 
 .partner-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .partner-grid > div { display: flex; flex-direction: column; min-height: 320px; padding: clamp(28px, 2.8vw, 44px); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
