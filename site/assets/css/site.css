@@ -79,7 +79,7 @@ button { font: inherit; color: inherit; }
   .nav a { font-size: 26px; font-weight: 300; padding: 18px 0; border-bottom: 1px solid var(--line); }
   .nav a::after { display: none; }
   .nav { overflow-y: auto; }
-  .nav-menu { position: static; min-width: 0; padding: 0; border: 0; box-shadow: none; opacity: 1; visibility: visible; transform: none; }
+  .nav-menu { position: static; min-width: 0; padding: 0; border: 0; box-shadow: none; opacity: 1; visibility: inherit; transform: none; }
   .nav-menu a { font-size: 19px; padding: 14px 0 14px 24px; white-space: normal; }
   .nav-menu a:hover, .nav-menu a[aria-current] { background: none; }
   .nav-parent { display: block; }
