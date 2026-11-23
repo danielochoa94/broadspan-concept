@@ -10,23 +10,6 @@
     $('.nav-toggle').setAttribute('aria-expanded', open);
   });
 
-  // Hero videos: Low Power Mode and data saver block autoplay, but still allow play() from the first tap
-  const heroVideos = [...document.querySelectorAll('.tint > video')];
-  const playHeroes = () => Promise.all(heroVideos.map((v) => v.play()));
-  if (heroVideos.length)
-  {
-    playHeroes().catch(() =>
-    {
-      const retry = () => playHeroes().then(() =>
-      {
-        document.removeEventListener('touchend', retry);
-        document.removeEventListener('click', retry);
-      }).catch(() => {});
-      document.addEventListener('touchend', retry, { passive: true });
-      document.addEventListener('click', retry);
-    });
-  }
-
   // Reveal on scroll
   const io = 'IntersectionObserver' in window && new IntersectionObserver((entries) =>
   {
