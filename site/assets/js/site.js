@@ -12,25 +12,6 @@
 
   // Hero videos: Low Power Mode and data saver block autoplay, but still allow play() from the first tap
   const heroVideos = [...document.querySelectorAll('.tint > video')];
-  // Some browsers (Firefox on iOS) flash a native loading overlay, so show the poster as an image and fade the video
-  // in once frames are actually advancing
-  heroVideos.forEach((v) =>
-  {
-    const still = new Image();
-    still.src = v.poster;
-    still.alt = '';
-    v.before(still);
-    v.classList.add('pending');
-    const reveal = () =>
-    {
-      if (v.currentTime > 0.25)
-      {
-        v.classList.remove('pending');
-        v.removeEventListener('timeupdate', reveal);
-      }
-    };
-    v.addEventListener('timeupdate', reveal);
-  });
   const playHeroes = () => Promise.all(heroVideos.map((v) => v.play()));
   if (heroVideos.length)
   {
